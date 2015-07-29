@@ -1,0 +1,47 @@
+---
+layout: post
+title: Ebb and Flow in Large-Scale Agile Development
+date: 2013-09-25 22:15:30.000000000 -06:00
+categories:
+- process
+- professional
+tags:
+- agile
+- development
+- large-scale
+- platform
+- psi
+- scaled-agile
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '5'
+  _yoast_wpseo_linkdex: '71'
+  _yoast_wpseo_focuskw: agile
+  _wpas_done_all: '1'
+  _wpas_skip_28796: '1'
+  _wpas_skip_4335974: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1437424865;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1095;}i:1;a:1:{s:2:"id";i:928;}i:2;a:1:{s:2:"id";i:530;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>I've found over the years that projects progress in ebbs and flows. This post talks about some of my recent experiences at work.</p>
+<p>We're using the Scaled Agile Framework, and the release train I'm a part of is coming up on the end of our first potentially shippable increment (PSI). While this isn't the first time the company has used SAFe, this project is larger in team size and scope than the previous one. We're also trying to coordinate the efforts of a more diverse group of teams. We've invited Operations and Infrastructure to join the party, and the effect of spreading agile methodology through the company is contagious.</p>
+<p>From the euphoria of our initial planning session, we have been reminded the last few weeks that choosing a dynamic approach to project management does not eliminate hardship, it just makes it more visible. I'll mention a few examples.</p>
+<p><a href="http://animaliaillustrated.blogspot.com/2009/08/pushmi-pullyu.html"><img src="assets/pushmipullyu.jpg" width="200" height="166" alt="Pushmi-pullyu" class="alignright" /></a><br />
+Early on in the PSI, I received some mixed signals from management. I'm a rare switch-hitter: I have strong development prowess, and I have strong grassroots agile transformation experience. Sometimes, employers have trouble reconciling the two. I end up feeling like a <a href="http://en.wikipedia.org/wiki/List_of_Doctor_Dolittle_characters#The_Pushmi-pullyu">pushmi-pullyu</a> from <i>Doctor Dolittle</i>. One day, I hear that I should stop being distracted and focus on delivering code. A few days later, I'm asked why I haven't contributed more to an agile process initiative. After talking with senior management, I'm glad to say that for this upcoming PSI, I think I've worked out a fair balance. I'll continue to chair the agile community of practice, and I have some bandwidth to help see some projects through.</p>
+<p>This PSI doesn't look like we expected. We've had a number of technology discoveries that have changed out thinking about the platform. As a result, one of the core teams on the release train made an early course correction that took the final result far afield of what we predicted, but ultimately will result in a better platform. There has been some team member churn as well. And coming into this new PSI, grooming has been a challenge as the product owners and stakeholders feverishly incorporate new findings, re-negotiate scope and generally work to get incoming features to a manageable size.</p>
+<p>We felt the pain of some missing ingredients this PSI as well. For example, we learned that the choice of automated acceptance test frameworks like FitNesse and Cucumber can be contentious, bordering on political, which has slowed adoption. In other cases, it was poor timing. At the start of this PSI, the Solutions Release Team was gathering requirements and wasn't ready for us, so we had to make do without a unified automated acceptance test or continuous integration strategy. And, some key infrastructure proof of concept work did its job in finding out that the anointed solution won't meet our needs, but it left us scrambling to implement plan B.</p>
+<p>I've also lost some confidence that I fully understand what our team is building. Yesterday, our enterprise architect talked about his vision for the platform, and as I heard him describe his vision for the SOA piece -- the piece my team is responsible for enabling -- I realized that we were in trouble. </p>
+<p>The vision has always been that our team of two now would be providing the "cars" for the company's information superhighway, making it easy to expose business functionality to internal and even external callers. Based on what we knew, we decided to implement some commodity functionality in our platform by leveraging the web platform, for example invocation logging through request handlers or filters. </p>
+<p>However, in said conversation we learned that there is also a need for our deliverable to be consumed by legacy applications to connect with platform services, ones that run outside of a web service context. Hence, we'll need to spend some time refactoring our design to separate the service interaction pieces from the hosting pieces.  <em>(Note: A System Architect hasn't been identified for our release train, a role designed to mitigate this situation. It's a risk I identified but omitted from the article. Thanks to my fellow agilist Holger from Google+ for pointing that out.)</em>.</p>
+<p>I realized today, though, that this is all part of the ebb and flow of software manufacturing. These are several interrelated examples of inspecting and adapting. The issue is not that we built the wrong thing, it's that we went so long without knowing that it was the wrong thing. To adapt, during our team retrospective today we talked about ways to close the feedback loop with client teams and that enterprise architect. And, when I look at where we are as a whole at the end of this PSI, we certainly have made a lot of progress and delivered on all our commitments, even though a couple of them were delivered with a modified understanding of the deliverables.</p>
+<p>I think we as a team need to stay calm, stay the course and get through these teething troubles. All of these issues are temporary, and I believe the communication and understanding mistakes will lessen over time. I believe in the end vision of the platform and hope that the company will give us the time we need to gel as a release train and build up some successes. </p>
+<p>There are hopeful signs on the horizon. For example, the Solutions Release Team will be joining us this PSI -- I'm really excited to incorporate early integration into our platform components. And I am glad that I should be able to take a stronger coaching role this leg of the journey.</p>

@@ -1,0 +1,128 @@
+---
+layout: post
+title: IronRuby script engine in C#
+date: 2009-06-29 11:40:32.000000000 -06:00
+categories:
+- professional
+tags:
+- C#
+- code
+- engine
+- extensions
+- ironruby
+- module
+- programming
+- script
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  delicious: a:3:{s:5:"count";s:1:"1";s:9:"post_tags";s:0:"";s:4:"time";s:10:"1248460146";}
+  reddit: a:2:{s:5:"count";s:1:"0";s:4:"time";s:10:"1248460141";}
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1438144716;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1409;}i:1;a:1:{s:2:"id";i:530;}i:2;a:1:{s:2:"id";i:908;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>This post talks about the IronRuby engine we built. Our application has a requirement that certain elements of program logic must be able to be changed without a deployment. The application's initial architecture involved compiling C# functions on the fly, but it ran into memory pining issues after several hundred function sets had been loaded, which brought the application down every so often. Our team was charged with the task of preventing this situation while maintaining the feature. </p>
+<p>We debated two approaches. We chose to use an interpreted script solution over a plug-in architecture because interpreted scripts are ideally suited to oft-changing code. Also, the logic is currently stored in XML files, and Ruby requires less character escaping than C# does when represented in XML. IronRuby won over IronPython because our team had a little experience with Ruby and none with Python.</p>
+<p>The heart of the solution is a C# class called the IronRubyScriptEngine. In order to play along, you'll need to include the following assemblies from the IronRuby 0.5.0 distribution:</p>
+<div style="background:white none repeat scroll 0 0;font-family:Monaco;font-size:9pt;color:black;">
+<p style="margin:0;"><span style="color:blue;">using</span> IronRuby;</p>
+<p style="margin:0;"><span style="color:blue;">using</span> IronRuby.Builtins;</p>
+<p style="margin:0;"><span style="color:blue;">using</span> Microsoft.Scripting.Hosting;</p>
+</p></div>
+<p>Here's the engine's constructor:</p>
+<div style="background:white none repeat scroll 0 0;font-family:Monaco;font-size:9pt;color:black;">
+<p style="margin:0;"><span style="color:blue;">public</span> IronRubyScriptEngine()</p>
+<p style="margin:0;">{</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; LoadRequiredAssemblies();</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; _runtime = <span style="color:rgb(43,145,175);">Ruby</span>.CreateRuntime();</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; _engine = <span style="color:rgb(43,145,175);">Ruby</span>.GetEngine(_runtime);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; </p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; ResetScope();</p>
+<p style="margin:0;">}</p>
+<p style="margin:0;">
+<p style="margin:0;"><span style="color:gray;">///</span><span style="color:green;"> </span><span style="color:gray;">&lt;summary&gt;</span></p>
+<p style="margin:0;"><span style="color:gray;">///</span><span style="color:green;"> We need the assembly loaded into memory before CreateRuntime() is called, so we force it here.<br />
+</span></p>
+<p style="margin:0;"><span style="color:gray;">///</span><span style="color:green;"> </span><span style="color:gray;">&lt;/summary&gt;</span></p>
+<p style="margin:0;">
+<p style="margin:0;"><span style="color:blue;">private</span> <span style="color:blue;">static</span> <span style="color:blue;">void</span> LoadRequiredAssemblies()</p>
+<p style="margin:0;">{</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:rgb(43,145,175);">ClrString</span>.IsEmpty(<span style="background:rgb(255,255,128) none repeat scroll 0 0;color:rgb(163,21,21);">""</span>);</p>
+<p style="margin:0;">}</p>
+<p style="margin:0;">
+<p style="margin:0;"><span style="color:gray;">///</span><span style="color:green;"> </span><span style="color:gray;">&lt;summary&gt;</span></p>
+<p style="margin:0;"><span style="color:gray;">///</span><span style="color:green;"> Resets the scope, allowing you to run the same script against multiple inputs.</span></p>
+<p style="margin:0;"><span style="color:gray;">///</span><span style="color:green;"> </span><span style="color:gray;">&lt;/summary&gt;</span></p>
+<p style="margin:0;"><span style="color:blue;">public</span> <span style="color:blue;">void</span> ResetScope()</p>
+<p style="margin:0;">{</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; _scope = _engine.CreateScope();</p>
+<p style="margin:0;">}</p>
+</p></div>
+<p>As you can see, creating an IronRuby engine in C# is very easy.</p>
+<p>We pass parameters into our engine with a method called SetParameter. More on this in a moment.</p>
+<div style="background:white none repeat scroll 0 0;font-family:Monaco;font-size:9pt;color:black;">
+<p style="margin:0;"><span style="color:blue;">public</span> <span style="color:rgb(43,145,175);">IronRubyScriptEngine</span> SetParameter(<span style="color:blue;">string</span> parameterName, <span style="color:blue;">object</span> value)</p>
+<p style="margin:0;">{</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; _scope.SetVariable(parameterName, value);</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">return</span> <span style="color:blue;">this</span>;</p>
+<p style="margin:0;">}</p>
+</p></div>
+<p>The real work is done inside the Invoke method, which wraps a snippet of Ruby code in a Proc. It dynamically creates the correct input parameter syntax, interprets the snippet, then invokes the script with the values of the parameters. </p>
+<div style="background:white none repeat scroll 0 0;font-family:Monaco;font-size:9pt;color:black;">
+<p style="margin:0;"><span style="color:blue;">private</span> <span style="color:blue;">object</span> Invoke(<span style="color:blue;">string</span> script)</p>
+<p style="margin:0;">{</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">var</span> variableNames = _scope.GetVariableNames();</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">string</span> expression = <span style="color:blue;">string</span>.Format(<span style="background:rgb(255,255,128) none repeat scroll 0 0;color:rgb(163,21,21);">"Proc.new {% raw %} {{ |{0}| {1} }} {% endraw %}"</span>, variableNames.ToDelimitedString(<span style="background:rgb(255,255,128) none repeat scroll 0 0;color:rgb(163,21,21);">", "</span>), script);</p>
+<p style="margin:0;">&nbsp;&nbsp; </p>
+<div style="background:white none repeat scroll 0 0;font-family:Monaco;font-size:9pt;color:black;">
+<p style="margin:0;"><span style="color:rgb(43,145,175);">&nbsp;&nbsp;&nbsp; ScriptSource</span> source = _engine.CreateScriptSourceFromString(expression);</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">var</span> proc = (<span style="color:rgb(43,145,175);">Proc</span>) source.Execute();</p>
+<p>&nbsp;&nbsp;&nbsp; <span style="color:rgb(43,145,175);">Proc</span> lambda = proc.ToLambda(); </div>
+<p style="margin:0;">&nbsp;</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">object</span>[] scopeVariables = variableNames.Select(name =&gt; _scope.GetVariable(name)).ToArray();</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">return</span> lambda.Call(scopeVariables);</p>
+<p style="margin:0;">}</p>
+</div>
+<p>Let's say I have a Person class, and I want to determine if the person is happy. By using SetParameters, I can associate an object with a parameter name, so that if I write a snippet "bob.happy?", the engine creates "Proc.new {{ |bob| bob.happy? }}" and when called, my Person class instance is passed in.</p>
+<p>As most Ruby afficionadoes know, Procs and Lambdas differ in how they handle the return keyword. We chose Lambdas so that return exits the scope like it would in a C# method.</p>
+<p>ToDelimitedString is a simple yet handy extension method on IEnumerable.</p>
+<div style="background:white none repeat scroll 0 0;font-family:Monaco;font-size:9pt;color:black;">
+<p style="margin:0;"></p>
+<div style="background:white none repeat scroll 0 0;font-family:Monaco;font-size:9pt;color:black;">
+<p style="margin:0;"><span style="color:blue;">public</span> <span style="color:blue;">static</span> <span style="color:blue;">string</span> ToDelimitedString&lt;T&gt;(<span style="color:blue;">this</span> <span style="color:rgb(43,145,175);">IEnumerable</span>&lt;T&gt; sequence, <span style="color:blue;">char</span> delimiter)</p>
+<p style="margin:0;">{</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">return</span> DelimitValues(sequence, delimiter.ToString());</p>
+<p style="margin:0;">}</p>
+</p></div>
+<p style="margin:0;"><span style="color:blue;">public</span> <span style="color:blue;">static</span> <span style="color:blue;">string</span> ToDelimitedString&lt;T&gt;(<span style="color:blue;">this</span> <span style="color:rgb(43,145,175);">IEnumerable</span>&lt;T&gt; sequence, <span style="color:blue;">string</span> delimiter)</p>
+<p style="margin:0;">{</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">return</span> DelimitValues(sequence, delimiter);</p>
+<p style="margin:0;">}</p>
+<p style="margin:0;">&nbsp;</p>
+<p style="margin:0;"><span style="color:blue;">private</span> <span style="color:blue;">static</span> <span style="color:blue;">string</span> DelimitValues&lt;T&gt;(<span style="color:rgb(43,145,175);">IEnumerable</span>&lt;T&gt; sequence, <span style="color:blue;">string</span> delimiter)</p>
+<p style="margin:0;">{</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">string</span>[] values = sequence.Select(x =&gt; x.ToString()).ToArray();</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">return</span> <span style="color:blue;">string</span>.Join(delimiter, values);</p>
+<p style="margin:0;">}</p>
+</div>
+<p>With this engine in place, it was easy to migrate our existing logic into Ruby functions. The final version of the engine includes script caching, so we don't interpret the same function over and over. </p>
+<p>As the migration proceeded, we decided to refactor some of the logic to re-use code, something that was difficult in the old architecture. In Ruby, it's easy to extend a class. In IronRuby, you can certainly do that with CLR classes as well. However, the classes we needed to extend exist on the wrong side of a Remoting boundary. Extending an anonymous RemotingProxy of the class proved tough, so we chose to extend the object instead.</p>
+<p>module FooExtensions<br />
+&nbsp; def extended?<br />
+&nbsp;&nbsp;&nbsp; true<br />
+&nbsp; end<br />
+end</p>
+<p>In the snippet, we apply the extension with the following code:</p>
+<p>require 'FooExtensions.rb'<br />
+myFoo.extend FooExtensions<br />
+myFoo.extended?&nbsp; # returns true</p>
+<p>Between the terseness of Ruby and re-use of code, we have much less code to maintain. Although the Ruby functions are slower than their C# counterparts, they are certainly performant enough for our scenario.</p>
+<p>I hope this post has been interesting. Comments are welcome.</p>

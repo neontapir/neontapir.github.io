@@ -1,0 +1,81 @@
+---
+layout: post
+title: BetaFish Part 1 - a Robocode robot in F#
+date: 2012-03-15 23:34:50.000000000 -06:00
+categories:
+- coding
+- professional
+tags:
+- code exercise
+- f-sharp
+- F#
+- robocode
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '5'
+  jabber_published: '1331876894'
+  _wpas_done_twitter: '1'
+  _wpas_mess: BetaFish Part 1 - a Robocode robot in F# http://wp.me/p530C-be
+  publicize_results: a:1:{s:7:"twitter";a:1:{i:17953864;a:2:{s:7:"user_id";s:11:"ChuckDurfee";s:7:"post_id";s:18:"180530910704312321";}}}
+  _syntaxhighlighter_encoded: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1433983700;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:700;}i:1;a:1:{s:2:"id";i:702;}i:2;a:1:{s:2:"id";i:530;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>The group here at work chose to compete via Robocode for our next code kata, and this post is the first in a series that describes how I wrote an F# robot for that challenge.</p>
+<p><a href="http://robocode.sourceforge.net/">Robocode</a> is a programming game in which a platform is provided, including an abstract Robot battle tank class, and competitors write concrete implementations. Those robots compete in real-time on-screen. The battle simulator has decent graphics, and the platform exposes a few dozen events that robots can subscribe to in their quest to be the last robot standing. For example, when the robot sees an opponent or hits a wall, an event is fired.</p>
+<p>Robocode itself is written in Java, but there is a library called JNI (Java-.NET interface) that allows .NET robots to take part in the fun. Since I'm learning F#, it seemed like the language to choose.</p>
+<p>First, I visited the site and downloaded the Java platform. I then followed the instructions for <a href="http://robowiki.net/wiki/Robocode/.NET/Create_a_.NET_robot_with_Visual_Studio">creating a .NET robot</a>, which including installing JNI and some helper libraries. The instructions were written for C#, and being F#, there were some subtle nuances that I missed which cost me a couple of hours:</p>
+<p>I followed the Visual Studio debug setup instructions included, but found that if I set a breakpoint prior to hitting F5, I got a fatal exception loading the JNI jar file. A colleague wasn't having this problem, and we figured out he wasn't setting breakpoints right away. Now, I use this workflow:</p>
+<ul>
+<li> Disable my breakpoints
+</li>
+<li> Hit F5 and let the Robocode battle simulator load
+</li>
+<li> Enable my breakpoints
+</li>
+<li> Start the battle
+</li>
+</ul>
+<p>I found <a href="http://zamboch.blogspot.com/2010/07/clr-40-for-robocode.html">a post on Zamboch's blog</a> showing a very basic F# robot. It was enough to get me over the hump. Here's the first version of the robot:</p>
+<p>[sourcecode language="fsharp" collapse="true"]<br />
+namespace Neontapir<br />
+open Robocode<br />
+open System</p>
+<p>type BetaFish() =<br />
+     inherit Robot()</p>
+<p>     let random = Random(DateTime.Now.Millisecond)<br />
+     let mutable firepower = 1.0 // TODO: handle this immutably instead?</p>
+<p>     let randomTurn (robot:Robot) amount =<br />
+          let direction = random.Next 2<br />
+          match direction with<br />
+               | 1 -&amp;gt; robot.TurnLeft amount<br />
+               | 0 -&amp;gt; robot.TurnRight amount<br />
+               | _ -&amp;gt; failwith &quot;Unexpected direction value&quot;</p>
+<p>     override robot.Run() =<br />
+               while true do<br />
+                    robot.TurnRight 40.0<br />
+                    robot.Ahead 20.0</p>
+<p>     override robot.OnScannedRobot(event : ScannedRobotEvent) =<br />
+               robot.Fire firepower<br />
+     override robot.OnBulletHit(event) =<br />
+               robot.Ahead 20.0<br />
+               firepower &amp;lt;- 1.0 + firepower</p>
+<p>     override robot.OnBulletMissed(event) =<br />
+               robot.Back 20.0<br />
+               firepower &amp;lt;- 1.0<br />
+     override robot.OnHitByBullet(event : HitByBulletEvent) =<br />
+               randomTurn robot (90.0 - event.Bearing)<br />
+[/sourcecode]</p>
+<p>You can see, it has a lot of similarity to Zamboch's sample robot. The new piece for me was the <code>randomTurn</code> method. This was the first occasion I'd had to use the pattern matching (<code>match</code>...<code>with</code>) construct.</p>
+<p>Pattern matching is a little like regular expressions for code. Instead of writing a switch statement or a series of if/then blocks, I can use pattern matching to conditionally execute code. In the case above, I'm getting a random result between 0 and 1, and using that to decide whether to turn left or right. The F# compiler won't allow me to specify an incomplete pattern, so I use the "match anything" (_) symbol to complete the pattern. The underscore is analogous to a default case in a switch statement.</p>
+<p>You'll notice that I have a mutable variable in this robot, <code>firepower</code>. Although F# supports mutables, I wanted to get rid of it. Typically, I'd do this by having a method that returns a new <code>BetaFish</code> robot. However, because the Robocode battle simulator expects a single instance of the Robot, this strategy won't work. At my present knowledge level, I'll need at least one mutable variable.<br />
+This robot isn't very smart. In fact, it can be thwarted by running into a wall. In the next article, I'll add some more basic functionality.</p>

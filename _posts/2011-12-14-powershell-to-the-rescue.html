@@ -1,0 +1,62 @@
+---
+layout: post
+title: PowerShell to the rescue!
+date: 2011-12-14 20:55:00.000000000 -07:00
+categories:
+- coding
+- professional
+tags:
+- powershell
+- troubleshooting
+status: publish
+type: post
+published: true
+meta:
+  tumblr_agiletapir_permalink: http://agiletapir.tumblr.com/post/14248781755/powershell-to-the-rescue
+  tumblr_agiletapir_id: '14248781755'
+  _wp_old_slug: '14248781755'
+  _edit_last: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1434299953;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:529;}i:1;a:1:{s:2:"id";i:531;}i:2;a:1:{s:2:"id";i:992;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>I encountered a situation today at work that lent itself to PowerShell. One of the developers asked for some information about the PowerShell line I wrote to diagnose this problem, and I thought it might make a good blog post.</p>
+<p>There was a pipe-delimited file that was failing to import into a database via our program, and the QA person was having trouble figuring out why. The process yielded a stack trace, which pointed to a certain stored procedure and a SQL error:</p>
+<blockquote>
+<p>System.Data.SqlClient.SqlException: Error during [stored procedure]: [stored procedure]; 4;<br />
+  String or binary data would be truncated. at System.Data.SqlClient.SqlConnection.OnError<br />
+  (SqlException exception, Boolean breakConnection)</p>
+</blockquote>
+<p>The stack trace clearly suggests that an input is exceeding a field length. Question was which one. As it turned out, there was only one column being inserted by this procedure. I did a quick schema lookup and found out that the column in question allows 50 characters.</p>
+<p>So, I wrote:</p>
+<pre><code>gc failing_input_file.txt | % {$_.split("|")[4] } `
+  | ? { $_.Length -gt 50 } | select –unique | measure –line
+</code></pre>
+<p>The query yielded 255 offending rows, and led to an alteration of the INSERT stored procedure to truncate the value from the flat file.</p>
+<p>The rest of this post is copied wholesale from that email.</p>
+<p>Let me restate it a command at a time, and expand the aliases.</p>
+<p>Most common PowerShell commands have an alias, which you can look at via <strong>Get-Alias</strong>. In general, if you want to know about a command, you type “<strong>Get-Help</strong> command-name”. I put a backtick after each line to continue the line, as is the PowerShell custom.</p>
+<p>Many cmdlets (read: “command-lets”) do pipeline processing, which if you haven’t seen it means that the previous command’s output is handed to the next piece as input. The special variable $_ is the current whatever &#8212; in this case, the current line. With most commands like with select and measure, $_ is inferred.</p>
+<p>PowerShell offers full access to .NET. The strings it returns are .NET strings, which is why Split() just works.</p>
+<pre><code>Get-Content failing_input_file.txt `      
+| ForEach-Object {$_.split("|")[4] } `    
+| Where-Object { $_.Length -gt 50 } `     
+| Select-Object –unique `                 
+| Measure-Object –line                    
+</code></pre>
+<p>The first line with <strong>Get-Content</strong> reads in the contents of the file.<br />
+For each line of the file, the second part with the <strong>Foreach-Object</strong> splits that line by &#8220;|&#8221; and grabs the 5th item.<br />
+The <strong>Select-Object</strong> command omits duplicates.<br />
+The <strong>Measure-Object</strong> command counts the number of lines.</p>
+<p>If you want the contract names themselves, leave off the Measure-Object call:</p>
+<pre><code>gc failing_input_file.txt `
+| % {$_.split("|")[4] } ` 
+| ? { $_.Length -gt 50 } `                                                       
+| select –unique
+</code></pre>

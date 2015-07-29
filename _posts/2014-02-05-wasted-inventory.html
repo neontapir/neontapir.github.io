@@ -1,0 +1,92 @@
+---
+layout: post
+title: 'Lean Wastes and Software Delivery: Wasted Inventory'
+date: 2014-02-05 18:56:40.000000000 -07:00
+categories:
+- process
+- professional
+tags:
+- inventory
+- lean
+- waste
+status: publish
+type: post
+published: true
+meta:
+  _yoast_wpseo_linkdex: '78'
+  _edit_last: '5'
+  _yoast_wpseo_focuskw: inventory
+  _wpas_done_all: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1438199416;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1319;}i:1;a:1:{s:2:"id";i:1302;}i:2;a:1:{s:2:"id";i:1291;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p><a href="http://neontapir.com/wp/wp-content/uploads/2014/01/inventory.jpg"><img src="assets/inventory-300x225.jpg" alt="inventory" width="300" height="225" class="alignright size-medium wp-image-1310" /></a></p>
+<p>In manufacturing, any piece of work that is ready for the next step<br />
+might be considered inventory: finished goods, works in progress, and<br />
+even raw material.</p>
+<p>For a software delivery team, it’s hard to measure inventory. For some<br />
+teams, they are done with a feature when it is checked into source<br />
+control. For others, they are done when they have delivered build<br />
+artifacts. A team’s definition of done comes into play here. A<br />
+definition of done can be thought of as a list of characteristics of<br />
+completed work. One common example is that all new functionality is<br />
+covered by unit tests. If Team Bravo tells me a feature is done, then I<br />
+can assume that if I ask to see unit tests that exercise the new<br />
+feature, Team Bravo can point me to them.</p>
+<p>Whether the finished product is code or binaries, until that deliverable<br />
+is in the hands of customers (internal or external), the producer earns<br />
+nothing from producing it and thus that code has a potential to be<br />
+waste. Firms don’t pay teams to produce code, they need their customers<br />
+to pay for the features that are realized by that running code. And I’ve<br />
+been on teams producing a feature that was cancelled or shelved before<br />
+delivery.</p>
+<p>Before the advent of distributed version control systems like Git and<br />
+Mercurial, source control systems used to store a full copy of each file<br />
+being monitored. In systems like those, branching was expensive in terms<br />
+of time and disk space. Keeping dorment branches beyond their usefulness<br />
+was a form of waste. Even using Git, I recommend that teams utilize tags<br />
+and remove inactive branches, because branches are easy to recreate.</p>
+<p>Still, having seen the contents of many of my colleague’s "temp"<br />
+folders, teams need to be disciplined about cleaning build and work<br />
+artifacts — for example, sample production data used to diagnose an<br />
+issue solved months ago. Often these files can be huge, which makes them<br />
+poor candidates for a version control system. Teams should take the time<br />
+to set up a <strong>shared file system</strong> for such files, so that a hard drive<br />
+failure on Keith’s machine won’t start a panic. Free options like Box,<br />
+Dropbox and SugarSync might suffice for small shops, enterprise<br />
+solutions like Amazon S3 also exist.</p>
+<p>Developers also experiment on their machines, and it’s easy for those<br />
+machines to become tainted by unusual software installations as well as<br />
+experimental and debug versions of code libraries. Having a <strong>continuous<br />
+integration</strong> system can help protect against unwitting building a<br />
+environmental dependency into your software. I say from experience that<br />
+you don’t want to be a position where you need to keep a departed<br />
+developer’s machine up and running on the network because it’s the only<br />
+place a piece of production code will compile.</p>
+<p>For every group that produces an output (code library, software package,<br />
+what have you), they require a set of inputs. Software is built from raw<br />
+materials, but instead of physical items programs are built from ideas.<br />
+<strong>Backlog grooming</strong> is analogous to a crude oil refinery, substituting<br />
+ideas for crude oil and requirements for gasoline.</p>
+<p>If a team does not have good discipline around its backlog, much like<br />
+those "temp" folders above, there will be items in the backlog that<br />
+won’t see the light of day in the near future. Ideas that are no longer<br />
+relevant, or as some say have been "overtaken by events". Ones that<br />
+aren’t commercially viable. Defects that don’t apply anymore. If the<br />
+backlog gets months long, you may find that people create new stories<br />
+and features that duplicate ones already in the backlog.</p>
+<p>Whether it’s the team that decides what to do next or a product owner,<br />
+each of those items needs to be reevaluated. This accumulated time<br />
+reviewing stale features is wasteful. Teams should strive to keep their<br />
+backlogs trim. Really, as long as there is always one single thing more<br />
+to do, the team can continue working, so teams should keep their<br />
+backlogs as small as possible without running dry. A kanban board can be<br />
+of immense help in planning workflows like this.</p>
+<p>Next installment is wasted motion and transportation.</p>

@@ -1,0 +1,38 @@
+---
+layout: post
+title: Teaching LINQ
+date: 2008-09-06 03:45:25.000000000 -06:00
+categories:
+- professional
+tags:
+- linq
+- programming
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  delicious: a:3:{s:5:"count";s:1:"0";s:9:"post_tags";s:0:"";s:4:"time";s:10:"1220971544";}
+  reddit: a:2:{s:5:"count";s:1:"0";s:4:"time";s:10:"1220971545";}
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1436900274;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:74;}i:1;a:1:{s:2:"id";i:242;}i:2;a:1:{s:2:"id";i:184;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>At work, I'm involved in a few things:</p>
+<p>* I'm the scrum master of one of our development squads<br />
+* I'm a LINQ and functional programming evangelist<br />
+* I'm a co-sponsor of the weekly development Lunch and Learn meetings<br />
+* I'm moderating our software engineering book club</p>
+<p>In this post, I'm going to talk a little about LINQ and the challenges I'm facing teaching LINQ to Objects to the team.</p>
+<p><!--more--><br />
+Our weekly Lunch and Learn sessions involve some preliminary discussion, then we turn the keyboard over to the audience. Our development staff consists of good programmers who largely learned the craft by rote, so few if any of us have formal computer science backgrounds. Hence, introductory sessions start at the very beginning.</p>
+<p>The first LINQ session covered extension methods, because LINQ makes heavy use of them. We presented as an example nUnit's <code>Assert.AreEqual(expected, actual)</code> method. We showed how an extension method could make this read <code>expected.AreEqual(actual)</code>. Then, we had our volunteer do the same for strings.</p>
+<p>We pointed out that this could get tedious, as <code>AreEqual</code> supports lots of types. So, we asked a volunteer to solve the problem in general. This proved challenging, and we discovered a hole in the team's collective knowledge base: generics.</p>
+<p>Once we got that straight, we had a volunteer implement a generic extension method for nUnit's <code>IsInstanceOfType(type)</code> test method to illustrate type inference.</p>
+<p>The remaining 20 minutes, we introduced the Select clause. Folks were confused about <code>Func&lt;T, bool&gt;</code>, and about lambdas. We didn't have enough time to cement the concepts, but we'll continue from there next week.</p>

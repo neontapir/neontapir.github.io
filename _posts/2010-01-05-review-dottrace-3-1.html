@@ -1,0 +1,38 @@
+---
+layout: post
+title: 'Review: dotTrace 3.1'
+date: 2010-01-05 13:31:13.000000000 -07:00
+categories:
+- professional
+tags:
+- ANTS Profiler
+- dotTrace
+- object mapper
+- performance
+- ReSharper
+- tweaking
+- unit testing
+status: publish
+type: post
+published: true
+meta:
+  reddit: a:2:{s:5:"count";s:1:"0";s:4:"time";s:10:"1268952165";}
+  _edit_last: '1'
+  delicious: a:3:{s:5:"count";s:1:"0";s:9:"post_tags";s:0:"";s:4:"time";s:10:"1268952160";}
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1432693176;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:389;}i:1;a:1:{s:2:"id";i:908;}i:2;a:1:{s:2:"id";i:399;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>When running some unit tests for the Object Mapper project, I found the test suite's execution time had slowed down noticably. I had been spoiled at my previous employer, where I had access to ANTS Profiler. So, I set about finding a performance profiling tool.</p>
+<p>While there are some free profilers out there, the reviews on the web led me to believe they wouldn't be up to the task. I was drawn to dotTrace because of its ReSharper integration. I decided to give it a go with their 30-day trial.</p>
+<p>What you will read in forums is absolutely true: ANTS provides more data, with ReSharper, dotTrace is much easier to use. And, I have learned that more data is not necessarily better. </p>
+<p>It seemed that dotTrace could not trace the code execution once it had been loaded into ReSharper's test runner thread, so I had to write a quick console app to exercise the code I wanted to check.<br />
+dotTrace was able to pinpoint the area of code that plagued me, where I was doing some repetitive MethodInfo lookups. Some caching brought the performance back in line with what it had been. </p>
+<p>During this tweaking process, I found dotTrace's capability to compare test runs to be invaluable! I was able to see in percentage terms how much things improved with the caching. I also removed the caching and saw the performance degrade as expected, so I could be sure it wasn't coincidence. And, I am happy to report that the Console.WriteLine statements in the console app were the most time-consuming piece of the process, so my engine ought be able to withstand the load I understand it will receive in production.</p>
+<p>I strongly considering buying dotTrace when my trial expires. It's a good tool to have in the toolbelt.</p>

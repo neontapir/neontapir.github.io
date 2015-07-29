@@ -1,0 +1,74 @@
+---
+layout: post
+title: Converting a PowerShell script into a pipeline processor
+date: 2012-09-14 12:41:35.000000000 -06:00
+categories:
+- coding
+- professional
+tags:
+- pipeline
+- powershell
+status: publish
+type: post
+published: true
+meta:
+  _syntaxhighlighter_encoded: '1'
+  _edit_last: '5'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1437596826;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:531;}i:1;a:1:{s:2:"id";i:532;}i:2;a:1:{s:2:"id";i:529;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>Ever had a situation where you write a program or script, but it takes forever to execute because of the size of the data set? That happened to me recently.</p>
+<p>At work, we work with fixed-delimited files on occasion. These files represent all the relevant contract data for a company, so they can grow quite large. The one I'm working with today is 1.4 GB in size.</p>
+<p>I already had a PowerShell script that would parse the file, but run against this file, it reduced my machine to a crawl eating up memory before it finished executing 2.5 hours later.</p>
+<p>[sourcecode language="powershell"]<br />
+param($file = (Read-Host &quot;Header file&quot;))</p>
+<p>$lines = @()</p>
+<p>gc $file | select -skip 1 | % {<br />
+  $contractId = $_.substring(6,6).trim()<br />
+  $endDate = $_.substring(12,10).trim()<br />
+  $startDate = $_.substring(22,10).trim()<br />
+  $description = $_.substring(156,80).trim()</p>
+<p>  $data = New-Object PSObject -Property @{<br />
+     ContractID       = $contractId<br />
+     StartDate        = $startDate<br />
+     EndDate          = $endDate<br />
+     Description      = $description<br />
+  }</p>
+<p>  $lines += $data<br />
+}</p>
+<p>$lines<br />
+[/sourcecode]</p>
+<p>Here's the command line I used:</p>
+<pre>PS&gt; .\Parse-ContractHeader.ps1 HEADER.file</pre>
+<p>As you can see, this script reads the file line by line (after skipping the header row), creates an object for each line, puts the object into an array, and then returns the array. This approach works with the data set is small, but it breaks down at some point when the data becomes large.</p>
+<p>What I needed was a script that would input and output to a pipeline, so I'd get the results one line at a time instead of all at once.</p>
+<p>In PowerShell, there's a BEGIN-PROCESS-END structure you can use to handle pipeline input and output. Since my script doesn't need to do anything before or after processing the stream, all I need is a PROCESS block:</p>
+<p>[sourcecode language="powershell"]<br />
+PROCESS {<br />
+  $mfgId = $_.substring(0,6).trim()<br />
+  $contractId = $_.substring(6,6).trim()<br />
+  $endDate = $_.substring(12,10).trim()<br />
+  $startDate = $_.substring(22,10).trim()<br />
+  $cc = $_.substring(127,2).trim()<br />
+  $description = $_.substring(156,80).trim()</p>
+<p>  $data = New-Object PSObject -Property @{<br />
+    ContractID       = $contractId<br />
+    StartDate        = $startDate<br />
+    EndDate          = $endDate<br />
+    Description      = $description<br />
+  }</p>
+<p>  $data<br />
+}<br />
+[/sourcecode]</p>
+<p>The command line is a little different now. I could have put these parts into a BEGIN block, but I wanted the additional versatility of being able to change the input stream.</p>
+<pre>PS&gt; gc HEADER.file | select -skip 1 | .\Parse-ContractHeader.ps1</pre>
+<p>By the way, I also recently learned that if you have a script like <code>Parse-ContractHeader.ps1</code> in your path, you can just refer to it like a built-in cmdlet, like so:</p>
+<pre>PS&gt; gc HEADER.file | select -skip 1 | Parse-ContractHeader</pre>
+<p>After I wrote the second version of this script, I found <a href="http://huddledmasses.org/writing-better-script-functions-for-the-powershell-pipeline/">a PowerShell pipeline script template</a>, which offers the added advantage of being able to elegantly handle both pipeline and parameter input. If I need to do more with this script, I'll give the template a shot.</p>

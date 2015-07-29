@@ -1,0 +1,74 @@
+---
+layout: post
+title: The Object Mapper Domain Model
+date: 2009-12-28 09:36:08.000000000 -07:00
+categories:
+- professional
+tags:
+- association
+- conversion
+- correspondence
+- domain model
+- function
+- object mapper
+- programming
+- properties
+- XML
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  reddit: a:2:{s:5:"count";s:1:"0";s:4:"time";s:10:"1262123916";}
+  delicious: a:3:{s:5:"count";s:1:"0";s:9:"post_tags";s:0:"";s:4:"time";s:10:"1262123916";}
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1427598024;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:399;}i:1;a:1:{s:2:"id";i:407;}i:2;a:1:{s:2:"id";i:443;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>Last time, I <a href="http://neontapir.wordpress.com/2009/12/23/introducing-the-object-mapper/">introduced the object mapper</a>. Here, I describe its domain model.</p>
+<p>The request and response objects that require mapping are plain-old CLR objects with properties for the most part, though there are some arrays to contend with. The challenge is that the request and response objects do not have the same structure.</p>
+<p>Many of the properties have a one-to-one correspondence. For example, a Name field on one request object may align with a Name property on the DataStore request. In some cases, though, the property names are different. </p>
+<p>Other properties share a one-to-many association, so the contents of the source object must be copied to several target properties. And yet other pesky properties share a many-to-one association. For example, a Java application's request might have address, city, state, and ZIP code as separate fields, but they must be combined into a single property of the DataStore request.</p>
+<p>Here's an example of a simple mapping document for a Foo object with Name and Age properties:</p>
+<p>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;<br />
+&lt;Maps&gt;<br />
+	&lt;Source ID=&quot;source1&quot; Type=&quot;Foo&quot;&gt;<br />
+		&lt;Target ID=&quot;target1&quot; Type=&quot;Foo&quot;&gt;<br />
+			&lt;Element ID=&quot;Name&quot; Source=&quot;Name&quot; Target=&quot;Name&quot; /&gt;<br />
+			&lt;Element ID=&quot;Age&quot; Source=&quot;Age&quot; Target=&quot;Age&quot; /&gt;<br />
+		&lt;/Target&gt;<br />
+	&lt;/Source&gt;<br />
+&lt;/Maps&gt;</p>
+<p>There is a Source, which describes a source object. That Source object can be converted into a Target object. Objects have Elements, which describe either properties or fields. Each element has its own source and target attributes to describe what property of the source corresponds to what property of the target.</p>
+<p>So far, so good. Let's say, though, that the source request object doesn't define an Age property, but it's required on the target request. For cases like this, I need the capability to inject a value:</p>
+<p>	&lt;Source ID=&quot;source1&quot; Type=&quot;Foo&quot;&gt;<br />
+		&lt;Target ID=&quot;source1&quot; Type=&quot;Foo&quot;&gt;<br />
+			&lt;Element ID=&quot;Name&quot; Source=&quot;Name&quot; Target=&quot;Name&quot; /&gt;<br />
+			&lt;Inject Target=&quot;Age&quot;&gt;37&lt;/Inject&gt;<br />
+		&lt;/Target&gt;<br />
+	&lt;/Source&gt;</p>
+<p>The Inject node allows me to specify the value I'd like to inject, in this case any target object would have an Age of 37.</p>
+<p>This poses a challenge, because that "37" is a string by virtue of being XML. .NET doesn't offer a way to implicitly make that "37" into the number 37. So, I need a way to convert primitive objects, objects with no properties:</p>
+<p>    &lt;Object Source=&quot;System.String&quot; Target=&quot;System.Int32&quot;&gt;<br />
+        &lt;Function Type=&quot;System.Int32&quot; Method=&quot;Parse&quot; /&gt;<br />
+	&lt;/Object&gt;</p>
+<p>The Function node defines a method to invoke when converting the object. It's a valid child of the Element node as well, so a property can be converted by a function as well. </p>
+<p>Functions can refer to instance methods, which are called against an instance of a type. They can also refer to static methods, which belong to the type itself. One can even specify arguments, for cases like Substring where I might only want the first few letters of a string:</p>
+<p>			&lt;Element ID=&quot;Name&quot; Source=&quot;Name&quot; Target=&quot;Name&quot;&gt;<br />
+				&lt;Function Type=&quot;System.String&quot; Method=&quot;Substring&quot;&gt;<br />
+					&lt;Argument Type=&quot;System.Int32&quot;&gt;0&lt;/Argument&gt;<br />
+					&lt;Argument Type=&quot;System.Int32&quot;&gt;3&lt;/Argument&gt;<br />
+				&lt;/Function&gt;<br />
+            &lt;/Element&gt;</p>
+<p>Sometimes, I may want to convert an array of one type to an array of another by converting each of its members individually by use of the ApplyToEachElement flag:</p>
+<p>    &lt;Object Source=&quot;System.String[]&quot; Target=&quot;System.Int32[]&quot; ApplyToEachElement=&quot;true&quot;&gt;<br />
+        &lt;Function Type=&quot;System.Int32&quot; Method=&quot;Parse&quot; /&gt;<br />
+	&lt;/Object&gt;</p>
+<p>Here, the conversion engine will take an array of strings and convert it to an array of integers by calling int.Parse with each string as an argument.</p>
+<p>That introduces most of the domain concepts of the object mapper. Next post will delve into the components that comprise the object mapper itself.</p>

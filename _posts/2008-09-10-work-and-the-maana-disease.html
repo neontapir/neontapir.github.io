@@ -1,0 +1,32 @@
+---
+layout: post
+title: Work and the Mañana Disease
+date: 2008-09-10 09:48:57.000000000 -06:00
+categories:
+- professional
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  reddit: a:2:{s:5:"count";s:1:"0";s:4:"time";s:10:"1222827999";}
+  delicious: a:3:{s:5:"count";s:1:"0";s:9:"post_tags";s:0:"";s:4:"time";s:10:"1222827998";}
+  _publicize_twitter_user: "@ChuckDurfee"
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1438176690;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1158;}i:1;a:1:{s:2:"id";i:1042;}i:2;a:1:{s:2:"id";i:530;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>I am an advocate of change and refactoring at work, and I was disheartened to receive an email today asking that no one check files into source control unless they are directly related to their sprint, especially the functional requirements. </p>
+<p>I found this missive chilling. I find several examples a day of code that could be improved with simple, well-known refactorings, but now I have a mandate not to! To me, doing preventative maintenance is responsible craft-work, and I'm <a href="http://blog.codinghorror.com/mort-elvis-einstein-and-you/">not alone</a> in believing that.</p>
+<p>I believe the intent of the policy is to lessen our exposure to risk. We had several merge issues recently, probably due to the Herculean task of merging a handful of code streams into a single integration candidate. In addition, our QA resources are spread very thin. With the last few releases sporting slight flaws, I think the concern is that we'll miss something bigger, something critical.</p>
+<p>I agree. We will miss something critical. We'll miss an opportunity to wrestle this alligator to the ground while it's still an adolescent! Every new feature we add gets harder and longer, because the structural changes we need today were put off until later. And, "later often means never", as <a href="http://edhird.blogspot.com/2007/11/conquering-manana-disease.html">Ed Hird says</a>. </p>
+<p>In the beginning, I kept hearing we'll focus on technical initiatives "once [the big roll-out] is complete". Now, it's "once the big roll-out is complete and [this other custom work] is done". My boss cautioned me early on that this stream of work never stops. I'm very worried that my workplace is fast succumbing to the "ma&ntilde;ana disease". </p>
+<p>When I was hired, I was told there wasn't enough time. So I rewrote a library in the course of adding functionality. I wrote unit tests to ensure I didn't break anything. And things were looking up. As time has passed, I've found there are some forces in play in the larger game that I'm not sure how to handle. That library I updated was isolated and my project introduced no breaking changes, which is the opposite of the fragile ball of mud that is the main code. However, these issues can be resolved with baby steps and careful testing.</p>
+<p>What I can't solve with design principles and unit testing is aversion to change. We have been conducting Lunch and Learn sessions for months, and we get the same quarter of the developers -- the Early Adopters. We taught ourselves LINQ, fluent interface design, functional programming, and the like. But how do we get the Late Bloomers to where we are, when they don't seem to want to come? Any ideas?</p>

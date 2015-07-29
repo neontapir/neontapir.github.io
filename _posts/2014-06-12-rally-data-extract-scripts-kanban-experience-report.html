@@ -1,0 +1,128 @@
+---
+layout: post
+title: 'Rally data extract scripts: a Kanban experience report'
+date: 2014-06-12 07:39:08.000000000 -06:00
+categories:
+- coding
+- process
+- professional
+tags:
+- bash
+- data
+- experience
+- kanban
+- script
+- story
+status: publish
+type: post
+published: true
+meta:
+  _wpas_done_all: '1'
+  _syntaxhighlighter_encoded: '1'
+  _yoast_wpseo_linkdex: '79'
+  _yoast_wpseo_focuskw: data
+  _publicize_twitter_user: "@ChuckDurfee"
+  _edit_last: '5'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1438144425;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1361;}i:1;a:1:{s:2:"id";i:1350;}i:2;a:1:{s:2:"id";i:1409;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>This is the second in a series of blog posts about implementing Kanban on my current project. The first installment was about <a href="http://wp.me/p2vhlC-lM">establishing the flow</a>. This post talks about obtaining the data for the Kanban metrics. Later posts talk about the Excel spreadsheet that consumes the data.</p>
+<p><a href="http://neontapir.com/wp/wp-content/uploads/2014/06/script-bash.jpg"><img class="alignright size-full wp-image-1379" src="assets/script-bash.jpg" alt="script-bash" width="300" height="225" /></a></p>
+<p>My employer has standardized on <a href="http://www.rallydev.com/">Rally</a>, so we are using it for work item management. However, I've found that its Kanban flow support is not as robust as I need. I wanted to create several additional charts on some derived values, so I manually input some data for each story into Excel for my formulas and charts. Of course Rally supports custom applications in JavaScript, but I didn't relish the thought of performing statistical analysis in raw JavaScript. I chose to continue to use Excel for my metrics gathering.</p>
+<p>After creating the first few, I started exploring the data and made more. At first, I would scour the revision history for the data I needed, but I quickly desired some automation. I wrote two shell scripts that query Rally's APIs for data. It currently takes me about 15 minutes a day of data entry to keep pace with the teams, which is short enough that I haven't taken the next step of converting a derivative of that script into a Excel data source.</p>
+<p>Here's the output of my script, with some of the project-specific data scrubbed. I used <a href="http://www.fakenamegenerator.com/">Fake Name Generator</a> to come up with poor Richard.</p>
+<blockquote><p>Fake Name Generator generates a lot more than names. Except when I'm looking for character ideas for a story I'm writing, I only use it for realistic test data.</p></blockquote>
+<pre><code>$ ./storyQuery.sh 53142
+US12345 -- Reorganize test packages to support ease of testing
+Project: Backend
+Release: BETA
+Tags: 
+
+State changes
+18641196378  2014-05-29  None         -------  Cedric Jorgenson
+Beta         2014-05-29  None         -------  Cedric Jorgenson
+Beta         2014-05-29  Ready        -------  Cedric Jorgenson
+Beta         2014-05-29  Design       -------  Gary Bennett
+Beta         2014-05-29  Development  -------  Peggy Bivens
+Beta         2014-05-30  Validation   -------  Richard Chenier
+Beta         2014-05-30  Validation   BLOCKED  Chuck Durfee
+Beta         2014-05-30  Validation   -------  Richard Chenier
+Beta         2014-05-30  Accepted     -------  Cedric Jorgenson
+
+User Count: 2
+Defects: 0 (NONE)
+Blocked: 1 hours
+Design: 0 hours
+Development: 25 hours
+Ready: 0 hours
+Validation: 0 hours
+</code></pre>
+<p>As you can see, the script uses both the story details and <a href="https://rally1.rallydev.com/analytics/doc/">Lookback</a> APIs to get a concise history of the story. The story details API only provides rollup information; I need the Lookback API to get revision history.</p>
+<p>In this case, Cedric is the <a href="http://www.mountaingoatsoftware.com/agile/scrum/product-owner/">product owner</a>, Gary is a quality engineer, and Peggy and Richard are developers on the project. Richard didn't implement the story, so he's handling validation. On stories that are risky or important to the project, a quality engineer will also perform ad-hoc testing.</p>
+<p>My script doesn't do separate lookups to obtain names for person or release IDs, as you can see by the <code>18641205378</code> in the first line. For some enumerated value fields, you can request that Rally "hydrate" a field, but the updating user and release are not among them. Though written in <a href="http://www.gnu.org/s/bash"><code>bash</code></a>, my script uses a <a href="http://www.perl.org/">Perl</a> associative array to inject the names into the output. While there's a more complete call example later, that Perl call looks like this:</p>
+<p>[code language="bash"]<br />
+  | perl -pe '%users = (<br />
+                &quot;10624400656&quot;,&quot;Cedric Jorgenson&quot;,<br />
+                &quot;1191677143&quot; ,&quot;Chuck Durfee&quot;,<br />
+                &quot;12294673246&quot;,&quot;Gary Bennett&quot;,<br />
+                &quot;13318093404&quot;,&quot;Peggy Bivens&quot;,<br />
+                &quot;13304263924&quot;,&quot;Richard Chenier&quot;,<br />
+              );<br />
+              foreach $key (keys %users) { s/$key/$users{$key}/g; }<br />
+              ' \<br />
+[/code]</p>
+<p>The <code>-e</code> option lets you execute Perl scripts inline. The <code>-p</code> option runs the script on each line in turn.</p>
+<p>I use a separate query script to get a new person's name and update the script, which I run a handful of times a month. I get the release by hand, since setting up releases happens only a few times a year.</p>
+<p>Here's how the story query script makes one of the Lookback API REST call gets some of its data. I defined <code>$KANBAN_FIELD</code> and <code>$MY_WORKSAPCE</code> earlier in the script. I parameterized <code>$KANBAN_FIELD</code> because the front-end team has a different workflow than the backend team and hence a different custom field in Rally to store the state.</p>
+<p>[code language="bash"]<br />
+BODY=$(cat &lt;&lt; EOF<br />
+{<br />
+    &quot;find&quot; : { &quot;FormattedID&quot;: &quot;$STORY&quot; },<br />
+    &quot;fields&quot; : [&quot;ObjectID&quot;, &quot;_ValidFrom&quot;, &quot;_ValidTo&quot;, &quot;Release&quot;, &quot;Blocked&quot;, &quot;$KANBAN_FIELD&quot;, &quot;_User&quot;],<br />
+    &quot;compress&quot; : true<br />
+}<br />
+EOF<br />
+)</p>
+<p>RESULTS=$(echo $BODY \<br />
+  | http -a $AUTH -j POST https://rally1.rallydev.com/analytics/v2.0/service/rally/workspace/$MY_WORKSPACE/artifact/snapshot/query.json \<br />
+  | json Results)<br />
+[/code]</p>
+<p>I'm using two CLI tools to help me, <a href="http://httpie.org">httpie</a> and <a href="http://trentm.com/json/">json</a>. HTTPie is a Python script that simplifies cURL-style REST calls. The <code>-b</code> option only outputs the response body. The <code>-a</code> provides my Rally credentials. I don't store those in plaintext in the script, of course.</p>
+<blockquote><p>If you're interested in seeing all the fields during script development, send <code>"fields": true</code> in the POST body.</p></blockquote>
+<p>The <code>json</code> tool is used to extract data from the REST call results. Here, I'm filtering the output to just the inner Results object. You can see <code>json</code>'s capabilities more clearly in the story details REST call:</p>
+<p>[code language="bash"]<br />
+DETAILS=$(http -b -a $AUTH -j GET &quot;$DETAILS_URL?query=(FormattedID = $STORY)&amp;fetch=true&amp;workspace=$WORKSPACE_URL&quot;)<br />
+DETAILS_RESULTS=$(echo $DETAILS | json -D / QueryResult/Results)</p>
+<p>if [[ $RAW = true ]]; then<br />
+  printf &quot;Raw Details\r\n&quot;<br />
+  echo $DETAILS_RESULTS | json<br />
+fi</p>
+<p>STORY_NAME=$(echo $DETAILS_RESULTS | json -a _refObjectName)<br />
+DEFECT_STATUS=$(echo $DETAILS_RESULTS | json -a DefectStatus)<br />
+DEFECT_COUNT=$(echo $DETAILS_RESULTS | json -D / -a Defects/Count)<br />
+PROJECT_NAME=$(echo $DETAILS_RESULTS | json -D / -a Project/_refObjectName)<br />
+RELEASE_NAME=$(echo $DETAILS_RESULTS | json -D / -a Release/_refObjectName)<br />
+TAGS=$(echo $DETAILS_RESULTS | json -D / -a Tags/_tagsNameArray | json -a Name | tr '\n' ',' | sed -e &quot;s/,$//;s/,/, /;&quot;)<br />
+[/code]</p>
+<p>The <code>-D</code> option on <code>json</code> sets the delimeter for the <code>-a</code> command, which causes <code>json</code> to parse each record of an array separately. To handle an array of arrays, you need to call <code>json</code> twice, as is done in for <code>$TAGS</code>. I use <a href="http://en.wikipedia.org/wiki/Tr_(Unix)"><code>tr</code></a> to translate the return character into a comma, and then <a href="http://www.grymoire.com/unix/sed.html"><code>sed</code></a> to do some inline substitutions. I also make use of GNU awk or <a href="http://www.gnu.org/s/gawk/manual/gawk.html"><code>gawk</code></a> to do some aggregation, as you can see from this excerpt:</p>
+<p>[code language="bash"]<br />
+# Display blocked hours<br />
+echo $RESULTS \<br />
+  | json -d, -a _ValidFrom _ValidTo Blocked \<br />
+  | grep true \<br />
+  | sed -e &quot;s/9999-01-01T00:00:00.000Z/${NOW}/g;<br />
+            s/[TZ:-]/ /g;&quot; \<br />
+  | gawk -F, '{d=(mktime($2)-mktime($1))<br />
+              printf (&quot;%02d h\r\n&quot;,d/3600);}' \<br />
+  | gawk '{cnt+=$1}<br />
+         END{printf &quot;Blocked: %s hours\r\n&quot;,cnt?cnt:0}'<br />
+[/code]</p>
+<p>Here, I use <code>json</code> to take the full JSON output of the REST call and strip out everything but the fields I specify. I then look for periods when the story is blocked (where the Blocked flag is true). I use <code>sed</code> to turn Rally's "max datetime" field into <code>$NOW</code>, which I obtain earlier. The first call to <code>gawk</code> takes the period of time and converts it into hours, whereas the second sums those times and reports the grand total. If the story was never blocked, it shows 0.</p>
+<p>Armed with that summary, I then plug the data into my Excel spreadsheet, which is the topic of my next post. Then I'll talk about process violations.</p>

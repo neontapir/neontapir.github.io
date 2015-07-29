@@ -1,0 +1,44 @@
+---
+layout: post
+title: Code Documentation with Sandcastle and doxygen
+date: 2010-01-11 12:21:10.000000000 -07:00
+categories:
+- professional
+tags:
+- CHM
+- documentation
+- doxygen
+- help files
+- LaTeX
+- object mapper
+- RTF
+- sandcastle
+- SHFB
+- XML comments
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  delicious: a:3:{s:5:"count";s:1:"0";s:9:"post_tags";s:0:"";s:4:"time";s:10:"1322627666";}
+  reddit: a:2:{s:5:"count";s:1:"0";s:4:"time";s:10:"1322553635";}
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1435418643;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1350;}i:1;a:1:{s:2:"id";i:908;}i:2;a:1:{s:2:"id";i:397;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>Last time, we talked about <a href="http://neontapir.wordpress.com/2010/01/08/object-mapper-accepting-file-input/">accepting file input</a>, the last feature added to the Object Mapper. Now, it has come time to document the module.</p>
+<p>I use ReSharper to help code in Visual Studio, but it still doesn't generate XML comments as well as I'd like, so I also use GhostDoc, which turns code into better English than ReSharper does. There is still editing to do, for while describing the code in English is marginally useful, GhostDoc still cannot provide context.</p>
+<p>Finding missing documentation was trial and error until I installed the AgentSmith ReSharper plug-in, which made finding them a breeze after I turned solution-wide analysis on and marked missing documentation as a ReSharper error. Once I had all the classes, properties, and methods documented, I set out in search of a tool to convert those XML comments into something nice.</p>
+<p>The first tool I tried was Microsoft's Sandcastle. Sandcastle itself is tough to use, so I went to CodePlex and also downloaded the <a href="http://www.codeplex.com/SHFB">Sandcastle Help File Builder</a>. It does a nice job of creating HTML and compressed help files (CHM).</p>
+<p>I did have to alter a few things. I wanted namespace comments, and dug around a little before I discovered the Project Properties -&gt; Comments expansion button on the right, and I typed those in. I did want to avoid outputting VB.NET and C++ contextual references, so I had to go into the Syntax Filters dialog and disable them. I also customized the root namespaces, help title, HTML help name, and copyright text, and I was ready to go.</p>
+<p>But the requirement was to generate the documentation in Word. For as good as Sandcastle is, it doesn't seem to do anything but HTML and CHM. </p>
+<p>The next tool I tried was <a href="http://www.doxygen.org/">doxygen</a>. It's a UNIX tool with Windows binaries, so it took a little more cajoling. At first, it wouldn't generate any content at all, but I got it working in short order after I saved its configuration file prior to rendering. </p>
+<p>doxygen also supports more formats: LaTeX, RTF, and MAN pages, though it won't do CHM. RTF is a close cousin to Word document formatting, so I had high hopes. However, I found the generated RTF document disappointing, and later found a forum where the author admitted as much. </p>
+<p>LaTeX is a great layout specification language, so I thought it might be a decent stepping stone to a Word doc. I spent a merry while trying to monkey with LaTeX2RTF, a free converter on sourceforge, but the results were disappointing. It couldn't understand doxygen's custom elements.</p>
+<p>I'm still looking for a better solution, any ideas?</p>

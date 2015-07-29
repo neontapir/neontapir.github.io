@@ -1,0 +1,82 @@
+---
+layout: post
+title: Bowling Game kata and frames
+date: 2014-04-15 15:34:50.000000000 -06:00
+categories:
+- coding
+tags:
+- implementation
+- junit
+- kata
+- test
+- unit
+status: publish
+type: post
+published: true
+meta:
+  _yoast_wpseo_linkdex: '73'
+  _yoast_wpseo_focuskw: frames
+  _wpas_skip_4335974: '1'
+  _wpas_skip_5821802: '1'
+  _wpas_skip_28796: '1'
+  _wpas_done_all: '1'
+  _syntaxhighlighter_encoded: '1'
+  _edit_last: '5'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1438144401;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1255;}i:1;a:1:{s:2:"id";i:1272;}i:2;a:1:{s:2:"id";i:528;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>I ran into an interesting scenario after revisiting the Bowling Game kata from memory. The exercise was a small reminder of the power of test-first development. </p>
+<p>I worked through the kata as usual, but I was unable to recall each step, so I wrote the code fresh. I came to the following implementation, which passes the normal JUnit tests:</p>
+<p>[code language="java"]<br />
+public int score() {<br />
+    int score = 0;<br />
+    for(int i = 0; i &lt; 20; i++) {<br />
+      if (scores[i] == 10) {<br />
+        score += scores[i+1] + scores[i+2];<br />
+      }<br />
+      else if (scores[i] + scores[i+1] == 10) {<br />
+        score += scores[i+2];<br />
+      }<br />
+      score += scores[i];<br />
+    }<br />
+    return score;<br />
+  }<br />
+[/code]</p>
+<p>I realized that I'd forgotten to support the notion of frames. An example is the logic for 10 pins. A strike only occurs when the 10 pins are knocked down in the first try in the frame. </p>
+<p>Unit tests are only as good as the use cases they cover. Because I hadn't written a test that implemented the "strike" business rule, I had a faulty implementation.</p>
+<p>Fortunately, it's easy to resolve this situation with test-first development. Here's the failing test I used to exploit this design weakness:</p>
+<p>[code language="java"]<br />
+  @Test<br />
+  public void spareWithTenPins() {<br />
+    g.roll(0);<br />
+    g.roll(10); // spare, not strike<br />
+    g.roll(2);<br />
+    g.roll(1);<br />
+    assertEquals(15, g.score());<br />
+  }<br />
+[/code]</p>
+<p>Next, I fixed the implementation to take attempts in pairs -- that is, a "frame" -- and the <code>spareWithTenPins</code> and other tests passed. Here's the new <code>score()</code> implementation:</p>
+<p>[code language="java"]<br />
+public int score() {<br />
+    int score = 0;<br />
+    for(int f = 0; f &lt; 10; f++) {<br />
+      int i = f * 2;<br />
+      if (scores[i] == 10) {<br />
+        score += scores[i+1] + scores[i+2];<br />
+      }<br />
+      else if (scores[i] + scores[i+1] == 10) {<br />
+        score += scores[i+2];<br />
+      }<br />
+      score += scores[i] + scores[i+1];<br />
+    }<br />
+    return score;<br />
+  }<br />
+[/code]</p>
+<p>It's worth noting that this is not clean code -- I'm not using variables with intention-revealing names, for example. I found that I was somewhat lax about the refactoring step when performing this kata today.</p>

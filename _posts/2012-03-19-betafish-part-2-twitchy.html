@@ -1,0 +1,86 @@
+---
+layout: post
+title: BetaFish Part 2 - Twitchy
+date: 2012-03-19 06:39:44.000000000 -06:00
+categories:
+- coding
+- professional
+tags:
+- code exercise
+- f-sharp
+- F#
+- robocode
+status: publish
+type: post
+published: true
+meta:
+  jabber_published: '1332160814'
+  publicize_results: a:1:{s:7:"twitter";a:1:{i:17953864;a:2:{s:7:"user_id";s:11:"ChuckDurfee";s:7:"post_id";s:18:"181721747039584257";}}}
+  _wpas_done_twitter: '1'
+  _edit_last: '5'
+  _syntaxhighlighter_encoded: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1435151720;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:696;}i:1;a:1:{s:2:"id";i:527;}i:2;a:1:{s:2:"id";i:702;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>Last time, I introduced the idea of building an F# robot for Robocode. The second iteration contains some improvements:</p>
+<p>[sourcecode language="fsharp" collapse="true"]<br />
+namespace Neontapir<br />
+open Robocode<br />
+open System</p>
+<p>type ActionType =<br />
+    | DoNothing // end of game<br />
+    | Search<br />
+    | Evade of float<br />
+    | Attack of float<br />
+    | AvoidWall</p>
+<p>type BetaFish() =<br />
+    inherit Robot()</p>
+<p>    let random = Random(DateTime.Now.Millisecond)<br />
+    let firepower = 1.0</p>
+<p>    let randomTurn (robot:Robot) amount =<br />
+        let direction = random.Next 2<br />
+        match direction with<br />
+            | 1 -&amp;gt; robot.TurnLeft amount<br />
+            | 0 -&amp;gt; robot.TurnRight amount<br />
+            | _ -&amp;gt; failwith &quot;Unexpected direction value&quot;</p>
+<p>     let mutable lastEvent : ActionType = Search</p>
+<p>     override robot.Run() =<br />
+        while true do<br />
+            match lastEvent with<br />
+            | DoNothing -&amp;gt; ()<br />
+            | AvoidWall -&amp;gt;<br />
+                robot.Back 20.0<br />
+                randomTurn robot 30.0<br />
+                lastEvent &amp;lt;- Search<br />
+            | Evade(bearing) -&amp;gt;<br />
+                randomTurn robot (90.0 - bearing)<br />
+                lastEvent &amp;lt;- Search<br />
+            | Attack firepower -&amp;gt;<br />
+                robot.Fire firepower<br />
+            | Search | _ -&amp;gt;<br />
+                robot.Ahead 20.0<br />
+                robot.TurnRight 40.0</p>
+<p>    override robot.OnBulletHit(event) =<br />
+        let newEvent = match lastEvent with<br />
+            | Attack strength -&amp;gt; Attack (strength + 1.0)<br />
+            | _ -&amp;gt; Attack 1.0<br />
+        lastEvent &amp;lt;- newEvent</p>
+<p>    override robot.OnScannedRobot(event : ScannedRobotEvent) = lastEvent &amp;lt;- Attack 1.0<br />
+    override robot.OnBulletMissed(event) = lastEvent &amp;lt;- Search<br />
+    override robot.OnHitByBullet(event : HitByBulletEvent) = lastEvent &amp;lt;- Evade(event.Bearing)<br />
+    override robot.OnHitWall(event) = lastEvent &amp;lt;- AvoidWall<br />
+    override robot.OnDeath(event) = lastEvent &amp;lt;- DoNothing<br />
+    override robot.OnWin(event) = lastEvent &amp;lt;- DoNothing<br />
+[/sourcecode]</p>
+<p>You may recall me saying that the first version of this robot could be defeated by a wall. While trying to implement this feature, it became clear that <code>firepower</code> didn't represent enough state for the BetaFish robot to care about. There were a number of intermediate versions between last post's code and the above, as I experimented with created a class to encapsulate state.</p>
+<p>While trying to use multiple classes, I was stymied for a time by Visual Studio. In an F# project, it wasn't clear to me how to spread my solution over multiple source files. I couldn't reference my other classes. I discovered that in a functional language, it's necessary to order the source files to resolve dependencies, so that items do not depend on other items that are compiled afterward. It turned out that the classes I wanted to use came after the main class in alphabetical order. In Visual Studio, you can reorder source files in an F# project by right-clicking the source file in Source Explorer and moving it up or down.</p>
+<p>After a number of iterations, I discarded that secondary class in favor of a <strong>discriminated union, which I called <code>ActionType</code>. Conceptually, a discriminated union is kind of like a generic C# enumeration, but of course much more useful. For example, notice that the <code>Evade</code> and <code>Attack</code> elements take a <code>float</code> argument, whereas the others don't. And pattern matching provides a more robust way to examine the contents of an <code>ActionType</code> than C# enumeration's ever would. To accomplish this in C#, you'd need a hierarchy of classes.</p>
+<p>The <code>Run</code> method has become more sophisticated also, now matching against the <code>AttackType</code> instead of just a scalar value. Notice that I'm able to name the union type's argument inline, such as in the case of <code>Evade</code>'s <code>bearing</code>. This is a feature of pattern matching, not discriminated unions, as you can see with <code>strength</code> in the <code>OnBulletHit</code> event handler.</p>
+<p>While this code looks more impressive, it actually stinks in battle. If you try this robot, you'll find that once BetaFish engages the enemy, the robot freezes in battle as soon as it's hit, twitching until it is annihilated. Can you see why? The next article in the series contains the answer.</strong></p>

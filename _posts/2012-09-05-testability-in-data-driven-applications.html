@@ -1,0 +1,57 @@
+---
+layout: post
+title: Testability in Data-Driven Applications
+date: 2012-09-05 08:36:47.000000000 -06:00
+categories:
+- coding
+- professional
+tags:
+- testing
+status: publish
+type: post
+published: true
+meta:
+  _cws_is_markdown: '1'
+  _edit_last: '5'
+  _sd_is_markdown: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1438225663;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:908;}i:1;a:1:{s:2:"id";i:1409;}i:2;a:1:{s:2:"id";i:1302;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>At work, there's a renewed interest in testability (<em>I've taken experience at a few positions and combine it into a narrative.</em>)</p>
+<p><img src="assets/IMG_0129.png" alt="Testability" /></p>
+<p>I'm a member of the third team to work on our project. The original team has left, the people who replaced them have moved on, and now we maintain and enhance this application. Often we find ourselves doing forensic analysis, trying to divine the reasoning behind some design choices.</p>
+<p>For example, there was a case recently when we were looking into a defect and found that the logic causing the defective behavior was quite intentional. No one on the team nor the current product owner understands why anyone would ever have wanted the system to behave this way. When faced with a situation like this, tests are a saving grace.</p>
+<p>Sadly, the previous teams made some different choices. This product began in a smaller, less structured organization. What we now think of as cowboy coding was <em>de rigueur</em> back when this product was designed and first implemented. The second team, both to evolve with the company -- and for their own sanity, I'm sure -- implemented some automated testing and were faced with a challenge.</p>
+<p>The application imports contracts and provides accurate price quotes. It is architected as an n-tier web application, but its purpose has evolved into a data warehouse. More and more business logic has moved into the database, yet the unit tests are written in NUnit and C#. As you have guessed, many of these tests are not unit tests in the common sense of the word. They are integration tests and rely heavily on having test data in certain conditions.</p>
+<p>Consequently, the tests go through a Byzantine setup and teardown process that makes the tests very slow and brittle. A number of tests don't clean up properly after themselves, so the suite needs to be run in a certain order to ensure success. In short, adding new tests or changing the data access layer more time-consuming and complicated that it should be.</p>
+<p>So, here we are, the third team. We experience a dynamic tension between two forces. One is Product, who wants to see competitive market features commensurate with a data warehouse solution -- faster processing of contract changes, better analytic reporting, and the like. The other is Development Management, who want to see industry-standard rigor around programming -- fewer defects, curtailed production access and automated testing that can plug into an end-to-end testing regimen of our integrated suite of products. Both groups want to see more predictable and faster feature delivery as we the third team learn about the software and the domain. Today, our most conservative estimates turn out to be optimistic.</p>
+<h2>The Crux of the Matter</h2>
+<p>Looking at the situation, one can rightly say that the application's biggest issue is that it's hard to test. The application calculates correct pricing for supplies based on a number of applicable contracts. As you can imagine, the intersection of these contracts can be complicated, so there are a variety of factors and adjustments that need to be considered. Each one of these data scenarios should be tested before releasing a new feature.</p>
+<p>Let's take unit of measure for example. Let's say I'm buying gum. Gum could be sold in individual pieces (known in UOM terms as an "each"), in packs which I'll call packages, and packages are often shrink-wrapped and bundled into what I'll call sets. As a glimpse into how varied item packaging can be, please consider looking at the 55-page <a href="http://www.gs1.org/docs/gsmp/gdsn/GDSN_Package_Measurement_Rules.pdf">GS1-compliant brand label placement guide</a> PDF for consumable goods found in grocery stores.</p>
+<p>Let's say as a buyer, I want to know the least expensive way I can get 17 sticks of Yummy-Yummy Bubble-Gummy Gum. I have a few avenues to pursue. I can get Yummy-Yummy:</p>
+<ul>
+<li>
+<p>directly from the manufacturer Gobstobbers International,</p>
+</li>
+<li>
+<p>from the Save-A-Lot wholesaler,</p>
+</li>
+<li>
+<p>the convenience store Quik-Bite, or</p>
+</li>
+<li>
+<p>my local grocery store Groceries eXtreme</p>
+</li>
+</ul>
+<p>Some of them stock 3-pack sets of gum. Others stock 5-packs. At Quik-Bite, I can get individual packages. And, it turns out Gobstobbers International has a deal where they will create custom-size and branded packages like 17 Yummy-Yummy sticks to the package, but only if you order a large enough quantity of them.</p>
+<p>To further complicate matters, depending on how many 17-stick units I need, I might be better off buying a box or a case and splitting it myself. And, now that we've discussed quantities, it's worth mentioning that all of these outlets sometimes offer sales, volume pricing, and special discounts to select customers.</p>
+<p>Imagine writing an application that decides who to order gum from. There are a lot of data scenarios to consider!</p>
+<p>It's like that with our application. We need a way to run a myriad of data scenarios through our pricing service to make sure we get the expected results.</p>
+<p>Next time, I'll talk about techniques I've used to improve the testability of applications.</p>

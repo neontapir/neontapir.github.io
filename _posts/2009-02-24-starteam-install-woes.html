@@ -1,0 +1,40 @@
+---
+layout: post
+title: StarTeam install woes
+date: 2009-02-24 10:30:43.000000000 -07:00
+categories:
+- professional
+tags:
+- cross-client
+- jvm
+- memory
+- starteam
+- startup
+status: publish
+type: post
+published: true
+meta:
+  delicious: a:3:{s:5:"count";s:1:"0";s:9:"post_tags";s:0:"";s:4:"time";s:10:"1239078398";}
+  reddit: a:2:{s:5:"count";s:1:"0";s:4:"time";s:10:"1239078398";}
+  _edit_last: '5'
+  _cws_is_markdown: '2'
+  _cws_is_markdown_gmt: '2013-10-19 16:21:35'
+  _yoast_wpseo_focuskw: starteam
+  _wpas_skip_4335974: '1'
+  _wpas_skip_28796: '1'
+  _yoast_wpseo_linkdex: '60'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1438117593;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:696;}i:1;a:1:{s:2:"id";i:399;}i:2;a:1:{s:2:"id";i:685;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>I spent two hours trying to figure out why StarTeam 2008 Release 2 Client wouldn't install correctly on my machine. Whenever I'd launch it, I'd get a "<b>Could not create the Java virtual machine</b>" error.</p>
+<p>Rather than being a problem locating the Java Virtual Machine, as I'd previously thought, turns out it's a memory allocation issue. In <code>StarTeamCP.stjava</code>, the default option set is "-Xmx1024m". My machine doesn't have a gig of RAM to spare for a Java VM, hence the error. By setting it to "-Xmx512m", I was able to get up and running.</p>
+<p>I'm posting this in the hopes someone can profit from my struggles this morning. Deep shame be unto Borland for:</p>
+<p>1) Making the default 1 GB, which is unrealistic for quite a few machines, mine included<br />
+2) Not putting it in their Platform Notes with the release documentation.</p>

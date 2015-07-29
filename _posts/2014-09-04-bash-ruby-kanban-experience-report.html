@@ -1,0 +1,49 @@
+---
+layout: post
+title: 'From Bash to Ruby: A Kanban experience report'
+date: 2014-09-04 21:27:10.000000000 -06:00
+categories:
+- coding
+- process
+tags:
+- bash
+- docker
+- kanban
+- rspec
+- ruby
+- script
+- slop
+- vagrant
+- vcr
+status: publish
+type: post
+published: true
+meta:
+  _publicize_twitter_user: "@ChuckDurfee"
+  _yoast_wpseo_focuskw: ruby
+  _yoast_wpseo_linkdex: '79'
+  _wpas_done_all: '1'
+  _oembed_17c3b9afbfab73336e7427f19c6e1c84: "{{unknown}}"
+  _edit_last: '5'
+  _the_champ_meta: a:5:{s:7:"sharing";i:0;s:16:"vertical_sharing";i:0;s:7:"counter";i:0;s:16:"vertical_counter";i:0;s:11:"fb_comments";i:0;}
+  _sq_fp_title: ''
+  _sq_fp_description: ''
+  _sq_post_keyword: '{"keyword":"ruby","update":1433730103,"rank":0,"country":"com","language":"en"}'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1438144428;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1356;}i:1;a:1:{s:2:"id";i:336;}i:2;a:1:{s:2:"id";i:1361;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p><a href="http://neontapir.com/wp/wp-content/uploads/2014/09/rubylang.png"><img class="alignright size-full wp-image-1410" src="assets/rubylang.png" alt="rubylang" width="128" height="128" /></a></p>
+<p>In the intervening months since my last post, the project has accelerated significantly. We released the first version of the platform, and now are adding features to meet an aggressive migration schedule. I even traveled to Minsk, Belarus to meet our contractor team, to do some process training, and to discuss strategies for improving our communication and throughput.</p>
+<p>There have been some process improvements too. I got tired of manually inputting the output of <a href="http://neontapir.com/wp/2014/06/rally-data-extract-scripts-kanban-experience-report/">my Bash script</a>, so I converted the script into a <strong>Ruby</strong> program. I wanted to share some of the implementation details, specifically the libraries I used. I am a Ruby novice, so I consciously chose not to use the Rally gem that's available as a learning experience.</p>
+<p>The application now supports two output modes: screen (the original output) and a pipe-delimited export file. My needs are very simple, so I use <strong>slop</strong> for command-line option parsing. The Ruby script also accepts an input file, instead of getting data one work item at a time.</p>
+<p>I chose <strong>mustache</strong> as a template engine, and implemented the Strategy design pattern to switch between them based on a command-line parameter. While mustache is frequently used for HTML output, I found that it handles plain-text output just as well.</p>
+<p>I'm using <strong>rspec</strong> for testing. I could not have gotten this application working without <strong>vcr</strong>. This application makes a lot of REST calls via <strong>rest-client</strong> and <strong>json</strong>, and I didn't want to spam Rally every time I ran my test suite. With the vcr module in place, I captured the result of those calls once, and they are replayed when the code under test requests data. Pure gold.</p>
+<p>While I can use the pipe-delimited export file as a data feed for Excel, the script will need some features to emulate some "processing" I was doing by hand. For example, there are still times when work items are moved backward on the Kanban board. In those cases, the Ruby script reports a negative duration in a process state.</p>
+<p>However, the script has had to wait. I've been tasked with getting a Vagrant image and Docker environment for our platform created. The immediate need is so that we can on-ramp temporary developers quickly. There are other use cases, though. We could use Docker as a way to deploy our platform to a cloud provider. We could use the image for our sales folks, who could use a standalone configuration of the platform to demonstrate products to customers. I partnered with our build engineer, and I'm testing the first version now.</p>

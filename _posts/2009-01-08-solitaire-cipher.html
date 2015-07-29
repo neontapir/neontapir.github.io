@@ -1,0 +1,32 @@
+---
+layout: post
+title: Solitaire Cipher
+date: 2009-01-08 23:23:52.000000000 -07:00
+categories:
+- professional
+tags:
+- cipher
+- lunch and learn
+- solitaire
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  delicious: a:3:{s:5:"count";s:1:"0";s:9:"post_tags";s:0:"";s:4:"time";s:10:"1234715383";}
+  reddit: a:2:{s:5:"count";s:1:"0";s:4:"time";s:10:"1234715383";}
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1435480898;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:72;}i:1;a:1:{s:2:"id";i:1158;}i:2;a:1:{s:2:"id";i:74;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>One of the things we do at work is "Lunch and Learn", a weekly seminar led by one of the development staff. Over the past few months, we've been doing the <a href="https://www.schneier.com/solitaire.html">Solitaire Cipher</a>. It was designed as a secure cipher operating with an ordinary deck of playing cards.</p>
+<p>It was an interesting programming challenge, and a refreshing one for me. I hope to post some of the pertinent pieces of code soon. (As a parenthetical note, what public code repository solution would my readers suggest?)</p>
+<p>I used a hybrid test-driven development, and found that it worked well for my style of coding. I'm beginning to use this thinking at work, where we're stubbing out interfaces, but using unit tests to explore their behavior.</p>
+<p>Another thing these challenges are good for is providing a testbed for new technologies. Since we're taking a little more time with this one than usual, I'm going to expand my solution and make it a WCF service. I'm also going to implement the standard .NET framework cryptography hooks, including the ICryptoProvider interface and the SymmetricAlgorithm class.</p>
+<p>If you're looking to do something similar at your workplace, or just for a challenge at home, we're cherry-picking through the <a href="http://rubyquiz.com/">Ruby Quiz</a> list.</p>

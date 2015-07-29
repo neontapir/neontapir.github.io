@@ -1,0 +1,96 @@
+---
+layout: post
+title: 'Object Mapper: Challenges of inferring type information'
+date: 2010-01-04 17:05:23.000000000 -07:00
+categories:
+- professional
+tags:
+- activator
+- C#
+- design patterns
+- dynamic
+- Factory
+- FieldInfo
+- infer
+- ironruby
+- MethodInfo
+- object mapper
+- PropertyInfo
+- Reflection
+- type
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  reddit: a:2:{s:5:"count";s:1:"0";s:4:"time";s:10:"1268952166";}
+  delicious: a:3:{s:5:"count";s:1:"0";s:9:"post_tags";s:0:"";s:4:"time";s:10:"1268952161";}
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1437978267;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:411;}i:1;a:1:{s:2:"id";i:401;}i:2;a:1:{s:2:"id";i:399;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>I left off last time talking about <a href="http://neontapir.com/wp/2009/12/object-mapper-xml-parsing/">array transformation Commands</a>, and mentioned they highlighted the troubles with inferring type information.</p>
+<p>Remember that the parser can take a signature of</p>
+<p><code><br />
+object Convert(object source)<br />
+</code></p>
+<p>The reason all of the Convert methods do not take generics is for Java interoperability. Because the method can take any object, I need to lean heavily on the Reflection library to infer type information. (This is a situation where the new dynamic typing in C# 4.0 would have been invaluable!)</p>
+<p>For example, let's take the ElementSetter command. In IronRuby or C# 4.0, this would be a piece of cake. In Ruby, I could simply say something like:</p>
+<p><code><br />
+property_name = "Name"<br />
+# ... stuff ...<br />
+target.send(property_name, source.send(property_name))<br />
+</code></p>
+<p>Instead, I have to use type metadata to do the work:</p>
+<div style="font-family:Courier New;font-size:10pt;color:black;background:white;">
+<p style="margin:0;"><span style="color:blue;">public</span> <span style="color:blue;">override</span> <span style="color:blue;">object</span> Execute(<span style="color:blue;">object</span> sourceObject, <span style="color:blue;">object</span> targetObject)</p>
+<p style="margin:0;">{</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; ElementInfo sourceProperty = <span style="color:blue;">new</span> ElementInfo(sourceObject.GetType(), _source.ID);</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">object</span> sourceValue = sourceProperty.GetValue(sourceObject);</p>
+<p style="margin:0;">&nbsp;</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; ElementInfo targetProperty = <span style="color:blue;">new</span> ElementInfo(targetObject.GetType(), _target.ID);</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; targetProperty.SetValue(targetObject, sourceValue);</p>
+<p style="margin:0;">&nbsp;</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">return</span> targetObject;</p>
+<p style="margin:0;">}</p>
+</div>
+<p>The ElementInfo class serves as an <a href="http://en.wikipedia.org/wiki/Adapter_pattern">Adapter</a> for the Reflection library's PropertyInfo and FieldInfo classes, so that I can treat properties and fields the same throughout the rest of my code. The ID property of the <tt>_source</tt> and <tt>_target</tt> variables contain the name of the property. Under the covers, the ElementInfo class just defers to the appropriate instance of either a PropertyInfo or FieldInfo class.</p>
+<p>The logic behind finding the right MethodInfo object to represent a conversion function is a little more challenging. I wrote a MethodResolver class to handle the lookup of a method by its name. It can find both instance and static methods.</p>
+<p>Another responsibility of the MethodResolver class is handling generic types. Using the Type.GetMethod() method, I can get a MethodInfo object. MethodInfo contains a method ContainsGenericParameters(). While that is true, there are open generic parameters to the method that need to be bound. </p>
+<p>The last challenge to mention in this post is the creation of objects. How can one create a new instance of an arbitrary type. Generics provide some useful constructs like default(T), but there is no convenient way to invoke this language feature outside of a generic method. And, as it turns out, default(T) doesn't always give me the answer I want.</p>
+<p>I stumbled upon this in writing the array Command Decorator. I have an array of strings. I want to fill an array of integers by converting each member of the string array to an integer. But where do I get the new array from?</p>
+<p>I tried a few casting solutions, but found that if I used an object[], for example, the objects inside the array would appear to lose their type information and be just objects, which caused problems later in the process.</p>
+<p>I also tried to write something like:</p>
+<p><code><br />
+T[] destination = new T[](_source);<br />
+</code></p>
+<p>I have an issue, though. This generic method must now have the constraint new(), which means I have to handle arrays as a special case.</p>
+<p>I found that by creating an ObjectFactory class, it simplified other areas of the code. The ObjectFactory, being a <a href="http://en.wikipedia.org/wiki/Factory_object">Factory</a>, knows how to create new objects. It also holds a cache of previously created objects.</p>
+<div style="font-family:Courier New;font-size:10pt;color:black;background:white;">
+<p style="margin:0;"><span style="color:blue;">public</span> <span style="color:blue;">object</span> Create(<span style="color:#2b91af;">Type</span> targetType)</p>
+<p style="margin:0;">{</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">if</span> (targetType.IsAssignableFrom(<span style="color:blue;">typeof</span>(<span style="color:blue;">string</span>)))</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">return</span> <span style="color:blue;">string</span>.Empty;</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">if</span> (targetType.IsAssignableFrom(<span style="color:blue;">typeof</span>(<span style="color:#2b91af;">DateTime</span>)))</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">return</span> <span style="color:#2b91af;">DateTime</span>.MinValue;</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">if</span> (targetType.IsArray)</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">return</span> <span style="color:#2b91af;">Array</span>.CreateInstance(targetType.GetElementType(), 0);</p>
+<p style="margin:0;">&nbsp;</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">try</span></p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; {</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">return</span> <span style="color:#2b91af;">Activator</span>.CreateInstance(targetType);</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; }</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">catch</span> (<span style="color:#2b91af;">MissingMethodException</span> e)</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; {</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">throw</span> <span style="color:blue;">new</span> <span style="color:#2b91af;">Exception</span>(<span style="color:blue;">string</span>.Format(<span style="color:#a31515;">"No parameterless constructor for type {0}"</span>, targetType), e);</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; }</p>
+<p style="margin:0;">}</p>
+</div>
+<p>Activator lives in the System namespace, and it's what the .NET Framework uses for instantiating objects in AppDomains. It works for my purposes, but as you can see, I did end up with some special handling of arrays in the end.</p>
+<p>Having talked about some of the challenges of type inferrence, next post will discuss the conversion engine itself.</p>

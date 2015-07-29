@@ -1,0 +1,62 @@
+---
+layout: post
+title: 'Establishing the Flow: a Kanban experience report'
+date: 2014-06-05 07:29:17.000000000 -06:00
+categories:
+- process
+- professional
+tags:
+- development
+- experience
+- git
+- kanban
+- Rally
+- scrum
+- Stash
+- state
+- team
+status: publish
+type: post
+published: true
+meta:
+  _wpas_done_all: '1'
+  _yoast_wpseo_linkdex: '75'
+  _yoast_wpseo_focuskw: flow
+  _cws_is_markdown: '2'
+  _cws_is_markdown_gmt: '2014-06-05 05:47:20'
+  _publicize_twitter_user: "@ChuckDurfee"
+  _edit_last: '5'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1438144405;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1047;}i:1;a:1:{s:2:"id";i:1361;}i:2;a:1:{s:2:"id";i:1413;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p><a href="http://neontapir.com/wp/wp-content/uploads/2014/06/simple-kanban-board.png"><img src="assets/simple-kanban-board.png" alt="simple-kanban-board" width="293" height="195" class="alignright size-full wp-image-1384" /></a></p>
+<p>To my mind, Kanban the process is a good fit for managing software projects in a startup situation, like we have at my current employer. In his book <em>The Lean Startup</em>, Eric Ries talks about the importance of build-measure-learn feedback loops. Kanban supports the measure phase of this feedback loop through rich metrics.</p>
+<blockquote><p>
+  I'd like to preface this blog series by saying that it's only been eight weeks since Kanban was applied in earnest on this project, and while I've done this before, examples should not be taken as a definitive statement of best practice. In fact, there are a number of places where potential improvements are obvious. Note also that this project has a very aggressive delivery timeline and that date has limited the number and scope of improvements the team is willing to undertake.
+</p></blockquote>
+<p>On this project, we have about 10 people here in Colorado and another 20 contractors in eastern Europe. If we were using scrum, I'd be a scrum master to all those teams, as well as a "release train engineer" in SAFe parlance. I'm honestly not sure what the analogous role is called with Kanban teams, since many Kanban teams are self-managed. Because project manager has a specific meaning at my employer, the best title I've come up with is "project coordinator" or maybe "technical project manager" (although that title has baggage too).</p>
+<p>When I was tasked with implementing Kanban for this project, I started by talking to the team about workflows they have enjoyed using in the past. I used the <a href="http://getkanban.com">getKanban</a> game to illustrate how a well-considered Kanban flow operates, and the team still talks about the game. We ended up adopting a similar flow to getKanban's for our backend team.</p>
+<ul>
+<li>In getKanban, the states are: Ready, Design Doing, Design Done, Development Doing, Development Done, Test, and Deployed. </li>
+<li>For our backend team board, we chose Ready, Design, Development, Validation and Accepted. </li>
+<li>The front-end team chose different states: Ready, Requirements, Wireframes, Data Contracts (where we identify API changes and groom stories for the backend team), Proof of Concept, Production Ready, Validation, and then Accepted.</li>
+</ul>
+<blockquote><p>
+  There was a lot of confusion about the Proof of Concept and Production Ready columns, which I renamed after the first delivery milestone to Development and Deployment. I'm also finding that stories on the front-end board don't spend significant time in Wireframes or Data Contracts, so I'm considering consolidating Requirements, Wireframes and Data Contracts into a "Design" step.
+</p></blockquote>
+<p>I spent time with both teams establishing some exit criteria for each step in the workflow. On the backend board, stories exit Ready when they are groomed, including acceptance criteria and test scenarios. During Design, the developer, often in partnership with a quality engineer, comes up with test suites and a high-level design approach, at least to the component and API level. Then, during Development, they create the implementation as well as any <a href="http://junit.org">JUnit</a> and <a href="http://www.fitnesse.org">FitNesse</a> fixtures needed to exercise their code. After a code review, the story enters Validation where the functionality is exercised by FitNesse as well as ad-hoc testing. Then, the PO accepts the story. Should we decide at some point that the story is no longer desired, it gets moved to Rejected.</p>
+<blockquote><p>
+  In practice, team members often break these exit criteria, and we went through a couple of weeks of blocking stories that didn't pass muster. I found this was an effective way to get the team to pay attention to exit criteria. With a team this large, it's hard to get everyone together at once. I discovered that I underestimated the communications effort -- both in terms of a Russian/English language barrier as well as need for repetition.
+</p></blockquote>
+<p>We use <a href="http://github.com"><code>git</code></a> for source control, specifically the Atlassian server project <a href="https://www.atlassian.com/software/stash"><code>Stash</code></a>, which allows us to keep our code behind our firewall and to use LDAP for user access. We use pull requests for code reviews, because Stash offers similar reviewing capabilities to <a href="http://github.com">github</a>.</p>
+<blockquote><p>
+  The eastern European team is used to <code>Subversion</code> and new to <code>git</code>, and that's caused some confusion with branching strategies. When one team reported they were spending man-days handling merge conflicts, I suspect it is either because of the way they handle branching or how they have configured git. In my experience, after some explanation, merge issues of this magnitude arise much less frequently with git. The tiny size of our initial code base is also a contributing factor -- there is a lot of contention for certain key files. I've challenged the team to dig into why that file and the code it contains are involved in so many of our features to make sure they are avoiding creating a <a href="http://en.wikipedia.org/wiki/God_object">God object</a> or the like.
+</p></blockquote>
+<p>The next post digs into the data collection aspect of a Kanban flow. Later posts talk about my Excel spreadsheet that consumes that data, what metrics I pull, and process violations.</p>

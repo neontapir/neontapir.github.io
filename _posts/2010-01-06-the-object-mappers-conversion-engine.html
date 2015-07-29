@@ -1,0 +1,101 @@
+---
+layout: post
+title: 'Object Mapper: Conversion Engine and Conditional Commands'
+date: 2010-01-06 17:50:11.000000000 -07:00
+categories:
+- professional
+tags:
+- Boodhoo
+- C#
+- code
+- conditional
+- conversion
+- delegate
+- design patterns
+- engine
+- Factory
+- lambda
+- Nothin' But .NET
+- object mapper
+- Predicate
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  delicious: a:3:{s:5:"count";s:1:"0";s:9:"post_tags";s:0:"";s:4:"time";s:10:"1268952158";}
+  reddit: a:2:{s:5:"count";s:1:"0";s:4:"time";s:10:"1268952164";}
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1433428237;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:401;}i:1;a:1:{s:2:"id";i:407;}i:2;a:1:{s:2:"id";i:416;}}}}
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>Last time, I talked about <a href="http://neontapir.wordpress.com/2009/12/30/object-mapper-xml-parsing/">the mapping document parser</a> component of my object mapper.</p>
+<p>The other component, the Conversion Engine, is the workhorse of the Object Mapper. Its ObjectConversionEngine class is the public interface to conversion functionality, and it exposes methods with the following signatures:</p>
+<p><code><br />
+object Convert(object source)<br />
+T Convert(object source)<br />
+object Convert(object source, object target)<br />
+</code></p>
+<p>The first two signatures are used when constructing a new instance of the target object. The generic overload makes use of the extra type information to attempt to use .NET type converters when all else fails. The final signature is used when updating an existing target object.</p>
+<p>When asked to convert an object, the engine will first try to locate a mapping that matches the source and target object types. If it finds a mapping, it invokes the mapping's Command against the source object. Being a Composite, the invocation will cascade down to each individual leaf element.</p>
+<p>I wanted to mention two things about this process. Because we may need to create an object in a multi-step process, a Source can have multiple Targets. After each Target's command is executed, the result is cached in the ObjectFactory so it can be injected by a later command.</p>
+<p>However, it's easy to imagine a situation where I may want to do something conditionally. For example, if I have an array of addresses on my source type, my destination type may have a PrimaryAddress property and a SecondaryAddresses array. In this case, I want the first address of the source to map to the PrimaryAddress property and the rest to go into the array.</p>
+<p>For this, I need a new type of command, a ConditionalCommand. The XML looks like this:</p>
+<p>	&lt;Object Source=&quot;&quot;System.String&quot;&quot; Target=&quot;&quot;System.String&quot;&quot;&gt;<br />
+        &lt;If Operation=&quot;&quot;Equals&quot;&quot; Operand=&quot;&quot;SomeValue&quot;&quot;&gt;true&lt;/If&gt;<br />
+        &lt;Else&gt;false&lt;/Else&gt;<br />
+	&lt;/Object&gt;</p>
+<p>I thought about how to implement this for a while. When I specified this feature, I'd envisioned using expression trees. When I found out I was restricted to C# 2.0, I even spiked a version using an IL generator to create methods programatically using Reflection.Emit!</p>
+<p>IL generation is not for the faint of heart, and I told myself there's got to be a better way! What I wanted originally was a lambda, which thanks to J.P. Boodhoo's <a href="http://blog.developwithpassion.com">Nothin' But .NET </a>course I knew was just syntactic sugar for delegates.</p>
+<p>I defined a Condition delegate type:</p>
+<p><code><br />
+bool Condition(object source, out object result, params object[] arguments)<br />
+</code></p>
+<p>And then I created a ConditionalCommandBuilder to create them. It's really a Factory class, but I preferred the name "builder" here. It uses a fluent interface, so the If methods return a ConditionalCommandBuilder for chaining.</p>
+<div style="font-family:Courier New;font-size:10pt;color:black;background:white;">
+<p style="margin:0;"><span style="color:blue;">public</span> <span style="color:#2b91af;">ConditionalCommandBuilder</span> IfObject(<span style="color:blue;">string</span> operation, <span style="color:blue;">object</span> operand, <span style="color:#2b91af;">ICommand</span> command)</p>
+<p style="margin:0;">{</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; Predicate predicate = GetPredicate(operation, operand);</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:#2b91af;">Condition</span> condition = <span style="color:blue;">delegate</span>(<span style="color:blue;">object</span> source, <span style="color:blue;">out</span> <span style="color:blue;">object</span> result, <span style="color:blue;">object</span>[] arguments)</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">if</span> (predicate(source))</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; result = command.Execute(source, arguments);</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">return</span> <span style="color:blue;">true</span>;</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</p>
+<p style="margin:0;">&nbsp;</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; result = <span style="color:blue;">null</span>;</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">return</span> <span style="color:blue;">false</span>;</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; };</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; _conditions.Add(condition);</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">return</span> <span style="color:blue;">this</span>;</p>
+<p style="margin:0;">}</p>
+</div>
+<p>The GetPredicate() command returns a Predicate, which is a delegate defined in the .NET Framework. The operation variable defines what type of predicate to retrieve, such as Equals, Exists, orGreaterThan. The operand value given to the delegate is captured for later use.</p>
+<p>Perhaps the most interesting GetPredicate() method is the one that retrieves CompareTo() results:</p>
+<div style="font-family:Courier New;font-size:10pt;color:black;background:white;">
+<p style="margin:0;"><span style="color:blue;">private</span> Predicate GetCompareToPredicate(<span style="color:blue;">object</span> operand, ICollection compareToValues)</p>
+<p style="margin:0;">{</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; Predicate predicate = <span style="color:blue;">delegate</span>(<span style="color:blue;">object</span> source)</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:#2b91af;">Type</span> type = source.GetType();</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; MethodInfo compareTo = type.GetMethod(<span style="color:#a31515;">"CompareTo"</span>, <span style="color:blue;">new</span> <span style="color:#2b91af;">Type</span>[] { <span style="color:blue;">typeof</span>(<span style="color:blue;">object</span>) });</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">if</span> (<span style="color:blue;">null</span> != compareTo)</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">object</span> converted = <span style="color:#2b91af;">TypeResolver</span>.ConvertTo(type, operand);</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">return</span> compareToValues.Contains((<span style="color:blue;">int</span>)compareTo.Invoke(source, <span style="color:blue;">new</span> <span style="color:blue;">object</span>[] { converted }));</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</p>
+<p style="margin:0;">&nbsp;</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">throw</span> <span style="color:blue;">new</span> <span style="color:#2b91af;">Exception</span>(<span style="color:blue;">string</span>.Format(<span style="color:#a31515;">"{0} must implement CompareTo(Object) to use the GreaterThan conditional"</span>, type));</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; };</p>
+<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">return</span> predicate;</p>
+<p style="margin:0;">}</p>
+</div>
+<p>The TypeResolver class is analogous to the MethodResolver class I talked about in a previous post, but it finds types by name instead of methods.</p>
+<p>One advantage to coding with design patterns is that they isolate concerns. Once I got a ConditionCommand to be created correctly, the rest of the conversion engine worked like a charm!</p>
