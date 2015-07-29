@@ -33,9 +33,9 @@
 
                 {% if page.author %}
                 <li>
-                    <a href="{{ '/search/?a=' | append: page.author | prepend: site.baseurl }}">
+                    <a href="{{ '/search/?a=' | append: page.author.display_name | prepend: site.baseurl }}">
                         <i class="fa fa-user"></i>
-                        {{ page.author }}
+                        {{ page.author.display_name }}
                     </a>
                 </li>
                 {% if page.icons %}
