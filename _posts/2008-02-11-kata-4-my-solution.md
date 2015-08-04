@@ -9,14 +9,6 @@ tags:
 - dry
 - munging
 - programming
-status: publish
-type: post
-published: true
-meta:
-  delicious: a:3:{s:5:"count";s:1:"0";s:9:"post_tags";s:0:"";s:4:"time";s:10:"1216177851";}
-  reddit: a:2:{s:5:"count";s:1:"0";s:4:"time";s:10:"1216177853";}
-  _edit_last: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1431192145;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:527;}i:1;a:1:{s:2:"id";i:860;}i:2;a:1:{s:2:"id";i:78;}}}}
 author:
   login: Chuck
   email: chuck@neontapir.com
@@ -26,12 +18,16 @@ author:
 excerpt: !ruby/object:Hpricot::Doc
   options: {}
 ---
-<p><a href="http://web.archive.org/web/20131016084024/http://codekata.pragprog.com/2007/01/kata_four_data_.html">Kata 4</a> is about data munging. We're asked to download a couple of text files and extract some data. The first is weather data (<a href="#listing1">Listing 1</a>). The second is soccer data (<a href="#listing2">Listing 2</a>). <a href="#listing3">Listing 3</a> is the DRY unified version. I combined the programs, but they could just as easily have been two programs.</p>
-<p>Then, we were asked to answer some questions. I'm going to answer them out of order. The writing of the first program certainly did alter my approach to the second. In fact, as you can see, the second program is almost identical to the first, because I retooled the first program to create the second program. </p>
-<p>I can't say whether factoring out code is <strong>always</strong> a good thing, but I think it certainly was in the case. Premature factoring is a waste of effort, but once the commonality emerges, I think factoring is often the right thing to do. I don't think the readability or maintainability of this particular program suffered too much, but I agree it can quickly become a concern in larger programs.</p>
-<p>See also my previous Kata posts: <a href="http://neontapir.wordpress.com/2008/01/26/code-kata-1-my-solution/">Kata 1</a>, <a href="http://neontapir.wordpress.com/2008/01/31/kata-2-my-solution/">Kata 2</a> and <a href="http://neontapir.wordpress.com/2008/02/04/kata-3-my-solution/">Kata 3</a>.</p>
-<p><!--more--></p>
-<p><a name="listing1"></a><strong>Listing 1</strong>: Weather data</p>
+[Kata 4](http://web.archive.org/web/20131016084024/http://codekata.pragprog.com/2007/01/kata_four_data_.html) is about data munging. We're asked to download a couple of text files and extract some data. The first is weather data ([Listing 1](#listing1)). The second is soccer data ([Listing 2](#listing2)). [Listing 3](#listing3) is the DRY unified version. I combined the programs, but they could just as easily have been two programs.
+
+Then, we were asked to answer some questions. I'm going to answer them out of order. The writing of the first program certainly did alter my approach to the second. In fact, as you can see, the second program is almost identical to the first, because I retooled the first program to create the second program.
+
+I can't say whether factoring out code is **always** a good thing, but I think it certainly was in the case. Premature factoring is a waste of effort, but once the commonality emerges, I think factoring is often the right thing to do. I don't think the readability or maintainability of this particular program suffered too much, but I agree it can quickly become a concern in larger programs.
+
+See also my previous Kata posts: [Kata 1](http://neontapir.wordpress.com/2008/01/26/code-kata-1-my-solution/), [Kata 2](http://neontapir.wordpress.com/2008/01/31/kata-2-my-solution/) and [Kata 3](http://neontapir.wordpress.com/2008/02/04/kata-3-my-solution/).
+
+<a name="listing1"></a>**Listing 1**: Weather data
+
 <pre><span class="kwrd">using</span> System;
 <span class="kwrd">using</span> System.IO;
 <span class="kwrd">using</span> System.Text.RegularExpressions;
@@ -42,10 +38,10 @@ excerpt: !ruby/object:Hpricot::Doc
     {
         <span class="kwrd">static</span> <span class="kwrd">void</span> Main()
         {
-            PrintSmallestDaySpread();          
+            PrintSmallestDaySpread();
             Console.ReadLine();
         }
-        
+
         <span class="kwrd">static</span> <span class="kwrd">void</span> PrintSmallestDaySpread() {
             <span class="kwrd">string</span> dayWithSmallestSpread = <span class="str">"(none)"</span>;
             <span class="kwrd">int</span> smallestSpread = <span class="kwrd">int</span>.MaxValue;
@@ -54,12 +50,12 @@ excerpt: !ruby/object:Hpricot::Doc
                     <span class="kwrd">while</span> (! sr.EndOfStream) {
                         <span class="kwrd">string</span> s = sr.ReadLine();
                         Match m = Regex.Match(s, <span class="str">@"^s+(d+)s+(d+)s+(d+)"</span>);
-                        <span class="kwrd">if</span> (m.Groups.Count &gt; 1) {
+                        <span class="kwrd">if</span> (m.Groups.Count > 1) {
                             <span class="kwrd">string</span> day = m.Groups[1].ToString();
                             <span class="kwrd">int</span> maxTemp = Convert.ToInt32(m.Groups[2].ToString());
                             <span class="kwrd">int</span> minTemp = Convert.ToInt32(m.Groups[3].ToString());
                             <span class="kwrd">int</span> spread = Math.Abs(maxTemp - minTemp);
-                            <span class="kwrd">if</span> (spread &lt; smallestSpread) {
+                            <span class="kwrd">if</span> (spread < smallestSpread) {
                                 smallestSpread = spread;
                                 dayWithSmallestSpread = day;
                             }
@@ -68,10 +64,12 @@ excerpt: !ruby/object:Hpricot::Doc
                 }
             }
             Console.WriteLine(<span class="str">"The day with the smallest spread is day {0}"</span>, dayWithSmallestSpread);
-        } 
-    } 
+        }
+    }
 }</pre>
-<p><a name="#listing2"></a><strong>Listing 2</strong>: Soccer data</p>
+
+<a name="#listing2"></a>**Listing 2**: Soccer data
+
 <pre><span class="kwrd">using</span> System;
 <span class="kwrd">using</span> System.IO;
 <span class="kwrd">using</span> System.Text.RegularExpressions;
@@ -94,12 +92,12 @@ excerpt: !ruby/object:Hpricot::Doc
                     <span class="kwrd">while</span> (! sr.EndOfStream) {
                         <span class="kwrd">string</span> s = sr.ReadLine();
                         Match m = Regex.Match(s, <span class="str">@"^s+d+.s+(w+)s+d+s+d+s+d+s+d+s+(d+)s+-s+(d+)"</span>);
-                        <span class="kwrd">if</span> (m.Groups.Count &gt; 1) {
+                        <span class="kwrd">if</span> (m.Groups.Count > 1) {
                             <span class="kwrd">string</span> team = m.Groups[1].ToString();
                             <span class="kwrd">int</span> goalsFor = Convert.ToInt32(m.Groups[2].ToString());
                             <span class="kwrd">int</span> goalsAgainst = Convert.ToInt32(m.Groups[3].ToString());
                             <span class="kwrd">int</span> spread = Math.Abs(goalsFor - goalsAgainst);
-                            <span class="kwrd">if</span> (spread &lt; smallestSpread) {
+                            <span class="kwrd">if</span> (spread < smallestSpread) {
                                 smallestSpread = spread;
                                 teamWithSmallestSpread = team;
                             }
@@ -112,7 +110,9 @@ excerpt: !ruby/object:Hpricot::Doc
     }
 }
 </pre>
-<p><a name="#listing3"></a><strong>Listing 3</strong>: Unified version</p>
+
+<a name="#listing3"></a>**Listing 3**: Unified version
+
 <pre><span class="kwrd">using</span> System;
 <span class="kwrd">using</span> System.IO;
 <span class="kwrd">using</span> System.Text.RegularExpressions;
@@ -128,12 +128,12 @@ excerpt: !ruby/object:Hpricot::Doc
                     <span class="kwrd">while</span> (! sr.EndOfStream) {
                         <span class="kwrd">string</span> s = sr.ReadLine();
                         Match m = Regex.Match(s, regex);
-                        <span class="kwrd">if</span> (m.Groups.Count &gt; 1) {
+                        <span class="kwrd">if</span> (m.Groups.Count > 1) {
                             <span class="kwrd">string</span> day = m.Groups[1].ToString();
                             <span class="kwrd">int</span> maxTemp = Convert.ToInt32(m.Groups[2].ToString());
                             <span class="kwrd">int</span> minTemp = Convert.ToInt32(m.Groups[3].ToString());
                             <span class="kwrd">int</span> spread = Math.Abs(maxTemp - minTemp);
-                            <span class="kwrd">if</span> (spread &lt; smallestSpread) {
+                            <span class="kwrd">if</span> (spread < smallestSpread) {
                                 smallestSpread = spread;
                                 itemWithSmallestSpread = day;
                             }
@@ -144,41 +144,42 @@ excerpt: !ruby/object:Hpricot::Doc
             <span class="kwrd">return</span> itemWithSmallestSpread;
         }
     }
-<font color="#008000"></font>
+
     <span class="kwrd">public</span> <span class="kwrd">class</span> Kata4Part3
     {
         <span class="kwrd">static</span> <span class="kwrd">void</span> Main()
         {
             <span class="kwrd">string</span> itemWithSmallestSpread = Kata4Munger.ExtractSmallestDifference(<span class="str">@"....weather.dat"</span>, <span class="str">@"^s+(d+)s+(d+)s+(d+)"</span>);
             Console.WriteLine(<span class="str">"The day with the smallest spread is day {0}"</span>, itemWithSmallestSpread);
-            
-            itemWithSmallestSpread = Kata4Munger.ExtractSmallestDifference(<span class="str">@"....football.dat"</span>, <span class="str">@"^s+d+.s+(w+)s+d+s+d+s+d+s+d+s+(d+)s+-s+(d+)"</span>); 
+
+            itemWithSmallestSpread = Kata4Munger.ExtractSmallestDifference(<span class="str">@"....football.dat"</span>, <span class="str">@"^s+d+.s+(w+)s+d+s+d+s+d+s+d+s+(d+)s+-s+(d+)"</span>);
             Console.WriteLine(<span class="str">"The team with the smallest goal spread is {0}"</span>, itemWithSmallestSpread);
             Console.ReadLine();
         }
     }
 }</pre>
-<p>.csharpcode, .csharpcode pre<br />
-{<br />
-	font-size: small;<br />
-	color: black;<br />
-	font-family: consolas, "Courier New", courier, monospace;<br />
-	background-color: #ffffff;<br />
-	/*white-space: pre;*/<br />
-}<br />
-.csharpcode pre { margin: 0em; }<br />
-.csharpcode .rem { color: #008000; }<br />
-.csharpcode .kwrd { color: #0000ff; }<br />
-.csharpcode .str { color: #006080; }<br />
-.csharpcode .op { color: #0000c0; }<br />
-.csharpcode .preproc { color: #cc6633; }<br />
-.csharpcode .asp { background-color: #ffff00; }<br />
-.csharpcode .html { color: #800000; }<br />
-.csharpcode .attr { color: #ff0000; }<br />
-.csharpcode .alt<br />
-{<br />
-	background-color: #f4f4f4;<br />
-	width: 100%;<br />
-	margin: 0em;<br />
-}<br />
-.csharpcode .lnum { color: #606060; }</p>
+
+.csharpcode, .csharpcode pre
+ {
+ font-size: small;
+ color: black;
+ font-family: consolas, "Courier New", courier, monospace;
+ background-color: #ffffff;
+ /*white-space: pre;*/
+ }
+ .csharpcode pre { margin: 0em; }
+ .csharpcode .rem { color: #008000; }
+ .csharpcode .kwrd { color: #0000ff; }
+ .csharpcode .str { color: #006080; }
+ .csharpcode .op { color: #0000c0; }
+ .csharpcode .preproc { color: #cc6633; }
+ .csharpcode .asp { background-color: #ffff00; }
+ .csharpcode .html { color: #800000; }
+ .csharpcode .attr { color: #ff0000; }
+ .csharpcode .alt
+ {
+ background-color: #f4f4f4;
+ width: 100%;
+ margin: 0em;
+ }
+ .csharpcode .lnum { color: #606060; }

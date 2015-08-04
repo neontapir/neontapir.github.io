@@ -6,32 +6,32 @@ url: http://localhost:4000
 baseurl: ""
 title: Chuck Durfee
 description: The neon tapir, casting his eerie glow upon the masses
-avatar: /assets/img/ogp.png
+avatar: /assets/img/tapir.png
 
 #
 # Icons
 #
 icons:
   rss: true
-  email:
+  email: chuck@neontapir.com
   github: neontapir
   bitbucket:
-  twitter: neontapir
-  facebook:
-  google_plus:
+  twitter: ChuckDurfee
+  facebook: chuck.durfee
+  google_plus: +ChuckDurfee
   tumblr:
   behance:
   dribbble:
-  flickr:
-  instagram:
-  linkedin:  # full URL
+  flickr: tangentier
+  instagram: neontapir
+  linkedin: https://www.linkedin.com/in/neontapir # full URL
   pinterest:
   reddit:
   soundcloud:
-  stack_exchange:  # full URL
+  stack_exchange: http://stackexchange.com/users/19520/neontapir # full URL
   steam:
-  wordpress:
-  youtube:
+  wordpress: neontapir
+  youtube: neontapir
 
 #
 # Prettify url.
@@ -70,7 +70,7 @@ paginate_path: page/:num
 #
 share_buttons: false
 ogp:
-  image_url: http://qckanemoto.github.io/jekyll-qck-theme/assets/img/ogp.png
+  image_url: /assets/img/tapir.png
   fb:
     admin: # facebook admin id
     app_id: # facebook application id

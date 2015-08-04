@@ -9,34 +9,30 @@ tags:
 - code exercise
 - picard iteration
 - programming
-status: publish
-type: post
-published: true
-meta:
-  reddit: a:2:{s:5:"count";s:1:"0";s:4:"time";s:10:"1201749297";}
-  delicious: a:3:{s:5:"count";s:1:"0";s:9:"post_tags";s:0:"";s:4:"time";s:10:"1201749297";}
-  _edit_last: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1436029343;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:528;}i:1;a:1:{s:2:"id";i:880;}i:2;a:1:{s:2:"id";i:529;}}}}
 author:
   login: Chuck
   email: chuck@neontapir.com
   display_name: Chuck
   first_name: Chuck
   last_name: Durfee
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
 ---
-<p><a href="http://web.archive.org/web/20131016085418/http://codekata.pragprog.com/2007/01/kata_two_karate.html" title="Code Kata 2">Code Kata 2</a> was harder than Kata 1. Dave is right, it's hard to come up with  five different ways to do something!  However, I think I have five sufficiently different approaches to warrant a post. My code, in C#, is below the More tag.</p>
-<p>Approach 1 is a simple for loop, starting at the bottom and working its way up.  Approach 2 uses a different looping mechanism for variety, but it does its comparisons from both ends of the array, which is faster than Approach 1 for values towards the larger end of the array.</p>
-<p>Approach 3 leverages the fact that in C#, the List object has a built-in IndexOf function, and frankly is the way I would normally implement it.</p>
-<p>Approach 4 creates a Dictionary with index/value pairs (in other words, a hash table), then determines the result. Lookups after the hash is built should be very quick. However, for a large array, there's a lot of overhead in creating the hash, and the hash would need to be maintained or recomputed if the array changes.</p>
-<p>Approach 5 uses a bifurcation algorithm, basically implementing the <a href="http://en.wikipedia.org/wiki/Picard_iteration" title="Picard iteration">Picard Iteration</a> approach of successive approximations. By far, it was the hardest to write. It splits the array in half, checks which half the target value would be in, and repeats until it finds the target value or proves the target's not in the array. For a small array like this, it's overkill. For sparse lookups against a large array, it might even prove to be the fastest.</p>
-<p>Approaches 2 and 5 were the last ones I came up with. I had to start questioning my assumptions, which is when I hit upon Approach 2. Approach 5 came to me in the shower while I was trying to apply my Math degree to the problem.</p>
-<p>I can't wait for Kata 3!</p>
-<p><!--more--></p>
-<p>(I'm going to apologize for the code formatting in advance. I need to do some research about the hosting on Wordpress and what formatting is and isn't allowed!)</p>
-<pre>
-using System;
+[Code Kata 2](http://web.archive.org/web/20131016085418/http://codekata.pragprog.com/2007/01/kata_two_karate.html "Code Kata 2") was harder than Kata 1\. Dave is right, it's hard to come up with five different ways to do something! However, I think I have five sufficiently different approaches to warrant a post. My code, in C#, is below the More tag.
+
+Approach 1 is a simple for loop, starting at the bottom and working its way up. Approach 2 uses a different looping mechanism for variety, but it does its comparisons from both ends of the array, which is faster than Approach 1 for values towards the larger end of the array.
+
+Approach 3 leverages the fact that in C#, the List object has a built-in IndexOf function, and frankly is the way I would normally implement it.
+
+Approach 4 creates a Dictionary with index/value pairs (in other words, a hash table), then determines the result. Lookups after the hash is built should be very quick. However, for a large array, there's a lot of overhead in creating the hash, and the hash would need to be maintained or recomputed if the array changes.
+
+Approach 5 uses a bifurcation algorithm, basically implementing the [Picard Iteration](http://en.wikipedia.org/wiki/Picard_iteration "Picard iteration") approach of successive approximations. By far, it was the hardest to write. It splits the array in half, checks which half the target value would be in, and repeats until it finds the target value or proves the target's not in the array. For a small array like this, it's overkill. For sparse lookups against a large array, it might even prove to be the fastest.
+
+Approaches 2 and 5 were the last ones I came up with. I had to start questioning my assumptions, which is when I hit upon Approach 2\. Approach 5 came to me in the shower while I was trying to apply my Math degree to the problem.
+
+I can't wait for Kata 3!
+
+(I'm going to apologize for the code formatting in advance. I need to do some research about the hosting on Wordpress and what formatting is and isn't allowed!)
+
+<pre>using System;
 using System.Collections.Generic;
 
 namespace Kata2
@@ -62,19 +58,19 @@ namespace Kata2
         {
             int highBound = array[array.Length - 1] + 1;
             Console.WriteLine(c.Method.Name);
-            for (int i = 0; i &lt; highBound; i++)
+            for (int i = 0; i < highBound; i++)
             {
                 Console.WriteLine(string.Format("{0} has index {1}", i, c(i, array)));
             }
             Console.WriteLine("n");
         }
 
-        /// 
+        ///
         /// Simplest approach: for loop
-        /// 
-        /// 
-        /// 
-        /// 
+        ///
+        ///
+        ///
+        ///
         static int Chop1(int number, int[] array)
         {
             for (int i = 0; i  number)
@@ -85,17 +81,17 @@ namespace Kata2
             return -1;
         }
 
-        /// 
-        /// Bi-directional lookup with slightly different looping 
+        ///
+        /// Bi-directional lookup with slightly different looping
         /// mechanism.
-        /// 
-        /// 
-        /// 
-        /// 
+        ///
+        ///
+        ///
+        ///
         static int Chop2(int number, int[] array)
         {
             int arraySize = array.Length;
-            if (arraySize &gt; 0)
+            if (arraySize > 0)
             {
                 int i = 0;
                 do
@@ -109,17 +105,17 @@ namespace Kata2
                         return arraySize - i - 1;
                     }
                     i++;
-                } while (array[i-1] &lt; number &amp;&amp; i &lt; (arraySize / 2));
+                } while (array[i-1] < number &amp;&amp; i < (arraySize / 2));
             }
             return -1;
         }
 
-        /// 
+        ///
         /// Convert array to List, then use built-in IndexOf method
-        /// 
-        /// 
-        /// 
-        /// 
+        ///
+        ///
+        ///
+        ///
         static int Chop3(int number, int[] array)
         {
             List list = new List(array);
@@ -127,18 +123,18 @@ namespace Kata2
         }
 
         static Dictionary chop4Hash;
-        /// 
+        ///
         /// Pre-populate a Dictionary, then do the lookup
-        /// 
-        /// 
-        /// 
-        /// 
+        ///
+        ///
+        ///
+        ///
         static int Chop4(int number, int[] array)
         {
             if (chop4Hash == null)
             {
                 chop4Hash = new Dictionary();
-                for (int i = 0; i &lt; array.Length; i++)
+                for (int i = 0; i < array.Length; i++)
                 {
                     if (!chop4Hash.ContainsKey(array[i]))
                     {
@@ -157,12 +153,12 @@ namespace Kata2
             }
         }
 
-        /// 
+        ///
         /// Bifurcation algorithm
-        /// 
-        /// 
-        /// 
-        /// 
+        ///
+        ///
+        ///
+        ///
         static int Chop5(int number, int[] array)
         {
             int leftIndex = 0;
@@ -170,7 +166,7 @@ namespace Kata2
             int currIndex = 0;
             int nextIndex = int.MinValue;
             do
-            {     
+            {
                 nextIndex = (int)((leftIndex + rightIndex) / 2);
                 if (nextIndex != currIndex)
                 {
@@ -185,7 +181,7 @@ namespace Kata2
                 {
                     return currIndex;
                 }
-                else if (array[currIndex] &lt; number)
+                else if (array[currIndex] < number)
                 {
                     // number's to our right
                     if (leftIndex != currIndex)
@@ -194,7 +190,7 @@ namespace Kata2
                     }
                     else
                     {
-                        break;                      
+                        break;
                     }
                 }
                 else
@@ -210,8 +206,8 @@ namespace Kata2
                     }
                 }
             } while (
-                array[leftIndex] &lt;= number 
-                &amp;&amp; number &lt;= array[rightIndex]);
+                array[leftIndex] <= number
+                &amp;&amp; number <= array[rightIndex]);
 
             return -1;
         }
