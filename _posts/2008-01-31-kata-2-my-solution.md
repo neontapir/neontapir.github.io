@@ -106,7 +106,7 @@ namespace Kata2
                         return arraySize - i - 1;
                     }
                     i++;
-                } while (array[i-1] < number &amp;&amp; i < (arraySize / 2));
+                } while (array[i-1] < number && i < (arraySize / 2));
             }
             return -1;
         }
