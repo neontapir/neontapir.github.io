@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 'Lean Wastes and Software Delivery: Overproduction and Overprocessing'
-date: 2014-02-19 18:09:41.000000000 -07:00
 categories:
 - process
 - professional

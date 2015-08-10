@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Part of a Movement Toward Fluidity
-date: 2014-01-13 20:02:07.000000000 -07:00
 categories:
 - coding
 - process

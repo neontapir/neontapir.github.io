@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 'Group Coding Exercises: the Code Dojo'
-date: 2012-08-29 18:17:09.000000000 -06:00
 categories:
 - coding
 - professional

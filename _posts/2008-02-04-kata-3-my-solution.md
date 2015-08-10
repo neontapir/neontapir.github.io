@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 'Code Kata 3: My Solution'
-date: 2008-02-04 09:03:55.000000000 -07:00
 categories:
 - professional
 tags:

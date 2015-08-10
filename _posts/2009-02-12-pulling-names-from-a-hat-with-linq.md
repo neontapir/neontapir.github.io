@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Pulling names from a hat with LINQ
-date: 2009-02-12 22:08:15.000000000 -07:00
 categories:
 - professional
 tags:

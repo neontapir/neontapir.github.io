@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Secret Santa Code Kata Redux in C#
-date: 2012-02-10 22:03:27.000000000 -07:00
 categories:
 - coding
 - professional

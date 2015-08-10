@@ -1,7 +1,6 @@
 ---
 layout: post
 title: BetaFish Part 2 - Twitchy
-date: 2012-03-19 06:39:44.000000000 -06:00
 categories:
 - coding
 - professional

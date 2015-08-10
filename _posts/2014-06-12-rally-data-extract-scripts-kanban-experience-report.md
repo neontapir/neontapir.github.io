@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 'Rally data extract scripts: a Kanban experience report'
-date: 2014-06-12 07:39:08.000000000 -06:00
 categories:
 - coding
 - process

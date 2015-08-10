@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Parsing large files using PowerShell
-date: 2012-01-17 15:54:00.000000000 -07:00
 categories:
 - coding
 - professional

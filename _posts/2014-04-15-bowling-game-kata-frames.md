@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Bowling Game kata and frames
-date: 2014-04-15 15:34:50.000000000 -06:00
 categories:
 - coding
 tags:

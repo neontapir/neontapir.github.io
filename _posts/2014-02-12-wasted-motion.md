@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 'Lean Wastes and Software Delivery: Wasted Motion'
-date: 2014-02-12 18:00:06.000000000 -07:00
 categories:
 - process
 - professional

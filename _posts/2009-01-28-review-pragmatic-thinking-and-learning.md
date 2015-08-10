@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 'Review: Pragmatic Thinking and Learning'
-date: 2009-01-28 07:08:02.000000000 -07:00
 categories:
 - professional
 tags:

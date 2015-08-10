@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Potential Nothin' But .NET course, Denver, mid-September 2010
-date: 2010-07-01 08:23:45.000000000 -06:00
 categories:
 - professional
 tags:

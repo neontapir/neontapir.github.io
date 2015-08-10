@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Lessons Running a Coding Dojo - Five Weeks In
-date: 2013-09-03 23:42:56.000000000 -06:00
 categories:
 - coding
 - presentation

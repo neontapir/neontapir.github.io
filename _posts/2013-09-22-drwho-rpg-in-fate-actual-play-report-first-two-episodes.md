@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 'Doctor Who RPG in Fate, Actual Play report: First Two Sessions'
-date: 2013-09-22 14:17:25.000000000 -06:00
 categories:
 - leisure
 - rpg

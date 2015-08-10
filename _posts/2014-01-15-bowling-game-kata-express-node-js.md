@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Bowling Game kata with Express and Node.js
-date: 2014-01-15 09:43:34.000000000 -07:00
 categories:
 - coding
 - professional

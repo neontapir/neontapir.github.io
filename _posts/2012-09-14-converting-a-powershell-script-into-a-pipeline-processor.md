@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Converting a PowerShell script into a pipeline processor
-date: 2012-09-14 12:41:35.000000000 -06:00
 categories:
 - coding
 - professional

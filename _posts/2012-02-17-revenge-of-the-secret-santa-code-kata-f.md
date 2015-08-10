@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Revenge of the Secret Santa Code Kata - F#
-date: 2012-02-17 10:11:10.000000000 -07:00
 categories:
 - coding
 - professional

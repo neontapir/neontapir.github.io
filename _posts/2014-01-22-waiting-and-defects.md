@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 'Lean Wastes and Software Delivery: Waiting and Defects'
-date: 2014-01-22 18:41:51.000000000 -07:00
 categories:
 - process
 - professional

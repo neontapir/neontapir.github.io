@@ -1,7 +1,6 @@
 ---
 layout: post
 title: '"Secret Santa" Code Kata in Powershell'
-date: 2012-01-25 21:36:48.000000000 -07:00
 categories:
 - coding
 - professional

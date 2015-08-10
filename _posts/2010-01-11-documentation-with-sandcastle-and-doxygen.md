@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Code Documentation with Sandcastle and doxygen
-date: 2010-01-11 12:21:10.000000000 -07:00
 categories:
 - professional
 tags:

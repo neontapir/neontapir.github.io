@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 'Lean Wastes and Software Delivery: Wasted Inventory'
-date: 2014-02-05 18:56:40.000000000 -07:00
 categories:
 - process
 - professional

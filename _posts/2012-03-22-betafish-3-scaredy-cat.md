@@ -1,7 +1,6 @@
 ---
 layout: post
 title: BetaFish Part 3 - Scaredy Cat
-date: 2012-03-22 06:46:46.000000000 -06:00
 categories:
 - coding
 - professional

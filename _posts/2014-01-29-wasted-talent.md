@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 'Lean Wastes and Software Delivery: Wasted Talent'
-date: 2014-01-29 18:52:09.000000000 -07:00
 categories:
 - process
 - professional

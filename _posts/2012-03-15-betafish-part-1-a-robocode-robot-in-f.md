@@ -1,7 +1,6 @@
 ---
 layout: post
 title: BetaFish Part 1 - a Robocode robot in F#
-date: 2012-03-15 23:34:50.000000000 -06:00
 categories:
 - coding
 - professional

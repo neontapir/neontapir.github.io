@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Whole Basketball Team
-date: 2009-02-06 22:08:53.000000000 -07:00
 categories:
 - professional
 tags:

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Code Katas
-date: 2012-08-21 21:32:17.000000000 -06:00
 categories:
 - coding
 - professional
