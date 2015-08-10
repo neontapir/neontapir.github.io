@@ -68,7 +68,7 @@ paginate_path: page/:num
 #
 # Social.
 #
-share_buttons: false
+share_buttons: true
 ogp:
   image_url: /assets/img/tapir.png
   fb:
