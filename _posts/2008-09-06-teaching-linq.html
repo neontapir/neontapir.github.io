@@ -30,7 +30,6 @@ excerpt: !ruby/object:Hpricot::Doc
 * I'm a co-sponsor of the weekly development Lunch and Learn meetings<br />
 * I'm moderating our software engineering book club</p>
 <p>In this post, I'm going to talk a little about LINQ and the challenges I'm facing teaching LINQ to Objects to the team.</p>
-<p><!--more--><br />
 Our weekly Lunch and Learn sessions involve some preliminary discussion, then we turn the keyboard over to the audience. Our development staff consists of good programmers who largely learned the craft by rote, so few if any of us have formal computer science backgrounds. Hence, introductory sessions start at the very beginning.</p>
 <p>The first LINQ session covered extension methods, because LINQ makes heavy use of them. We presented as an example nUnit's <code>Assert.AreEqual(expected, actual)</code> method. We showed how an extension method could make this read <code>expected.AreEqual(actual)</code>. Then, we had our volunteer do the same for strings.</p>
 <p>We pointed out that this could get tedious, as <code>AreEqual</code> supports lots of types. So, we asked a volunteer to solve the problem in general. This proved challenging, and we discovered a hole in the team's collective knowledge base: generics.</p>

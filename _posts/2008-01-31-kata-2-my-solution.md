@@ -32,7 +32,8 @@ I can't wait for Kata 3!
 
 (I'm going to apologize for the code formatting in advance. I need to do some research about the hosting on Wordpress and what formatting is and isn't allowed!)
 
-<pre>using System;
+{% highlight csharp %}
+using System;
 using System.Collections.Generic;
 
 namespace Kata2
@@ -207,9 +208,10 @@ namespace Kata2
                 }
             } while (
                 array[leftIndex] <= number
-                &amp;&amp; number <= array[rightIndex]);
+                  && number <= array[rightIndex]);
 
             return -1;
         }
     }
-}</pre>
+}
+{% endhighlight %}

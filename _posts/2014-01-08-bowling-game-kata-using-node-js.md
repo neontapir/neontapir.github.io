@@ -18,7 +18,7 @@ author:
 excerpt: !ruby/object:Hpricot::Doc
   options: {}
 ---
-[![bowling](assets/bowling-300x225.jpg)](http://neontapir.com/wp/wp-content/uploads/2014/01/bowling.jpg)
+[![bowling](/assets/bowling-300x225.jpg)](/assets/bowling-300x225.jpg)
 
 At work, my team is working on building commodity functionality for a SOA network of services. While learning more about SOA, I've become interested in [Node.js](http://nodejs.org‎), a JavaScript library that makes it easy and quick to build network applications.
 
