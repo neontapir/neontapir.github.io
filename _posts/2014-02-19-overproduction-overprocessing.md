@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Lean Wastes and Software Delivery: Overproduction and Overprocessing'
 categories:
 - process

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: '"Secret Santa" Code Kata in Powershell'
 categories:
 - coding

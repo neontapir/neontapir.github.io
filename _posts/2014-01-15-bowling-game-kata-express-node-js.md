@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Bowling Game kata with Express and Node.js
 categories:
 - coding

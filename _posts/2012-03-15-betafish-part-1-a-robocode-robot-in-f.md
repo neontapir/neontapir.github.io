@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: BetaFish Part 1 - a Robocode robot in F#
 categories:
 - coding

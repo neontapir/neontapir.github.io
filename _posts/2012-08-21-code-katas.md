@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Code Katas
 categories:
 - coding

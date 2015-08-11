@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Rally data extract scripts: a Kanban experience report'
 categories:
 - coding

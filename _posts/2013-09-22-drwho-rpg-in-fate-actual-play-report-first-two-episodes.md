@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Doctor Who RPG in Fate, Actual Play report: First Two Sessions'
 categories:
 - leisure

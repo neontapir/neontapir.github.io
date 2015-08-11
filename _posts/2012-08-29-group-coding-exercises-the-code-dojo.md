@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Group Coding Exercises: the Code Dojo'
 categories:
 - coding

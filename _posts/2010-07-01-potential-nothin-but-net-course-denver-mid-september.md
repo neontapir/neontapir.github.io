@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Potential Nothin' But .NET course, Denver, mid-September 2010
 categories:
 - professional

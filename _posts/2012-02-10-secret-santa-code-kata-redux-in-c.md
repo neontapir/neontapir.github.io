@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Secret Santa Code Kata Redux in C#
 categories:
 - coding

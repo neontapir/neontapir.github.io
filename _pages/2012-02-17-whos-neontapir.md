@@ -1,5 +1,6 @@
 ---
 layout: page
+comments: true
 title: Who's the Neon Tapir?
 ---
 ![Photo on 2011 06 30 at 20 24](/assets/photo-on-2011-06-30-at-20-24.jpg "Photo on 2011-06-30 at 20.24.jpg")

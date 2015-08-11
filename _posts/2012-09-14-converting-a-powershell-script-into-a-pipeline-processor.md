@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Converting a PowerShell script into a pipeline processor
 categories:
 - coding
