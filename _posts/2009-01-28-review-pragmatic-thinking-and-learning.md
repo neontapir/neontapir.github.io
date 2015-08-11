@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Review: Pragmatic Thinking and Learning'
 categories:
 - professional

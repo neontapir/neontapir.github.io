@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Code Kata 2: My Solution'
 categories:
 - professional

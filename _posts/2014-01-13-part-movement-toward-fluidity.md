@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Part of a Movement Toward Fluidity
 categories:
 - coding

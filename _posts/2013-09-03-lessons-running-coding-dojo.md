@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Lessons Running a Coding Dojo - Five Weeks In
 categories:
 - coding

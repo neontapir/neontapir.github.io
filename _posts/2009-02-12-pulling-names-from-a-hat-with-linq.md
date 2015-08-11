@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Pulling names from a hat with LINQ
 categories:
 - professional

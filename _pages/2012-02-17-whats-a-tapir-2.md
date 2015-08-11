@@ -1,5 +1,6 @@
 ---
 layout: page
+comments: true
 title: What's a Tapir?
 ---
 ![tapir baby from Wikimedia](/assets/tapirbaby.jpg "Tapir Baby from WikiMedia")

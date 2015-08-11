@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Code Kata 4: My Solution'
 categories:
 - professional

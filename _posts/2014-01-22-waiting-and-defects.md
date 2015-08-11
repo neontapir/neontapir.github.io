@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Lean Wastes and Software Delivery: Waiting and Defects'
 categories:
 - process

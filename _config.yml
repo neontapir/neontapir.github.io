@@ -2,10 +2,11 @@
 # Basic settings.
 #
 #url: http://qckanemoto.github.io # or http://you.github.io
+lang: en
 url: http://neontapir.github.io
 baseurl: ""
 title: Chuck Durfee
-description: The neon tapir, casting his eerie glow upon the masses
+description: "The neon tapir, casting his eerie glow upon the masses"
 avatar: /assets/img/tapir.png
 
 #
@@ -42,7 +43,7 @@ permalink: pretty
 # Scripts.
 #
 google_analytics: # e.g. UA-000000-01
-disqus:
+disqus: neontapir-dot-com
 
 #
 # Localizations.
@@ -73,7 +74,7 @@ ogp:
   image_url: /assets/img/tapir.png
   fb:
     admin: # facebook admin id
-    app_id: # facebook application id
+    app_id: 710997945694360 # facebook application id
 
 #
 # Gems.

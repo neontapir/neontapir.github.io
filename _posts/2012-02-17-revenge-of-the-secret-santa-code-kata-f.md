@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Revenge of the Secret Santa Code Kata - F#
 categories:
 - coding

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: BetaFish Part 3 - Scaredy Cat
 categories:
 - coding

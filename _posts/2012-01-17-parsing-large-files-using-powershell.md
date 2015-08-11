@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Parsing large files using PowerShell
 categories:
 - coding

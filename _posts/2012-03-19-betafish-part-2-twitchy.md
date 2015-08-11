@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: BetaFish Part 2 - Twitchy
 categories:
 - coding
