@@ -241,14 +241,14 @@ instance.
 {% highlight java %}
 // sync testing model
 private void getFrameFromFrameActor(GetFrame frameSignal, int[] expected) throws Exception {
-    new JavaTestKit(system) {{
+    new JavaTestKit(system) \{\{
         Future<Object> future = Patterns.ask(frame, frameSignal, 1000);
         assertTrue(future.isCompleted());
 
         GotFrame actual = (GotFrame)Await.result(future, Duration.Zero());
 
         assertArrayEquals(expected, actual.frame);
-    }};
+    \}\};
 }
 {% endhighlight %}
 
@@ -270,10 +270,10 @@ code and it doesn't require understanding `Future`.
 {% highlight java %}
 // async testing model
 private void getScoreFromFrameActor(TestActorRef<Frame> frame, ScoreFrame frameSignal, ScoredFrame expected) throws Exception {
-    new JavaTestKit(system) {{
+    new JavaTestKit(system) \{\{
         frame.tell(frameSignal, getRef());
         expectMsgEquals(FiniteDuration.apply(500, TimeUnit.MILLISECONDS), expected);
-    }};
+    \}\};
 }
 {% endhighlight %}
 
