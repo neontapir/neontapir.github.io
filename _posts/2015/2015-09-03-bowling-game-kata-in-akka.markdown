@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "bowling-game-kata-in-akka"
+title: "Bowling Game Kata in Akka"
 date: "2015-09-03 10:02"
 ---
 Fresh from Typesafe's "Fast Track to Akka in Java", I decided to apply Akka to a
-problem I know well, the bowling game kata. ![Akka logo](/assets/Akka_toolkit_logo.svg.png)
+problem I know well, the bowling game kata. <img src="/assets/Akka_toolkit_logo.svg.png" style="float:right" />
 
 Although I'll be using some code snippets to illustrate my journey, the full
 solution is [on GitHub](https://github.com/neontapir/code-katas/tree/master/BowlingGame/java-akka).
@@ -241,14 +241,14 @@ instance.
 {% highlight java %}
 // sync testing model
 private void getFrameFromFrameActor(GetFrame frameSignal, int[] expected) throws Exception {
-    new JavaTestKit(system) \{\{
+    new JavaTestKit(system) { {
         Future<Object> future = Patterns.ask(frame, frameSignal, 1000);
         assertTrue(future.isCompleted());
 
         GotFrame actual = (GotFrame)Await.result(future, Duration.Zero());
 
         assertArrayEquals(expected, actual.frame);
-    \}\};
+    } };
 }
 {% endhighlight %}
 
