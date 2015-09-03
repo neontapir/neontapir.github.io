@@ -32,7 +32,7 @@ called a guardian at the root. If you are intrigued as I was, visit
 
 Let's dig in....
 
-<!-- more -->
+<!--more-->
 
 ## Application of Akka
 
@@ -270,10 +270,10 @@ code and it doesn't require understanding `Future`.
 {% highlight java %}
 // async testing model
 private void getScoreFromFrameActor(TestActorRef<Frame> frame, ScoreFrame frameSignal, ScoredFrame expected) throws Exception {
-    new JavaTestKit(system) \{\{
+    new JavaTestKit(system) { {
         frame.tell(frameSignal, getRef());
         expectMsgEquals(FiniteDuration.apply(500, TimeUnit.MILLISECONDS), expected);
-    \}\};
+    } };
 }
 {% endhighlight %}
 
