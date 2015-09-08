@@ -1,3 +1,12 @@
+---
+layout: page
+comments: true
+title: Terms of Service and Privacy Policy
+permalink: /tos/
+order: 1
+share: false
+---
+
 <h2>
 	Web Site Terms and Conditions of Use
 </h2>
@@ -11,7 +20,7 @@
 	web site Terms and Conditions of Use, all applicable laws and regulations,
 	and agree that you are responsible for compliance with any applicable local
 	laws. If you do not agree with any of these terms, you are prohibited from
-	using or accessing this site. The materials contained in this web site are 
+	using or accessing this site. The materials contained in this web site are
 	protected by applicable copyright and trade mark law.
 </p>
 

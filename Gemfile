@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
+
 gem 'jekyll', '2.4.0'
 gem 'jekyll-coffeescript', '1.0.1'
 gem 'jekyll-sass-converter', '1.3.0'
@@ -15,6 +16,7 @@ gem 'jekyll-redirect-from', '0.8.0'
 gem 'jekyll-sitemap', '0.8.1'
 gem 'jekyll-feed', '0.3.1'
 gem 'github-pages'
-gem 'celluloid'
+gem 'celluloid', '0.16.0'
+gem 'timers', '4.0.4'
 gem 'hpricot'
 gem 'nokogiri'
