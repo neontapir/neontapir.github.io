@@ -42,7 +42,7 @@ permalink: pretty
 #
 # Scripts.
 #
-google_analytics: # e.g. UA-000000-01
+google_analytics: UA-67306270-1
 disqus: neontapir-dot-com
 
 #
