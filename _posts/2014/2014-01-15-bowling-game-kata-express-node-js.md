@@ -20,7 +20,7 @@ author:
 ---
 <img src="/assets/bowling-300x225.jpg"/>
 
-Last time, I talked about the [Bowling Game kata in Node.js]({% post_url 2014-01-08-bowling-game-kata-using-node-js %}), and mentioned that the next step in looking at the [MEAN stack](http://www.mean.io/) is [Express](http://expressjs.com/), which is a JavaScript web application framework.
+Last time, I talked about the [Bowling Game kata in Node.js]({% post_url 2014/2014-01-08-bowling-game-kata-using-node-js %}), and mentioned that the next step in looking at the [MEAN stack](http://www.mean.io/) is [Express](http://expressjs.com/), which is a JavaScript web application framework.
 
 The inclusion of Express means that the game scoring will need to be exposed as a web application. This seems like a good use case for [REST](http://en.wikipedia.org/wiki/Representational_state_transfer). I'm aware that [restify](http://mcavage.me/node-restify/) is a better fit for this kind of application, but in keeping with exploration of the MEAN stack, I stuck with Express. In doing some more exploration with Restify, I found that it needs the node development environment to be installed on Windows, which I found off-putting.
 

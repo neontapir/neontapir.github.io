@@ -37,4 +37,4 @@ How Fast?
 *   _My binary search algorithm..._ **It should go exponentially, so a hundredfold increase in entries caused a 1.5ms increase. The next one is another hundredfold, so that would be 1.5ms x 1.5 ms, or 2.25mS. So, I say 7.75ms.**
 *   _Unix passwords are stored using a one-way hash function..._ **Well, that would be 96! / (96 - 16)!, which is 96 * 95 * ... * 80, or about 88^16, or about 7700^8, or about 670000^4, or about 44x10^8 ^2, or about 176x10^16 ms. There's 1.5x10^9 seconds per year, so it would take millions of years to crack the algorithm. My answer is no. :)**
 
-See also my previous Kata posts: [Kata 1]({% post_url 2008-01-26-code-kata-1-my-solution %}), [Kata 2]({% post_url 2008-01-31-kata-2-my-solution %})
+See also my previous Kata posts: [Kata 1]({% post_url 2008/2008-01-26-code-kata-1-my-solution %}), [Kata 2]({% post_url 2008/2008-01-31-kata-2-my-solution %})

@@ -24,7 +24,7 @@ author:
 excerpt: !ruby/object:Hpricot::Doc
   options: {}
 ---
-In my last post, I talked about [book clubs]({% post_url 2012-08-15-starting-a-technical-book-club %}). In it, I touched on code katas.
+In my last post, I talked about [book clubs]({% post_url 2012/2012-08-15-starting-a-technical-book-club %}). In it, I touched on code katas.
 
 For a long time, I thought that code katas were puzzles that people solved together. I'll describe a few of those exercises in another article. Group coding exercises are fun but have different goals.
 

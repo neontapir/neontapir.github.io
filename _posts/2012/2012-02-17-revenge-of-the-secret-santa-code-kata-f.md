@@ -23,8 +23,8 @@ Here’s another solution to the [Secret Santa code kata](http://rubyquiz.com/qu
 
 To recap:
 
-*   My [first solution]({% post_url 2012-01-25-secret-santa-code-kata-in-powershell %}), written in PowerShell, relied on selecting random pairs of people and using a “hill-climbing” algorithm to avoid getting stuck.
-*   My [second solution]({% post_url 2012-02-10-secret-santa-code-kata-redux-in-c %}) I constrained to be deterministic — no randomness.
+*   My [first solution]({% post_url 2012/2012-01-25-secret-santa-code-kata-in-powershell %}), written in PowerShell, relied on selecting random pairs of people and using a “hill-climbing” algorithm to avoid getting stuck.
+*   My [second solution]({% post_url 2012/2012-02-10-secret-santa-code-kata-redux-in-c %}) I constrained to be deterministic — no randomness.
 
 This one was more about trying to write something meaningful in F# using a problem I’m by now familiar with. Take a look at the code:
 
