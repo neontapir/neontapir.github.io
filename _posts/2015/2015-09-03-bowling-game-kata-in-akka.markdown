@@ -2,12 +2,23 @@
 layout: post
 title: "Bowling Game Kata in Akka"
 date: "2015-09-03 10:02"
+categories:
+- coding
+- professional
+tags:
+- akka
+- kata
+author:
+  login: Chuck
+  email: chuck@neontapir.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
 ---
-Fresh from Typesafe's "Fast Track to Akka in Java", I decided to apply Akka to a
-problem I know well, the bowling game kata. <img src="/assets/Akka_toolkit_logo.svg.png" style="float:right" />
-
-Although I'll be using some code snippets to illustrate my journey, the full
-solution is [on GitHub](https://github.com/neontapir/code-katas/tree/master/BowlingGame/java-akka).
+<img src="/assets/Akka_toolkit_logo.svg.png" style="float:right" /><p>Fresh from
+Typesafe's "Fast Track to Akka in Java", I decided to apply Akka to a problem I
+know well, the bowling game kata. Although I'll be using some code snippets
+to illustrate my journey, the full solution is [on GitHub](https://github.com/neontapir/code-katas/tree/master/BowlingGame/java-akka).</p>
 
 ## Bowling Game kata
 
