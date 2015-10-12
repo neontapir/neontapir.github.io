@@ -10,6 +10,23 @@ description: "The neon tapir, casting his eerie glow upon the masses"
 avatar: /assets/img/tapir.png
 
 #
+# Defaults
+#
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author:
+        login: Chuck
+        email: chuck@neontapir.com
+        display_name: Chuck
+        first_name: Chuck
+        last_name: Durfee
+
+#
 # Icons
 #
 icons:
