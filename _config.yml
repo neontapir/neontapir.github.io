@@ -80,6 +80,7 @@ ogp:
 # Gems.
 #
 gems:
+  - jekyll-sitemap
   - jemoji
 
 #
