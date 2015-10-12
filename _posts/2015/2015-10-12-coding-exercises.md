@@ -16,10 +16,11 @@ author:
   last_name: Durfee
 ---
 
-<img src="/assets/tools-wood-bench.jpg" style="float:right" /> When hiring for a
-technical position, I like to give candidates a coding exercise to test their
-**mettle**. In this post, I talk about traits to look for in coding exercises and
-use those to discuss why coding exercises are useful.
+<img width="40%" style="float:right;margin:1em" src="/assets/tools-wood-bench.jpg" />
+
+When hiring for a technical position, I like to give candidates a coding
+exercise to test their **mettle**. In this post, I talk about traits to look for
+in coding exercises and use those to discuss why coding exercises are useful.
 
 Obviously, much of this advice would apply to a similar professional exercise
 like a backlog grooming exercise for a prospective product owner, but I'm hiring
