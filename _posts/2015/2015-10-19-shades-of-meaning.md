@@ -45,7 +45,7 @@ needed to distinguish the subtleties between words. For my kind of query, I
 need a hybrid resource.
 
 I happened to be doing a web search in this vein and came across
-[vocubulary.com](http://vocubulary.com), which is the closest I've seen. Each
+[vocabulary.com](http://vocabulary.com), which is the closest I've seen. Each
 word comes with a quick paragraph that highlights why you might choose the word,
 illustrated with a usage example. Its definitions are given in short phrases,
 which overcomes my issue with thesauruses, along with links to related words to
