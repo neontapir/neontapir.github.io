@@ -1,7 +1,7 @@
 ---
 layout: post
 title: In Praise of Exercism.io
-date: 2015-01-27 14:30:00
+date: 2016-01-27 14:30:00
 categories:
 - professional
 tags:
@@ -10,7 +10,7 @@ tags:
 - feedback
 ---
 
-<img src="/assets/exercism_log.svg" style="float:right; margin:1em" />
+<img src="/assets/exercism_logo.svg" style="float:right; margin:1em; width:200px" />
 
 I have been enjoying [Exercism.io](http://exercism.io), and I wanted to share
 the fun with you. The site's name is a playful take on the term code exercises.

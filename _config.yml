@@ -21,7 +21,7 @@ defaults:
     values:
       author:
         login: Chuck
-        email: chuck@neontapir.com
+        email: neontapir@gmail.com
         display_name: Chuck
         first_name: Chuck
         last_name: Durfee
@@ -31,7 +31,7 @@ defaults:
 #
 icons:
   rss: true
-  email: chuck@neontapir.com
+  email: neontapir@gmail.com
   github: neontapir
   bitbucket:
   twitter: ChuckDurfee
@@ -44,7 +44,7 @@ icons:
   instagram: neontapir
   linkedin: https://www.linkedin.com/in/neontapir # full URL
   pinterest:
-  reddit:
+  reddit: neontapir
   soundcloud:
   stack_exchange: http://stackexchange.com/users/19520/neontapir # full URL
   steam:
