@@ -19,15 +19,20 @@ I think the designers of Exercism got a lot of things right.
 The authors made the site easy to use. Exercism has two components: its web
 site, and a command-line client. For anyone who uses a version control tool like
 Git, the interface should seem familiar. The command-line client allows you to
-submit solutions as well as fetch new exercises. The web site is where the site
-really shines.
+submit solutions as well as fetch new exercises.
 
-The thing I love the most about Exercism is its code review capability. When you
-upload a solution to an exercise, you are given a URL to your submission. Here,
-you can see your code as well as a comments section. There's a notification
-feature that encourages code reviews in the top navigation by showing you recent
-submissions by other people. To update your code, you simply submit a new copy
-and the site displays it in a new tab on your submission page.
+Although there doesn't appear to be a strict progression, later exercises are
+certainly more challenging than early ones. Each exercise can be solved by
+writing a method or two, so I normally complete one or two during a lunch break.
+Many would be suitable as an [interview exercise]({% post_url 2015/2015-10-12-coding-exercises %}).
+
+The web site is where the site really shines. The thing I love the most about
+Exercism is its code review capability. When you upload a solution to an
+exercise, you are given a URL to your submission. Here, you can see your code as
+well as a comments section. There's a notification feature that encourages code
+reviews in the top navigation by showing you recent submissions by other people.
+To update your code, you simply submit a new copy and the site displays it in a
+new tab on your submission page.
 
 What sets Exercism apart from other implementations is its community. I've
 submitted around fifty solutions thus far. I'm happy to say that about a quarter
@@ -41,4 +46,5 @@ In my experience, a code review is perhaps the most effective way of improving
 your technique, aside from pair programming. After all, pair programming could
 be described as a real-time, continuous code review.
 
-If you are looking for a way to keep you skills sharp, take a look at Exercism.io.
+If you are looking for a way to keep your programming skills sharp, take a look
+at Exercism.io.
