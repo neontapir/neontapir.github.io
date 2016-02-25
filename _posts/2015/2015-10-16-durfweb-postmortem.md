@@ -10,6 +10,8 @@ tags:
 - retrospective
 ---
 
+<img src="/assets/iterations.jpg" width="33%" style="float:right; margin:1em" />
+
 Two weeks ago, I ended my consulting firm, Durfweb. It was a difficult decision
 emotionally, but it was the right decision from a business standpoint. I wanted
 to get some distance and make some observations about it.
@@ -59,40 +61,48 @@ take fees from this and reinvest them into the business, snowballing capital to
 grow the business. However, I wasn't able to convert these leads. More on this
 in the next section.
 
-The death knell for Durfweb came in the podcast download statistics. While I had
-developed a small, loyal following, the download growth rate was linear,
-indicating that the same 100 or so people were downloading episodes.
-Listenership growth was stagnant for a period of several weeks, with two
-marketing campaigns have no noticeable impact. The end result was that Durfweb
-was spending money on Agile Chuck Wagon hosting and other podcast production
-costs with no prospect of any returns.
+The death knell for Durfweb came in the Agile Chuck Wagon podcast download
+statistics. While I had developed a small, loyal following, the download growth
+rate was linear, indicating that the same 100 or so people were downloading
+episodes. Listenership growth was stagnant for a period of several weeks, with
+two marketing campaigns having no noticeable impact. The end result was that
+Durfweb was spending money on Agile Chuck Wagon hosting and other podcast
+production costs with no prospect of returns.
 
 ## What to Improve Next Time
 
 Durfweb was starved for resources. In order to get the market penetration we
 sought, we would have needed to spend a lot more time, money and effort toward
 Durfweb. A related issue was that Durfweb was originally envisioned as a
-collaboration between me and my wife Candy, yet I took on the work of
-bootstraping the business. As a result, most of the service inquiries we got
-were more in my wheelhouse than hers. This made it difficult for Candy to help
-get the business off the ground.
+collaboration between me and my wife Candy. I launched the business earlier than
+planned because of an unexpected windfall of time I had, and I focused on
+offerings I knew best. Candy was in crunch time on a project at that time and
+could not collaborate on it. As a result of this bias, most of the service
+inquiries we got were more in my wheelhouse than hers. This made it difficult
+for Candy to help get the business grow when it started faltering.
 
-Next time, we need to market her offerings in such a way to ensure that our
-leads develop in a more balanced manner. We also need to make sure that either
-of us can perform our basic services. For example, we had one lead that fell
-through due to scheduling issues. It was for a getKanban game facilitation
-session, which I've run many times but Candy has not played before. We lost that
-sale because of scheduling conflicts.
+Next time, we need to market her offerings alongside mine so our leads can
+develop in a more balanced manner. We also need to make sure that either of us
+can perform our basic services. For example, we had one lead that fell through
+due to scheduling issues. It was for a getKanban game facilitation session,
+which I've run many times but Candy has not played before. We lost that sale
+because of scheduling conflicts.
 
 Durfweb's business model was to offer a customized coaching package for clients.
-For each lead, I would do an initial consultation, describe what services I have
-would apply to their situation, and negotiate an engagement. However, I lost
-business with this model, because these prospects seemed to seek a pre-packaged,
-flat-rate product. It seemed clear that they had a problem in mind, but didn't
-seem as interested in solution discovery. We need to improve the packaging of our
-services to more clearly describe the value proposition.
+For each lead, I would do an initial consultation, describe what services we had
+that would apply to their situation, and negotiate an engagement. However, I
+lost business with this model, because these prospects seemed to want a
+pre-packaged, flat-rate product. It seemed clear that they had a problem in
+mind, but didn't seem as interested in solution discovery. We need to improve
+the packaging of our services to more clearly describe the value proposition.
 
 An example entry-level offering that would be to explicitly package facilitation
 of the getKanban training game. We own a copy, and I have run it many times for
 employers and clients. Helping clients apply the lessons of this game to their
 particular situation could become a premium service.
+
+## Conclusion
+
+I haven't given up on this business idea. After I complete my MBA degree, I plan
+to revisit Durfweb, ideate, and then prepare a proper business plan. With that
+plan in hand, Candy and I can decide if and when to launch.
