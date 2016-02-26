@@ -3,14 +3,17 @@ layout: post
 title: A Quick Review of Sushi-Go
 date: 2016-02-25 16:00:00
 categories:
-- personal
+- leisure
 tags:
 - game
 - cards
 - review
 ---
 
-<img src="/assets/sushi-go.jpg" style="float:right; margin:1em; width:33%" />
+<div style="float:right; margin:1em">
+<img src="/assets/sushi-go.jpg" style="width:33%" />
+<p>Image courtesy of Gamewright</p>
+</div>
 
 I wanted to give a quick review of the game [Sushi
 Go](http://www.gamewright.com/gamewright/index.php?section=games&page=game&show=291)

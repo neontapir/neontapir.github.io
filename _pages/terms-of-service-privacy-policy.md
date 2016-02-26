@@ -3,7 +3,7 @@ layout: page
 comments: true
 title: Terms of Service and Privacy Policy
 permalink: /tos/
-order: 1
+order: 3
 share: false
 ---
 
@@ -21,7 +21,7 @@ share: false
 	and agree that you are responsible for compliance with any applicable local
 	laws. If you do not agree with any of these terms, you are prohibited from
 	using or accessing this site. The materials contained in this web site are
-	protected by applicable copyright and trade mark law.
+	protected by applicable copyright and trademark law.
 </p>
 
 <h3>

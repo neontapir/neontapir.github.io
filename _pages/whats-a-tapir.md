@@ -1,6 +1,8 @@
 ---
 layout: page
 comments: true
+order: 2
+permalink: /tapir/
 title: What's a Tapir?
 ---
 ![tapir baby from Wikimedia](/assets/tapirbaby.jpg "Tapir Baby from WikiMedia")
