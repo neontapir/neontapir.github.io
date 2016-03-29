@@ -18,7 +18,9 @@ author:
   first_name: Chuck
   last_name: Durfee
 ---
-<div style="float: right; padding: 1em;"><img alt="Music box, copyright CC BY-NC-ND 2.0 by Lys*" src="/assets/180907037_0fef89ec66_z-300x198.jpg"/></div>
+<div style="float: right; padding: 1em;">
+  <img alt="Music box, copyright CC BY-NC-ND 2.0 by Lys*" src="/assets/music-box.jpg"/>
+</div>
 
 I recently posted about doing the [Bowling Game kata in Node.js]({% post_url 2014/2014-01-08-bowling-game-kata-using-node-js %}). On [Google+](https://plus.google.com/+ChuckDurfee), an online friend of mine Aaron commented:
 
