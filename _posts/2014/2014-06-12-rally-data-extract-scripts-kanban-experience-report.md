@@ -22,11 +22,11 @@ author:
 excerpt: !ruby/object:Hpricot::Doc
   options: {}
 ---
-This is the second in a series of blog posts about implementing Kanban on my current project. The first installment was about [establishing the flow](http://wp.me/p2vhlC-lM). This post talks about obtaining the data for the Kanban metrics. Later posts talk about the Excel spreadsheet that consumes the data.
+This is the second in a series of blog posts about implementing Kanban on my current project. The first installment was about [establishing the flow](% post_url 2014/2014-06-05-establishing-flow-kanban-experience-report %). This post talks about obtaining the data for the Kanban metrics. Later posts talk about the Excel spreadsheet that consumes the data.
 
-[![script-bash](assets/script-bash.jpg)](http://neontapir.com/wp/wp-content/uploads/2014/06/script-bash.jpg)
+![script-bash](/assets/script-bash.jpg)
 
-My employer has standardized on [Rally](http://www.rallydev.com/), so we are using it for work item management. However, I've found that its Kanban flow support is not as robust as I need. I wanted to create several additional charts on some derived values, so I manually input some data for each story into Excel for my formulas and charts. Of course Rally supports custom applications in JavaScript, but I didn't relish the thought of performing statistical analysis in raw JavaScript. I chose to continue to use Excel for my metrics gathering.
+My employer has standardized on [Rally](http://www.rallydev.com), so we are using it for work item management. However, I've found that its Kanban flow support is not as robust as I need. I wanted to create several additional charts on some derived values, so I manually input some data for each story into Excel for my formulas and charts. Of course Rally supports custom applications in JavaScript, but I didn't relish the thought of performing statistical analysis in raw JavaScript. I chose to continue to use Excel for my metrics gathering.
 
 After creating the first few, I started exploring the data and made more. At first, I would scour the revision history for the data I needed, but I quickly desired some automation. I wrote two shell scripts that query Rally's APIs for data. It currently takes me about 15 minutes a day of data entry to keep pace with the teams, which is short enough that I haven't taken the next step of converting a derivative of that script into a Excel data source.
 
