@@ -44,10 +44,10 @@ The team turned to our real product owner, one of the remote team members watchi
 
 ## Conclusion
 
-I recommend the game to any trainers who are introducing a kanban flow. The company has a copy of version 2 of the game, which is what I used. I've played version 3, and while it does have some interesting options, version 2 is quite effective. Better yet, if you are interested, the makers of the game have made the print files available on their web site, so you can make your setup.
+I recommend the game to any trainers who are introducing a Kanban flow. The company has a copy of version 2 of the game, which is what I used. I've played version 3, and while it does have some interesting options, version 2 is quite effective. Better yet, if you are interested, the makers of the game have made the print files available on their web site, so you can make your setup.
 
 If you have an option, I'd recommend gathering enough people to do two teams. The competition would have accelerated game play and made it seem more like a game than an exercise. That having been said, it was effective with a single team.
 
-My boss attended the demo. He has some experience with kanban already, and he remarked how effective the game is at making the Kanban approach concrete. Many times, when describing Kanban, he's found people get the idea that it's intellectual and theoretical, whereas Kanban is the opposite. It's a very practical tool, forming a window into whatever process you currently use. To my delight, he also became more dubious of a purely digital Kanban board as he saw the team connect with the physical game pieces. With remote team members, though, it may not be avoidable.
+My boss attended the demo. He has some experience with Kanban already, and he remarked how effective the game is at making the Kanban approach concrete. Many times, when describing Kanban, he's found people get the idea that it's intellectual and theoretical, whereas Kanban is the opposite. It's a very practical tool, forming a window into whatever process you currently use. To my delight, he also became more dubious of a purely digital Kanban board as he saw the team connect with the physical game pieces. With remote team members, though, it may not be avoidable.
 
 I consider the exercise a great success. The team went from tepid to excited to implement a Kanban board alongside the scrum tracking we already do. My boss has asked me to facilitate a session with his development management peers, and the PMO group is interested in one as well.
