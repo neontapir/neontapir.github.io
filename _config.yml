@@ -8,6 +8,7 @@ baseurl: ""
 title: Chuck Durfee
 description: "The neon tapir, casting his eerie glow upon the masses"
 avatar: /assets/img/tapir.png
+show_drafts: false
 
 #
 # Defaults
