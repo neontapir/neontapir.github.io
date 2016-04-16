@@ -31,7 +31,7 @@ layout: default
 {% endif %}
 <meta name="twitter:description" content="{{ page.content | strip_html | xml_escape | truncate: 200 }}">
 {% if page.image %}
-  <meta name="twitter:image:src" content="{{ site.url }}/path/to/image/{{ page.image }}">
+  <meta name="twitter:image:src" content="{{ site.url }}/assets{{ page.image }}">
 {% else %}
-  <meta name="twitter:image:src" content="{{ site.url }}/path/to/image/logo.png">
+  <meta name="twitter:image:src" content="{{ site.url }}{{ site.avatar }}">
 {% endif %}
