@@ -12,9 +12,7 @@ tags:
 - internal-model
 ---
 
-<div style="float:right; margin:1em; width:33%; text-align: center">
-  <img src="/assets/dolphin.jpg"/>
-</div>
+{% include side-image.html image="dolphin.jpg" %}
 
 Today, I want to talk about presentation techniques I learned last week during
 an excellent lunch talk given by a colleague, <a

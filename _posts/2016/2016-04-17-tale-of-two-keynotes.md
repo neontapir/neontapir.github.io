@@ -10,9 +10,7 @@ tags:
 - comparison
 ---
 
-<div style="float:right; margin:1em; width:33%; text-align: center">
-  <img src="/assets/jurgen-appelo.jpg"/>
-</div>
+{% include side-image.html image="jurgen-appelo.jpg" %}
 
 I recently wrote about [Cognitive Communication Coaching for Engineers]({% post_url 2016-04-07-cognitive-communication-coaching-for-engineers %}), a
 talk a colleague gave on presentation techniques. Today, I'm going to apply
@@ -38,13 +36,11 @@ without reading his book (which is quite good). After each technique, he asked
 us to point to a slide with the three principles and say which one it fit best
 into. This was an excellent example of a dolphin map.
 
-<div style="float:right; margin:1em; width:33%; text-align: center">
-  <img src="/assets/michael-feathers.jpg"/>
-</div>
+{% include side-image.html image="michael-feathers.jpg" %}
 
-Michael Feathers spoke at lunch on "**A Technical Keynote?**". The talk started out
-strong, but it did not use the techniques Tom taught. It wasn't clear to us in
-the audience what we were supposed to take away from his talk. The lack of
+Michael Feathers spoke at lunch on "**A Technical Keynote?**". The talk started
+out strong, but it did not use the techniques Tom taught. It wasn't clear to us
+in the audience what we were supposed to take away from his talk. The lack of
 dolphin map became noticeable toward the latter half of the talk, in which I
 observed a number of people fidgeting and on their cell phones. The tragedy of
 this talk was that Feathers didn't spend a lot of time communicating his

@@ -8,15 +8,10 @@ categories:
 tags:
 - interviewing
 - exercise
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
 
-<img width="40%" style="float:right;margin:1em" src="/assets/tools-wood-bench.jpg" />
+{% include side-image.html image="tools-wood-bench.jpg" width='40' %}
 
 When hiring for a technical position, I like to give candidates a coding
 exercise to test their **mettle**. In this post, I talk about traits to look for

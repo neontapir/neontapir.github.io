@@ -10,7 +10,7 @@ tags:
 - feedback
 ---
 
-<img src="/assets/exercism_logo.svg" style="float:right; margin:1em; width:200px" />
+{% include side-image.html image="exercism_logo.svg" %}
 
 I have been enjoying [Exercism.io](http://exercism.io), and I wanted to share
 the fun with you. The site's name is a playful take on the term code exercises.

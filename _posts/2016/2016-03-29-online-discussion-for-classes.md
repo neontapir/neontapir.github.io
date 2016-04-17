@@ -12,9 +12,7 @@ tags:
 - participation
 ---
 
-<div style="float:right; margin:1em; width:33%; text-align: center">
-  <img src="/assets/discussion.jpg"/>
-</div>
+{% include side-image.html image="discussion.jpg" %}
 
 I'm in the home stretch for my MBA studies. I'm taking advantage of the online
 studies program that Colorado State University offers (go Rams!). Today, I

@@ -12,9 +12,7 @@ tags:
 - aircraft
 ---
 
-<div style="float:right; margin:1em; width:33%; text-align: center">
-  <img src="/assets/boom-supersonic-aircraft.jpg"/>
-</div>
+{% include side-image.html image="boom-supersonic-aircraft.jpg" %}
 
 Recently a company called Boom announced that they were creating a supersonic
 aircraft to replace the Concorde, which hasn't been in regular use since 2003.

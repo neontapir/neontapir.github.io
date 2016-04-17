@@ -11,7 +11,7 @@ tags:
 - synonyms
 ---
 
-<img src="/assets/shades-of-meaning.jpg" style="float:right; margin:1em" />
+{% include side-image.html image="shades-of-meaning.jpg" %}
 
 I'm a native English speaker, but I often find myself looking up the meaning of
 English words. To me, word choices are powerful and important. A lot of the
