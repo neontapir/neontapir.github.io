@@ -30,7 +30,7 @@ author:
 
 In the intervening months since my last post, the project has accelerated significantly. We released the first version of the platform, and now are adding features to meet an aggressive migration schedule. I even traveled to Minsk, Belarus to meet our contractor team, to do some process training, and to discuss strategies for improving our communication and throughput.
 
-There have been some process improvements too. I got tired of manually inputting the output of [my Bash script]({% post_url 2014/2014-06-12-rally-data-extract-scripts-kanban-experience-report %}), so I converted the script into a **Ruby** program. I wanted to share some of the implementation details, specifically the libraries I used. I am a Ruby novice, so I consciously chose not to use the Rally gem that's available as a learning experience.
+There have been some process improvements too. I got tired of manually inputting the output of [my Bash script]({% post_url 2014-06-12-rally-data-extract-scripts-kanban-experience-report %}), so I converted the script into a **Ruby** program. I wanted to share some of the implementation details, specifically the libraries I used. I am a Ruby novice, so I consciously chose not to use the Rally gem that's available as a learning experience.
 
 The application now supports two output modes: screen (the original output) and a pipe-delimited export file. My needs are very simple, so I use **slop** for command-line option parsing. The Ruby script also accepts an input file, instead of getting data one work item at a time.
 

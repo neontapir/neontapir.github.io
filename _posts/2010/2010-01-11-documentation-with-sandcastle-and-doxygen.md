@@ -25,7 +25,7 @@ author:
   first_name: Chuck
   last_name: Durfee
 ---
-Last time, we talked about [accepting file input]({% post_url 2010/2010-01-08-object-mapper-accepting-file-input %}), the last feature added to the Object Mapper. Now, it has come time to document the module.
+Last time, we talked about [accepting file input]({% post_url 2010-01-08-object-mapper-accepting-file-input %}), the last feature added to the Object Mapper. Now, it has come time to document the module.
 
 I use ReSharper to help code in Visual Studio, but it still doesn't generate XML comments as well as I'd like, so I also use GhostDoc, which turns code into better English than ReSharper does. There is still editing to do, for while describing the code in English is marginally useful, GhostDoc still cannot provide context.
 

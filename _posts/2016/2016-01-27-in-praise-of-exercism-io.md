@@ -24,7 +24,7 @@ submit solutions as well as fetch new exercises.
 Although there doesn't appear to be a strict progression, later exercises are
 certainly more challenging than early ones. Each exercise can be solved by
 writing a method or two, so I normally complete one or two during a lunch break.
-Many would be suitable as an [interview exercise]({% post_url 2015/2015-10-12-coding-exercises %}).
+Many would be suitable as an [interview exercise]({% post_url 2015-10-12-coding-exercises %}).
 
 The web site is where the site really shines. The thing I love the most about
 Exercism is its code review capability. When you upload a solution to an

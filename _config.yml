@@ -99,6 +99,7 @@ ogp:
 #
 gems:
   - jekyll-sitemap
+  - jekyll-paginate
   - jemoji
 
 #
@@ -114,7 +115,7 @@ include: ["_pages"]
 markdown: redcarpet
 redcarpet:
   extensions: ["autolink", "fenced_code_blocks", "strikethrough", "superscript", "with_toc_data", "tables", "footnotes", "no_intra_emphasis"]
-highlighter: pygments
+highlighter: rouge
 
 excerpt_separator: <!--more-->
 

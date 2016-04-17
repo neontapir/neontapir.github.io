@@ -22,7 +22,7 @@ author:
   <img alt="Music box, copyright CC BY-NC-ND 2.0 by Lys*" src="/assets/music-box.jpg"/>
 </div>
 
-I recently posted about doing the [Bowling Game kata in Node.js]({% post_url 2014/2014-01-08-bowling-game-kata-using-node-js %}). On [Google+](https://plus.google.com/+ChuckDurfee), an online friend of mine Aaron commented:
+I recently posted about doing the [Bowling Game kata in Node.js]({% post_url 2014-01-08-bowling-game-kata-using-node-js %}). On [Google+](https://plus.google.com/+ChuckDurfee), an online friend of mine Aaron commented:
 
 > Not being a software engineer, I just like reading how you write about code development. You're clearly part of a movement that is about improving your work life's fluidity. As your writing conveys, this encompasses efficiency and skill, but also has a notable element of beauty. I wonder why this type of movement is not present in more career fields.
 

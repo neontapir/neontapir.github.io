@@ -14,7 +14,7 @@ tags:
   <img src="/assets/jurgen-appelo.jpg"/>
 </div>
 
-I recently wrote about [Cognitive Communication Coaching for Engineers]({% post_url 2016/2016-04-07-cognitive-communication-coaching-for-engineers %}), a
+I recently wrote about [Cognitive Communication Coaching for Engineers]({% post_url 2016-04-07-cognitive-communication-coaching-for-engineers %}), a
 talk a colleague gave on presentation techniques. Today, I'm going to apply
 those concepts to the two keynotes at [Mile High Agile 2016](http://milehighagile.org/)
 by Jurgen Appelo and Michael Feathers.

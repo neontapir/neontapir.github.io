@@ -26,7 +26,7 @@ author:
 ---
 ![violations](/assets/violations.jpeg)
 
-This is the fourth in a series of blog posts about implementing Kanban on my current project. The first installment was about [establishing the flow](% post_url 2014/2014-06-05-establishing-flow-kanban-experience-report %). The second described the [Rally data extract scripts](% post_url 2014/2014-06-12-rally-data-extract-scripts-kanban-experience-report %) I wrote. The third about [my Excel spreadsheet](% post_url 2014/2014-06-19-excel-spreadsheet-metrics %) that consumes the data. This post is about Kanban flow process violations.
+This is the fourth in a series of blog posts about implementing Kanban on my current project. The first installment was about [establishing the flow](% post_url 2014-06-05-establishing-flow-kanban-experience-report %). The second described the [Rally data extract scripts](% post_url 2014-06-12-rally-data-extract-scripts-kanban-experience-report %) I wrote. The third about [my Excel spreadsheet](% post_url 2014-06-19-excel-spreadsheet-metrics %) that consumes the data. This post is about Kanban flow process violations.
 
 I enter the number of state change violations that occurred, either by a story skipping a step or going backward across the board. I wish Rally had stronger means to discourage people from these kinds of violations! For me, simply marking a nonconforming column red is not strong enough.
 

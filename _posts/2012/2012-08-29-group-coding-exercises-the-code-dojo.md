@@ -18,7 +18,7 @@ author:
   first_name: Chuck
   last_name: Durfee
 ---
-Lately, I've talked about [book clubs]({% post_url 2012/2012-08-15-starting-a-technical-book-club %}) and [code katas]({% post_url 2012/2012-08-21-code-katas %}). While talking about code katas, I said:
+Lately, I've talked about [book clubs]({% post_url 2012-08-15-starting-a-technical-book-club %}) and [code katas]({% post_url 2012-08-21-code-katas %}). While talking about code katas, I said:
 
 > For a long time, I thought that code katas were puzzles that people solved together. I'll describe a few of those exercises in another article. Group coding exercises are fun but have different goals.
 
@@ -62,7 +62,7 @@ White belt programmers get validation that they do indeed know how to code somet
 
 While it's true that a group doesn't often repeat the same exercise over and over, I have found it instructive to try the same problem more than once with different techniques.
 
-For example, I've tried the [Secret Santa](http://rubyquiz.com/quiz2.html) problem in [PowerShell]({% post_url 2012/2012-01-25-secret-santa-code-kata-in-powershell %}), [C#]({% post_url 2012/2012-02-10-secret-santa-code-kata-redux-in-c %}), and [F#]({% post_url 2012/2012-02-17-revenge-of-the-secret-santa-code-kata-f %}). The F# post describes the different in approaches each time. It's true, there is no single solution to a computing problem!
+For example, I've tried the [Secret Santa](http://rubyquiz.com/quiz2.html) problem in [PowerShell]({% post_url 2012-01-25-secret-santa-code-kata-in-powershell %}), [C#]({% post_url 2012-02-10-secret-santa-code-kata-redux-in-c %}), and [F#]({% post_url 2012-02-17-revenge-of-the-secret-santa-code-kata-f %}). The F# post describes the different in approaches each time. It's true, there is no single solution to a computing problem!
 
 ## Feedback
 
