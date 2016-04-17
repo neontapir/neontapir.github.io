@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tale of Two Keynotes
-date: 2016-04-14 14:15:00
+date: 2016-04-17 15:07:00
 categories:
 - professional
 tags:

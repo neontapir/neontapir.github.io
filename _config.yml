@@ -98,6 +98,7 @@ ogp:
 # Gems.
 #
 gems:
+  - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
   - jemoji
