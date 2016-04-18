@@ -7,18 +7,20 @@ $code-font-family: Consolas, Monaco, 'Andale Mono', monospace;
 $code-font-size: 0.85em;
 
 // vertical margin.
-$margin: 50px;
+$margin: 30px;
 
 // brand color.
 $brand-color: #44eeff;
 
 // other major colors.
-$site-title-color: rgba(#000, .6);
-$page-title-color: $brand-color;
-$background-color: #fff;
-$border-color: rgba(#000, .1);
+$site-title-color: black;
+$page-title-color: goldenrod;
+  // darken($brand-color, 15%);
+$page-title-outline: darken($page-title-color, 20%);
+$background-color: #eee;
+$border-color: rgba(black, .1);
 
 // typography colors.
-$text-color: #1C1C1C;
-$link-color: darken($brand-color, 40%);
+$text-color: black;
+$link-color: darken($brand-color, 33%);
 $blockquote-color: #777;

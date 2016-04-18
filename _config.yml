@@ -22,7 +22,7 @@ defaults:
     values:
       author:
         login: Chuck
-        email: neontapir@gmail.com
+        email: neontapir+blog@gmail.com
         display_name: Chuck
         first_name: Chuck
         last_name: Durfee
@@ -32,7 +32,7 @@ defaults:
 #
 icons:
   rss: true
-  email: neontapir@gmail.com
+  email: neontapir+blog@gmail.com
   github: neontapir
   bitbucket:
   twitter: ChuckDurfee

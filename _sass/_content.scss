@@ -23,6 +23,11 @@
         font-size: 1.9em;
     }
 
+    strong, b {
+      font-size: 1.1em;
+      font-weight: bolder;
+    }
+
     blockquote {
         border-left: 5px solid #ddd;
         color: $blockquote-color;
@@ -131,6 +136,10 @@
                     margin: 0;
                     &, a {
                         color: $page-title-color;
+                        text-shadow:
+                          $page-title-outline 0px 0px 1px,   $page-title-outline 0px 0px 1px,   $page-title-outline 0px 0px 1px,
+                          $page-title-outline 0px 0px 1px,   $page-title-outline 0px 0px 1px,   $page-title-outline 0px 0px 1px;
+                        -webkit-font-smoothing: antialiased;
                     }
                 }
                 ul.meta, ul.tags {
