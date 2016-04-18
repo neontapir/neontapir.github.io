@@ -137,8 +137,10 @@
                     &, a {
                         color: $page-title-color;
                         text-shadow:
-                          $page-title-outline 0px 0px 1px,   $page-title-outline 0px 0px 1px,   $page-title-outline 0px 0px 1px,
-                          $page-title-outline 0px 0px 1px,   $page-title-outline 0px 0px 1px,   $page-title-outline 0px 0px 1px;
+                          $page-title-outline 0px 0px 1px,
+                          $page-title-outline 0px 0px 1px,
+                          $page-title-outline 0px 0px 1px,
+                          $page-title-outline 0px 0px 1px;
                         -webkit-font-smoothing: antialiased;
                     }
                 }
