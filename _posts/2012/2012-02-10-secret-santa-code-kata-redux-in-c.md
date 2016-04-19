@@ -7,11 +7,17 @@ categories:
 - professional
 tags:
 - c-sharp
+- C#
 - code exercise
 status: publish
 type: post
 published: true
-
+author:
+  login: Chuck
+  email: neontapir@gmail.com
+  display_name: Chuck
+  first_name: Chuck
+  last_name: Durfee
 ---
 Here’s another solution to the [Secret Santa code kata](http://rubyquiz.com/quiz2.html), this time in my “native” programming language of C#. This is the second solution I’ve written this week to this problem. Code katas are about experimenting with different approaches to simple but not trivial problems.
 

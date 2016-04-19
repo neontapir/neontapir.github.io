@@ -10,10 +10,6 @@
             {% endif %}
         </h1>
 
-        <div class="readtime">
-
-        </div>
-
         <ul class="tags">
             {% assign tags_num = (page.tags | size) %}
             {% if tags_num > 0 %}
@@ -28,13 +24,6 @@
 
         <div class="clearfix">
             <ul class="meta">
-                {% if page.content %}
-                  <li>
-                    <i class="fa fa-readtime"></i>
-                    {{ page.content | readtime }} min
-                  </li>
-                {% endif %}
-
                 {% if page.date %}
                 <li>
                     <i class="fa fa-calendar"></i>
