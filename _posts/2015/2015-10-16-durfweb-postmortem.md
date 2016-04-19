@@ -10,7 +10,7 @@ tags:
 - retrospective
 ---
 
-<img src="/assets/iterations.jpg" width="33%" style="float:right; margin:1em" />
+{% include side-image.html image="iterations.jpg" %}
 
 Two weeks ago, I ended my consulting firm, Durfweb. It was a difficult decision
 emotionally, but it was the right decision from a business standpoint. I wanted
