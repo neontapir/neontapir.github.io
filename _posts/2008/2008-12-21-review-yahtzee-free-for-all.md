@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: 'Review: Yahtzee Free-For-All'
-date: 2008-12-21 15:53:29.000000000 -07:00
+date: 2008-12-21 15:53:29 -07:00
 categories:
 - leisure
 - tabletop
@@ -11,20 +11,11 @@ tags:
 - games
 - review
 - yahtzee
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
 
 ---
 ![Yahtzee Free for All](/assets/yahtzee-free-for-all.jpeg)
 
-One of the gifts we got at the TKD white elephant Christmas gift exchange was [Yahtzee Free for All](http://www.amazon.com/gp/product/B0017RSYDU?ie=UTF8&tag=netacahieeglu-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B0017RSYDU). We decided to play it while waiting for dinner to finish, and later between dinner and dessert. The first game had 3 players; the second, 4. The adults had played Yahtzee before, but the kids hadn't.
+One of the gifts we got at the TKD white elephant Christmas gift exchange was [Yahtzee Free for All](http://www.amazon.com/gp/product/B0017RSYDU). We decided to play it while waiting for dinner to finish, and later between dinner and dessert. The first game had 3 players; the second, 4. The adults had played Yahtzee before, but the kids hadn't.
 
 Going into the game, I didn't have my hopes up. Yahtzee tends to be somewhat boring unless you're playing with the right crowd.
 

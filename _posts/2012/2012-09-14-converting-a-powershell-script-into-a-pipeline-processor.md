@@ -8,21 +8,7 @@ categories:
 tags:
 - pipeline
 - powershell
-status: publish
-type: post
-published: true
-meta:
-  _syntaxhighlighter_encoded: '1'
-  _edit_last: '5'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1437596826;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:531;}i:1;a:1:{s:2:"id";i:532;}i:2;a:1:{s:2:"id";i:529;}}}}
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
+- approaches
 ---
 Ever had a situation where you write a program or script, but it takes forever to execute because of the size of the data set? That happened to me recently.
 

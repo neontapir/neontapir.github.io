@@ -14,12 +14,6 @@ tags:
 status: publish
 type: post
 published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
 ---
 An article in Business Week made me think about sports movies as a metaphor for agile methodologies.
 

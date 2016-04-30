@@ -13,14 +13,8 @@ tags:
 - kanban
 - script
 - story
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
+- agile
+
 ---
 This is the second in a series of blog posts about implementing Kanban on my current project. The first installment was about [establishing the flow](% post_url 2014-06-05-establishing-flow-kanban-experience-report %). This post talks about obtaining the data for the Kanban metrics. Later posts talk about the Excel spreadsheet that consumes the data.
 

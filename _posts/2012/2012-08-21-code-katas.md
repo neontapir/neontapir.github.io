@@ -8,21 +8,7 @@ categories:
 tags:
 - code kata
 - coding
-status: publish
-type: post
-published: true
-meta:
-  _sd_is_markdown: '1'
-  _edit_last: '5'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1438144527;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:880;}i:1;a:1:{s:2:"id";i:1255;}i:2;a:1:{s:2:"id";i:1150;}}}}
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
+
 ---
 In my last post, I talked about [book clubs]({% post_url 2012-08-15-starting-a-technical-book-club %}). In it, I touched on code katas.
 

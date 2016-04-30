@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: 'Actual Play: Feng Shui 2 RPG with the Fashion Police'
-date: 2014-10-21 23:00:02.000000000 -06:00
+date: 2014-10-21 23:00:02 -06:00
 categories:
 - rpg
 - tabletop
@@ -14,12 +14,7 @@ tags:
 status: publish
 type: post
 published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
 ![fashion_police_badge](/assets/5f083_fashion_police.jpg)
 

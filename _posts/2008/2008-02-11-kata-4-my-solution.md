@@ -9,14 +9,7 @@ tags:
 - dry
 - munging
 - programming
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
+- approaches
 ---
 [Kata 4](http://web.archive.org/web/20131016084024/http://codekata.pragprog.com/2007/01/kata_four_data_.html) is about data munging. We're asked to download a couple of text files and extract some data. The first is weather data ([Listing 1](#listing1)). The second is soccer data ([Listing 2](#listing2)). [Listing 3](#listing3) is the DRY unified version. I combined the programs, but they could just as easily have been two programs. Then, we were asked to answer some questions. I'm going to answer them out of order. The writing of the first program certainly did alter my approach to the second. In fact, as you can see, the second program is almost identical to the first, because I retooled the first program to create the second program. I can't say whether factoring out code is **always** a good thing, but I think it certainly was in the case. Premature factoring is a waste of effort, but once the commonality emerges, I think factoring is often the right thing to do. I don't think the readability or maintainability of this particular program suffered too much, but I agree it can quickly become a concern in larger programs. See also my previous Kata posts: [Kata 1](http://neontapir.wordpress.com/2008/01/26/code-kata-1-my-solution/), [Kata 2](http://neontapir.wordpress.com/2008/01/31/kata-2-my-solution/) and [Kata 3](http://neontapir.wordpress.com/2008/02/04/kata-3-my-solution/).
 

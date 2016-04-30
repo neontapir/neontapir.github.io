@@ -10,6 +10,7 @@ tags:
 - discussion
 - facilitation
 - participation
+- approaches
 ---
 
 {% include side-image.html image="discussion.jpg" %}

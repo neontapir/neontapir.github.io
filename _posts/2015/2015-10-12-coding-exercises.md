@@ -8,7 +8,7 @@ categories:
 tags:
 - interviewing
 - exercise
-
+- approaches
 ---
 
 {% include side-image.html image="tools-wood-bench.jpg" width='40' %}

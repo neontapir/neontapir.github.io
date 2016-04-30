@@ -9,14 +9,7 @@ tags:
 - kata
 - node.js
 - should
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
+
 ---
 [![bowling](/assets/bowling-300x225.jpg)](/assets/bowling-300x225.jpg)
 

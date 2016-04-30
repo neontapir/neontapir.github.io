@@ -10,12 +10,6 @@ tags:
 - kata
 - test
 - unit
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
 ---
 I ran into an interesting scenario after revisiting the Bowling Game kata from memory. The exercise was a small reminder of the power of test-first development.
 

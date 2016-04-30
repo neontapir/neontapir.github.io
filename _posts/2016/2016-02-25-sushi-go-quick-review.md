@@ -10,10 +10,7 @@ tags:
 - review
 ---
 
-<div style="float:right; margin:1em; width:33%; text-align: center">
-  <img src="/assets/sushi-go.jpg"/></br />
-  <span style="font-size: small">Image courtesy of Gamewright</span>
-</div>
+{% include side-image.html image="sushi-go.jpg" caption="Image courtesy of Gamewright" %}
 
 I wanted to give a quick review of the game [Sushi
 Go](http://www.gamewright.com/gamewright/index.php?section=games&page=game&show=291)

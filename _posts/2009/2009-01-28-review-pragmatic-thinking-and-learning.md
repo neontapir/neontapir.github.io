@@ -17,17 +17,11 @@ tags:
 - refactoring your wetware
 - review
 - wetware
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
-I had a chance to read [Pragmatic Thinking and Learning: Refactor Your Wetware](http://www.amazon.com/gp/product/1934356050?ie=UTF8&tag=netacahieeglu-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1934356050) <img src="/assets/pragmatic-thinking-cover"/> when the office was not exactly closed, but brought to a standstill by heavy snowfall. I work right upside the Front Range in Golden, and we were getting inches of snow in an hour, and people were genuinely concerned about being able to get out of the parking lot if the snow continued much longer.
+{% include side-image.html image="pragmatic-thinking-cover.gif" %}
+
+I had a chance to read [_Pragmatic Thinking and Learning: Refactor Your Wetware_](http://www.amazon.com/gp/product/1934356050) when the office was not exactly closed, but brought to a standstill by heavy snowfall. I work right upside the Front Range in Golden, and we were getting inches of snow in an hour, and people were genuinely concerned about being able to get out of the parking lot if the snow continued much longer.
 
 The book brings some of the latest cognitive science to software engineers. Andy Hunt begins by explaining the Dreyfus Model of Skill Acquisition, which marks the transformation people make when acquiring a skill in five stages: novice, advanced beginner, competent, proficient, and expert. He applies the model to learning, explaining what people at each stage need to continue learning, and what traits they must acquire to proceed. For example, it explains why the mandatory training at work is so ineffective for me: the corporate videos assume that I am a novice, whereas I am at least competent at skills like navigating ethical dilemmas and security consciousness.
 

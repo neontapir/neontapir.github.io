@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: 'Example #47 of Why Programmers Struggle to Talk to Humans'
-date: 2014-01-28 13:47:54.000000000 -07:00
+date: 2014-01-28 13:47:54 -07:00
 categories:
 - coding
 - professional
@@ -10,12 +10,6 @@ tags: []
 status: publish
 type: post
 published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
 ---
 My friend and fellow programmer Josh just walked over to my cubicle and asked if I had any disinfecting wipes. I opened my drawer, looked at the shelve, said "yes" and closed the drawer.
 

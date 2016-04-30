@@ -21,5 +21,6 @@ $border-color: rgba(black, .1);
 
 // typography colors.
 $text-color: black;
+$caption-color: lighten($text-color, 50%);
 $link-color: darken($brand-color, 33%);
 $blockquote-color: #777;

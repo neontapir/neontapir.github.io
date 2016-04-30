@@ -9,12 +9,6 @@ tags:
 - lean
 - talent
 - waste
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
 ---
 [![talent](/assets/talent-300x200.jpg)](/assets/talent-300x200.jpg)
 

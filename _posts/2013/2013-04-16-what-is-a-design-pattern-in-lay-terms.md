@@ -2,21 +2,15 @@
 layout: post
 comments: true
 title: What is a Design Pattern, in Lay Terms?
-date: 2013-04-16 12:49:53.000000000 -06:00
+date: 2013-04-16 12:49:53 -06:00
 categories:
 - coding
 - professional
 tags:
 - design patterns
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+- agile
+- presentation
+- agiledenver
 
 ---
 In preparation for my talk at [Mile High Agile 2013](http://milehighagile2013.agiledenver.org/) on Friday, I asked this question on a few social networks:

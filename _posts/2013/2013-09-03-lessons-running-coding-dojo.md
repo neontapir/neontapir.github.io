@@ -8,19 +8,12 @@ categories:
 - professional
 tags:
 - code dojo
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
 ![dojo](/assets/dojo-300x128.jpg)
 
-After posting about [coding dojos]({% post_url 2012-08-29-group-coding-exercises-the-code-dojo %}) a year ago, I have one started at work. We wrapped up our fifth session today on the [bowling game kata](http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata) by Uncle Bob Martin.
+After posting about coding dojos
+ a year ago, I have one started at work. We wrapped up our fifth session today on the [bowling game kata](http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata) by Uncle Bob Martin.
 
 Overall, the experience has been wonderful. I've gotten a number of encouraging comments each week, and we have a number of regulars who attend. The survey I sent today affirmed my anecdotal evidence -- very positive feedback. Also, I've gotten to know a few programmers in different departments that I normally wouldn't interact with.
 

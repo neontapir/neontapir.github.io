@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: 'Process Violations: a Kanban experience report'
-date: 2014-06-26 07:55:37.000000000 -06:00
+date: 2014-06-26 07:55:37 -06:00
 categories:
 - process
 - professional
@@ -14,15 +14,6 @@ tags:
 - step
 - story
 - violations
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
 ---
 ![violations](/assets/violations.jpeg)
 

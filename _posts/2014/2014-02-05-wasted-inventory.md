@@ -9,17 +9,11 @@ tags:
 - inventory
 - lean
 - waste
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
 ---
-<img src="/assets/inventory-300x225.jpg"/>
+![inventory](/assets/inventory-300x225.jpg)
 
-In manufacturing, any piece of work that is ready for the next step   might be
-considered inventory: finished goods, works in progress, and   even raw
+In manufacturing, any piece of work that is ready for the next step might be
+considered inventory: finished goods, works in progress, and even raw
 material.
 
 For a software delivery team, it’s hard to measure inventory. For some   teams,

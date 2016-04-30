@@ -7,15 +7,7 @@ categories:
 - professional
 tags:
 - powershell
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
 At work, I had the need to parse through a large pipe-delimited file to count the number of records whose 5th column meets and doesn’t meet my criteria.
 

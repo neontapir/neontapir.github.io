@@ -8,15 +8,7 @@ categories:
 tags:
 - code exercise
 - powershell
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
 The team at work is doing a Code Kata, [the Secret Santa kata from Ruby Quiz](http://rubyquiz.com/quiz2.html). In it, you are given a list of names and emails and need to pair givers with receivers, with the only constraint being that a giver and receiver can’t have the same surname.
 

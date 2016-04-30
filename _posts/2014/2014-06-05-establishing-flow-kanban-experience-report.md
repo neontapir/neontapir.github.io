@@ -16,15 +16,6 @@ tags:
 - Stash
 - state
 - team
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
 ---
 ![simple-kanban-board](/assets/simple-kanban-board.png)
 

@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: 'From Bash to Ruby: A Kanban experience report'
-date: 2014-09-04 21:27:10.000000000 -06:00
+date: 2014-09-04 21:27:10 -06:00
 categories:
 - coding
 - process
@@ -19,12 +19,6 @@ tags:
 status: publish
 type: post
 published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
 ---
 ![rubylang](/assets/rubylang.png)
 

@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: The getKanban Game
-date: 2013-02-12 15:16:03.000000000 -07:00
+date: 2013-02-12 15:16:03 -07:00
 categories:
 - presentation
 - process
@@ -11,15 +11,7 @@ tags:
 - game
 - Kanban
 - training
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
 
 I did my second demonstration of Kanban yesterday, this time with my own team. As before, I used the [getKanban game](http://getkanban.com/BoardGame.html) to give teams hands-on experience with a sample Kanban-driven workflow.

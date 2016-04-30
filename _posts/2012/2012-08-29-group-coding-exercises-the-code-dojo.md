@@ -8,15 +8,7 @@ categories:
 tags:
 - code dojo
 - coding
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+- approaches
 ---
 Lately, I've talked about [book clubs]({% post_url 2012-08-15-starting-a-technical-book-club %}) and [code katas]({% post_url 2012-08-21-code-katas %}). While talking about code katas, I said:
 

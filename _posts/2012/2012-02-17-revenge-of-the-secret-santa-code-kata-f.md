@@ -9,15 +9,7 @@ tags:
 - code exercise
 - f-sharp
 - F#
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
 Here’s another solution to the [Secret Santa code kata](http://rubyquiz.com/quiz2.html), this time a scouting mission into functional programming with F#.
 

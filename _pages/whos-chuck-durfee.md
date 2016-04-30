@@ -8,7 +8,7 @@ title: About Chuck Durfee
 
 Hello, my name is Charles Durfee, and welcome to my site! I go by Chuck.
 
-<img alt="Photo of Chuck Durfee" width="33%" style="padding: 1em; float: right;" src="/assets/chuck-durfee-201507.jpg">
+{% include side-image.html image="chuck-durfee-201507.jpg" alt="Photo of Chuck Durfee" %}
 
 ## Professional Me
 

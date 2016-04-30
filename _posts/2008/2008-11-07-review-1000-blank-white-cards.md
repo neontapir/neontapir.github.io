@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: 'Review: 1000 Blank White Cards'
-date: 2008-11-07 12:32:34.000000000 -07:00
+date: 2008-11-07 12:32:34 -07:00
 categories:
 - leisure
 - tabletop
@@ -10,17 +10,9 @@ tags:
 - cards
 - drawing
 - games
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
-<div style="float:right;margin-left:10px;margin-bottom:10px;">[![1000 Blank White Cards](/assets/1000-blank-white-cards.jpg)](http://www.flickr.com/photos/tangentier/3009919670/ "photo sharing")</div>
+{% include side-image.html image='1000-blank-white-cards.jpg' %}
 
 1000 Blank White Cards is a family favorite, introduced to us by a good friend of mine. A good discussion of the game itself is available on [Wikipedia](http://en.wikipedia.org/wiki/1000_Blank_White_Cards), so I won't bore you with the details. We play with most of the suggested card limitation rules. We allow people to pen a couple of cards to start the game, then sprinkle some blank ones throughout the deck.
 

@@ -11,16 +11,9 @@ tags:
 - elegant
 - fluidity
 - xp
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
 ---
-<div style="float: right; padding: 1em;">
-  <img alt="Music box, copyright CC BY-NC-ND 2.0 by Lys*" src="/assets/music-box.jpg"/>
-</div>
+
+{% include side-image.html image="music-box.jpg" alt="Music box, copyright CC BY-NC-ND 2.0 by Lys*" %}
 
 I recently posted about doing the [Bowling Game kata in Node.js]({% post_url 2014-01-08-bowling-game-kata-using-node-js %}). On [Google+](https://plus.google.com/+ChuckDurfee), an online friend of mine Aaron commented:
 

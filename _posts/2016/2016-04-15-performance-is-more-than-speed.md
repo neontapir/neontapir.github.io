@@ -16,8 +16,9 @@ tags:
 
 Recently a company called Boom announced that they were creating a supersonic
 aircraft to replace the Concorde, which hasn't been in regular use since 2003.
-This called to mind a presentation [slide deck](http://www.tamps.cinvestav.mx/~adiaz/ArqComp/03-Performance.pdf) I read last year talking about
-performance that referenced the Concorde.
+This called to mind a presentation [slide
+deck](http://www.tamps.cinvestav.mx/~adiaz/ArqComp/03-Performance.pdf) I read
+last year talking about performance that referenced the Concorde.
 
 The thrust of the presentation is that when we speak about performance, there
 are really two metrics we are conflating. One is the time to do the task, which

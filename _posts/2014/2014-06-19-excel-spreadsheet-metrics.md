@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: 'Excel spreadsheet for metrics: a Kanban experience report'
-date: 2014-06-19 07:44:40.000000000 -06:00
+date: 2014-06-19 07:44:40 -06:00
 categories:
 - process
 - professional
@@ -16,12 +16,7 @@ tags:
 status: publish
 type: post
 published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
 This is the third in a series of blog posts about implementing Kanban on my current project. The first installment was about [establishing the flow](% post_url 2014-06-05-establishing-flow-kanban-experience-report %). The second described the [Rally data extract scripts](% post_url 2014-06-12-rally-data-extract-scripts-kanban-experience-report %) I wrote. In this post, I talk about my Excel spreadsheet that consumes the data.
 

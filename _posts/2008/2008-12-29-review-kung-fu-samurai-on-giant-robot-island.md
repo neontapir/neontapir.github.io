@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: 'Review: Kung Fu Samurai on Giant Robot Island'
-date: 2008-12-29 21:02:30.000000000 -07:00
+date: 2008-12-29 21:02:30 -07:00
 categories:
 - leisure
 - tabletop
@@ -15,15 +15,6 @@ tags:
 - kung fu
 - review
 - samurai
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
 
 ---
 ![Kung Fu Samurai on Giant Robot Island](/assets/kung-fu-samurai.jpeg)

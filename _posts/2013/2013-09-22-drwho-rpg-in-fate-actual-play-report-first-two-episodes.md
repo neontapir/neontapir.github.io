@@ -9,17 +9,9 @@ tags:
 - actual play
 - doctor who
 - FATE
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
 ---
-<img src="/assets/IMAG0313.jpg" width="172" height="307" alt="Fate book and dice" style="float: right;" />
+
+{% include side-image.html image="fate-book-with-dice.jpg" %}
 
 This week, I just finished playing an introductory _Doctor Who_ scenario using [Fate Accelerated Edition](http://www.evilhat.com/home/fae/‎) with my teenage kids. We had a blast, and I just had to share our actual play experience. _Note: This post is an edited version of a forum post made on Google+, in case you saw it there._
 

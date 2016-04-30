@@ -8,15 +8,7 @@ tags:
 - code exercise
 - estimation
 - programming
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
 [Kata 3](http://web.archive.org/web/20131016085513/http://codekata.pragprog.com/2007/01/kata_three_how_.html) has to do with estimation. The full questions are on Dave's blog.
 

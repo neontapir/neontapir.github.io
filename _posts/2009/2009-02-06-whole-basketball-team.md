@@ -5,6 +5,7 @@ title: Whole Basketball Team
 categories:
 - professional
 tags:
+- agile
 - basketball
 - development
 - disciplines
@@ -13,16 +14,8 @@ tags:
 - scrum
 - switching
 - whole team
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
 ---
+
 One of the thornier agile concepts around my workplace is what XP calls "whole team", where people put getting tasks done over their job titles.
 
 I got to demonstrate this firsthand in my team this week, as we're completely blocked by some testing tasks. We have a practice in place forbidding developers to write test cases for their own code (which would be a bit like students writing their own final exams), but we can certainly execute test cases written by others on the team. Can, being the key word.

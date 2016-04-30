@@ -10,15 +10,7 @@ tags:
 - f-sharp
 - F#
 - robocode
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
 Last time, I introduced the idea of building an F# robot for Robocode. The second iteration contains some improvements:
 

@@ -8,12 +8,10 @@ tags:
 - code
 - benchmarking
 - performance
+- approaches
 ---
 
-<div style="float:right; margin:1em; width:33%; text-align: center">
-  <img src="/assets/grapefruit.jpeg"/></br />
-  <span style="font-size: small">Not the Fruity logo, but I like grapefruit</span>
-</div>
+{% include side-image.html image="grapefruit.jpeg" caption="Not the Fruity logo, but I like grapefruit" %}
 
 Another tech review, this time a Ruby library. [Fruity](https://github.com/marcandre/fruity) is
 a library for performance testing. You have probably heard of its better-known

@@ -10,24 +10,7 @@ tags:
 - f-sharp
 - F#
 - robocode
-status: publish
-type: post
-published: true
-meta:
-  publicize_results: a:1:{s:7:"twitter";a:1:{i:17953864;a:2:{s:7:"user_id";s:11:"ChuckDurfee";s:7:"post_id";s:18:"182811854186352641";}}}
-  _wpas_done_twitter: '1'
-  jabber_published: '1332420716'
-  _edit_last: '5'
-  _syntaxhighlighter_encoded: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1434224345;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:700;}i:1;a:1:{s:2:"id";i:696;}i:2;a:1:{s:2:"id";i:527;}}}}
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
+
 ---
 This is article 3 in a series of posts in which I introduced the idea of building an F# robot for Robocode. The last installment showed an improved version of the robot that didn't bump into walls, but did quake at the sight of an enemy.
 

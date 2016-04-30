@@ -15,15 +15,7 @@ tags:
 - sandcastle
 - SHFB
 - XML comments
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
 Last time, we talked about [accepting file input]({% post_url 2010-01-08-object-mapper-accepting-file-input %}), the last feature added to the Object Mapper. Now, it has come time to document the module.
 

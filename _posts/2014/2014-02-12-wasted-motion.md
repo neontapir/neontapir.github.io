@@ -9,12 +9,6 @@ tags:
 - lean
 - motion
 - waste
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
 ---
 [![transportation](/assets/transportation-193x300.jpg)](/assets/transportation-193x300.jpg)
 

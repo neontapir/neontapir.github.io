@@ -5,16 +5,12 @@ title: 'Code Kata 2: My Solution'
 categories:
 - professional
 tags:
+- approaches
 - algorithm
 - code exercise
 - picard iteration
 - programming
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
 [Code Kata 2](http://web.archive.org/web/20131016085418/http://codekata.pragprog.com/2007/01/kata_two_karate.html "Code Kata 2") was harder than Kata 1\. Dave is right, it's hard to come up with five different ways to do something! However, I think I have five sufficiently different approaches to warrant a post. My code, in C#, is below the More tag.
 

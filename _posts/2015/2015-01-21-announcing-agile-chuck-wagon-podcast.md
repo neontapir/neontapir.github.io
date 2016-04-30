@@ -7,15 +7,8 @@ categories:
 - podcast
 tags:
 - podcast
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+- agile
+
 ---
 ![agile-chuck-wagon-banner-1400x1400](/assets/agile-chuck-wagon-banner-1400x1400-300x300.jpg)
 

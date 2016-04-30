@@ -10,15 +10,7 @@ tags:
 - f-sharp
 - F#
 - robocode
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
 The group here at work chose to compete via Robocode for our next code kata, and this post is the first in a series that describes how I wrote an F# robot for that challenge.
 

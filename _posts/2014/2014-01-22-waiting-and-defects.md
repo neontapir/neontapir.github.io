@@ -11,14 +11,10 @@ tags:
 - lean
 - waiting
 - waste
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+- agile
+- approaches
 ---
-<div style="float: right; padding: 1em;"><img src="/assets/waiting-198x300.jpg" /></div>
+{% include side-image.html image="waiting-198x300.jpg" %}
 
 Lean thinking comes from innovation in statistical process control. The idea is
 that honing techniques leads to measurably better results. Lean identifies eight

@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: AsciiDoc revelation
-date: 2013-09-21 14:43:17.000000000 -06:00
+date: 2013-09-21 14:43:17 -06:00
 categories:
 - coding
 - professional
@@ -11,15 +11,6 @@ tags:
 - layout
 - rendering
 - sublime-text
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
 ---
 I love [Asciidoc](http://asciidoctor.org/). It is akin to Markdown, but it provides more functionality, particularly when it comes to transcoding. You can take an AsciiDoc file and turn it into an HTML file with extensive CSS theme support, PDF, DocBook XML file, eBook -- many more possibilities especially when using the Asciidoctor rendering engine.
 

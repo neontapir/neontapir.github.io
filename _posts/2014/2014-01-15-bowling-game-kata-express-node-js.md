@@ -11,14 +11,9 @@ tags:
 - node.js
 - restify
 - supertest
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
-<img src="/assets/bowling-300x225.jpg"/>
+![bowling](/assets/bowling-300x225.jpg)
 
 Last time, I talked about the [Bowling Game kata in Node.js]({% post_url 2014-01-08-bowling-game-kata-using-node-js %}), and mentioned that the next step in looking at the [MEAN stack](http://www.mean.io/) is [Express](http://expressjs.com/), which is a JavaScript web application framework.
 

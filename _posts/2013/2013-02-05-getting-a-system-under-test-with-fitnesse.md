@@ -2,24 +2,16 @@
 layout: post
 comments: true
 title: Getting a System Under Test with FitNesse
-date: 2013-02-05 20:53:54.000000000 -07:00
+date: 2013-02-05 20:53:54 -07:00
 categories:
 - coding
 - professional
 tags:
 - agile
-- C#
+- csharp
 - fitnesse
 - testing
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
 Over the past week or so, I've become quite a fan of FitNesse. [FitNesse](http://fitnesse.org) is "a simple tool that allows non-technical users to specify and run acceptance tests for software systems."
 

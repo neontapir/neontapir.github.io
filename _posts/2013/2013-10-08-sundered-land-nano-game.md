@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: The Sundered Land, a nano-game
-date: 2013-10-08 23:59:04.000000000 -06:00
+date: 2013-10-08 23:59:04 -06:00
 categories:
 - leisure
 - rpg
@@ -10,15 +10,6 @@ tags:
 - nano-game
 - rpg
 - sundered
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
 ---
 I've been having fun with Vincent Baker's nano-game [**The Sundered Land**](http://nightskygames.com/welcome/game/TheSunderedLand) the past couple of days. It's a small roleplaying game set, comprised of a number of single encounters, suitable for playing in a forum thread. In one called _A Doomed Pilgrim_, one player plays a pilgrim, and the other participants try to stop the pilgrim from succeeding. However, there is a constraint: the other players can only respond to the pilgrim's direct questions, so they may not be able to do it. A typical exchange might look like this:
 

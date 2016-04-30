@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: Get the Gist
-date: 2013-08-17 16:20:45.000000000 -06:00
+date: 2013-08-17 16:20:45 -06:00
 categories:
 - coding
 - professional
@@ -11,15 +11,7 @@ tags:
 - gist
 - github
 - markdown
-status: publish
-type: post
-published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
 Recently, I discovered Gists, a code snippet publishing platform by GitHub. In fact, a Gist is essentially a one-file GitHub repository.
 

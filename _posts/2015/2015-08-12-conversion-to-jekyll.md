@@ -9,12 +9,7 @@ tags:
 status: publish
 type: post
 published: true
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
+
 ---
 ![Jekyll](/assets/jekyll-logo.png)
 

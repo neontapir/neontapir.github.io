@@ -10,26 +10,8 @@ tags:
 - processing
 - production
 - waste
-status: publish
-type: post
-published: true
-meta:
-  _yoast_wpseo_linkdex: '67'
-  _edit_last: '5'
-  _yoast_wpseo_focuskw: overproduction
-  _wpas_done_all: '1'
-  _wpas_skip_28796: '1'
-  _wpas_skip_4335974: '1'
-  _wpas_skip_5821802: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1438194143;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1309;}i:1;a:1:{s:2:"id";i:1291;}i:2;a:1:{s:2:"id";i:1312;}}}}
-author:
-  login: Chuck
-  email: neontapir@gmail.com
-  display_name: Chuck
-  first_name: Chuck
-  last_name: Durfee
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
+- agile
+- approaches
 ---
 [![bronze-rose](/assets/bronze-rose-300x223.jpg)](/assets/bronze-rose.jpg)
 
