@@ -24,3 +24,8 @@ gem 'celluloid', '0.16.0'
 gem 'timers', '4.0.4'
 gem 'nokogiri'
 gem 'classifier-reborn'
+
+# Needed by Octopress
+
+gem 'octopress'
+gem 'jekyll-watch'
