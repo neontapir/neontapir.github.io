@@ -2,6 +2,8 @@
 layout: post
 title: Conversion to Markdown complete
 date: 2016-04-30T14:24:21-06:00
+tags:
+- markdown
 ---
 {% include side-image.html image="markdown.png" width="20" %}
 
