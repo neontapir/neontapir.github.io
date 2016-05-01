@@ -12,7 +12,7 @@ tags:
 ---
 Last time, I talked about testability and why it's important. Today, I continue the conversation with techniques to improve testability. 
 
-![Steps Forward](/assets/IMG_0130.png)
+![Steps Forward](/assets/steps-forward.png)
 
 Though I've used different technologies through my career to achieve these benefits, I use examples from my current team.
 

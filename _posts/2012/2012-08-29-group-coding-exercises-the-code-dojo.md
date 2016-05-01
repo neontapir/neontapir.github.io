@@ -16,7 +16,7 @@ Lately, I've talked about [book clubs]({% post_url 2012-08-15-starting-a-technic
 
 This post explores group coding exercises.
 
-![Code Dojo](/assets/IMG_0116.png)
+![Code Dojo](/assets/code-dojo.png)
 
 ## Group Coding versus a Kata
 

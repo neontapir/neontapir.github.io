@@ -11,6 +11,6 @@ tags:
 - presentation
 ---
 
-![Chuck Durfee at MHA 2013](/assets/agileROB_2839-M.jpg "Chuck Durfee presents on 'Design Patterns in Non-Software Contexts' at Mile High Agile 2013")
+![Chuck Durfee at MHA 2013](/assets/chuck-durfee-mha2013.jpg "Chuck Durfee presents on 'Design Patterns in Non-Software Contexts' at Mile High Agile 2013")
 
 I'm back from my honeymoon, and the conference has posted pictures from the event. This is me giving my presentation.

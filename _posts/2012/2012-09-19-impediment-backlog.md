@@ -16,7 +16,7 @@ Look, I get it. You have a boss that hasn't coded in five years and doesn't reme
 
 Todays, let's talk about impediments.
 
-![Impediments](/assets/IMG_0131.png)
+![Impediments](/assets/impediments.png)
 
 ### Cost Cutting Measures
 

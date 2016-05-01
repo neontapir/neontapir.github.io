@@ -19,7 +19,7 @@ tags:
 - wetware
 
 ---
-{% include side-image.html image="pragmatic-thinking-cover.gif" %}
+{% include side-image.html image="pragmatic-thinking-cover.jpeg" %}
 
 I had a chance to read [_Pragmatic Thinking and Learning: Refactor Your Wetware_](http://www.amazon.com/gp/product/1934356050) when the office was not exactly closed, but brought to a standstill by heavy snowfall. I work right upside the Front Range in Golden, and we were getting inches of snow in an hour, and people were genuinely concerned about being able to get out of the parking lot if the snow continued much longer.
 

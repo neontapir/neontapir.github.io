@@ -12,7 +12,7 @@ tags:
 ---
 At work, there's a renewed interest in testability (_I've taken experience at a few positions and combine it into a narrative._)
 
-![Testability](/assets/IMG_0129.png)
+![Testability](/assets/testability.png)
 
 I'm a member of the third team to work on our project. The original team has left, the people who replaced them have moved on, and now we maintain and enhance this application. Often we find ourselves doing forensic analysis, trying to divine the reasoning behind some design choices.
 

@@ -10,7 +10,7 @@ tags:
 - agile
 
 ---
-![agile-chuck-wagon-banner-1400x1400](/assets/agile-chuck-wagon-banner-1400x1400-300x300.jpg)
+![agile-chuck-wagon-banner](/assets/agile-chuck-wagon-banner-300x300.jpg)
 
 I'm pleased to announce the Agile Chuck Wagon podcast! Each episode will be a short talk about an agile or lean software delivery topic, including techniques like design patterns that help teams stay agile. Please join me!
 
