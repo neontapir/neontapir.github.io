@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Charles Durfee, MBA"
-date: 2016-05-15 16:00:00
+date: 2016-05-14 16:00:00
 categories:
 - school
 tags:
@@ -10,7 +10,10 @@ tags:
 
 {% include side-image.html image="csu-mba.png" %}
 
-Today I earn my Master's in Business Administration!
+Today I earn my Master's in Business Administration! I could not have succeeded
+in this program with the support of my wife Candy and my family. And I thank God
+for the opportunities this degree program gave me and for blessing me with the
+strength to see it through.
 
 To celebrate, I wanted to share with you a vignette I found on my hard drive while
 doing some maintenance. I wrote this in June 2013, when I had just decided
