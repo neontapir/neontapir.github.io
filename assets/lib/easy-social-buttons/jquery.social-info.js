@@ -2,7 +2,7 @@
  * 	Social Info 0.2 - jQuery plugin
  *	written by cyokodog
  *
- *	Copyright (c) 2014 cyokodog 
+ *	Copyright (c) 2014 cyokodog
  *		http://www.cyokodog.net/
  *		http://d.hatena.ne.jp/cyokodog/)
  *		http://cyokodog.tumblr.com/
@@ -64,7 +64,7 @@
 				return;
 			}
 			$.si.jsonp({
-				url : 'http://urls.api.twitter.com/1/urls/count.json',
+				url : 'http://opensharecount.com/count.json',
 				data : {
 					url : arg.url
 				},

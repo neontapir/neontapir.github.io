@@ -24,7 +24,7 @@
         font-size: 1em;
         line-height: 1em;
         margin: 0;
-        .title {
+        .site-title {
             display: inline-block;
             color: $site-title-color;
             font-weight: bold;
@@ -35,8 +35,9 @@
             @media screen and (max-width: $mobile-width) {
                 margin-top: 0;
             }
-        }
-        .description {
+        };
+
+        span.site-description {
             margin: 0;
             font-size: 0.6em;
             line-height: 1em;
@@ -44,4 +45,5 @@
             color: lighten($site-title-color, 20%);
         }
     }
+
 }
