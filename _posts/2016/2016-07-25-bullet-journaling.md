@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bullet Journaling
-date: 2016-07-26 15:00:00
+date: 2016-07-25 15:00:00
 categories:
 - personal
 tags:
