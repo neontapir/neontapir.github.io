@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     {% capture title %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% endcapture %}
-
+    {% include google-analytics.html %}
     {% include page-url-resolver.html page=page %}
 
     {% if page.excerpt %}
@@ -123,6 +123,5 @@
 <script src="{{ '/assets/js/search.js' | prepend: site.baseurl }}"></script>
 {% endif %}
 
-{% include google-analytics.html %}
 </body>
 </html>
