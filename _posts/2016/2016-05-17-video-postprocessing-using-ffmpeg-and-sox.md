@@ -103,6 +103,9 @@ The tutorial page suggests a sensitivity threshold in a range of .21-.3, but I
 found that even .21 introduced some attenuation. However, .15 left enough of
 Paul's voice that he was intelligible when he was talking quietly.
 
+{% include pullquote.html
+text="This step makes a huge difference in watchability." %}
+
 Each time I generated a new `tmpaud-clean.wav` file, I listened to it with
 `play tmpaud-clean.wav`. When I was satisfied with the results, I used FFmpeg
 to merge (remux) the two streams back together:

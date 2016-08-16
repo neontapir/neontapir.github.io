@@ -7,6 +7,8 @@ categories:
 - personal
 tags:
 - journal
+- willpower
+- organization
 ---
 
 {% include side-image.html image="bullet-journal.jpg" %}
