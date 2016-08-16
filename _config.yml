@@ -2,7 +2,7 @@
 # Basic settings.
 #
 #url: http://qckanemoto.github.io # or http://you.github.io
-lang: en
+lang: en-US
 url: http://neontapir.github.io
 baseurl: ""
 title: Chuck Durfee's Blog
@@ -92,7 +92,10 @@ paginate_path: page/:num
 #
 # Social.
 #
-share_buttons: true
+share_buttons:
+  twitter: true
+  facebook: true # needs ogp.fb.app_id
+  hatena: false
 ogp:
   image_url: /assets/img/tapir.png
   fb:
@@ -134,5 +137,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
+  - NOTES.md
   - README.md
   - vendor

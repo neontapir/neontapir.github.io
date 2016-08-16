@@ -1,7 +1,7 @@
 <div class="site-pullquote" style="width:{{ include.width | default:'50' }}%;">
   <blockquote>
     {% if include.image %}
-    <img src="/assets/{{ include.image }}" alt="{{ include.alt }}"/>
+    <img src="/assets/{{ include.image }}" alt="{{ include.alt }}"/><br/>
     {% endif %}
     {{ include.text }}
   </blockquote>

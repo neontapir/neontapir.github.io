@@ -33,7 +33,11 @@ camcorder uses a proprietary .MOD file format and the raw footage was 1.8 GB,
 too bulky to share.
 
 Aside from compressing it, I felt there were a couple of small things I could do
-to enhance the quality of the video. The room had an air vent that was running
+to enhance the quality of the video.
+
+<!--more-->
+
+The room had an air vent that was running
 throughout his talk. And, I wanted to preface the video with a title screen.
 
 My work computer is a Mac, but I don't have carte blanche to install anything I

@@ -1,7 +1,5 @@
 <footer>
     {% if site.share_buttons and include.share != false %}
-    <div style="margin-top: 1em;">
-        {% include share-buttons.html page=page %}
-    </div>
+    {% include share-buttons.html page=include.page %}
     {% endif %}
 </footer>
