@@ -60,7 +60,7 @@ ones. For example, `lighten(shade($color, 20%), 10%)` throws an error in one of
 the Jekyll converters.
 
 The site showed me the effects of various functions, as well as allowing me to
-tweak the values without having to rebuild my site to see the changes. Had I used this site
-originally, I feel sure I would have ditched the neon green secondary coloring
-much faster. I think the goldenrod makes for a more readable design while still
-fitting in with the "neon" theme. Let me know what you think.
+tweak the values without having to rebuild my site to see the changes. Had I
+used this site originally, I feel sure I would have ditched the neon green
+secondary coloring much faster. I think the goldenrod makes for a more readable
+design while still fitting in with the "neon" theme. Let me know what you think.
