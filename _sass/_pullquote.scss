@@ -1,0 +1,12 @@
+.site-pullquote {
+    float: right;
+    // padding-top: 1em;
+    // padding-bottom: 1em;
+    padding-left: 1em;
+
+    blockquote {
+      font-size: 1.5em;
+      font-weight: bolder;
+      color: $pullquote-color;
+    }
+}

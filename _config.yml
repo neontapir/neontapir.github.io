@@ -6,7 +6,7 @@ lang: en
 url: http://neontapir.github.io
 baseurl: ""
 title: Chuck Durfee's Blog
-description: "The neon tapir, casting his eerie glow upon the masses"
+description: The neon tapir, casting his eerie glow upon the masses
 avatar: /assets/img/tapir.png
 show_drafts: false
 
@@ -20,6 +20,11 @@ defaults:
       path: ""
       type: "posts"
     values:
+      logo: /assets/img/tapir.png
+      social:
+        name: Chuck Durfee
+      twitter:
+        username: ChuckDurfee
       author:
         login: Chuck
         email: neontapir+blog@gmail.com
@@ -99,8 +104,9 @@ ogp:
 #
 gems:
   - jekyll-feed
-  - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
   - jemoji
 
 #

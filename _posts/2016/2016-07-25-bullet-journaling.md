@@ -2,6 +2,7 @@
 layout: post
 title: Bullet Journaling
 date: 2016-07-25 15:00:00
+description: How I came to adopt bullet journaling
 categories:
 - personal
 tags:
@@ -33,11 +34,13 @@ what the census calls it. Locals refer to the individual towns in this
 metropolitan area of 500,000 people, with the most recognized probably being
 Fayetteville.
 
-In Eureka Springs, the Internet is not a given. And that's when my digital life
-began to fall apart. I've been somewhat dissatisfied with my phone and biding my
-time until I can upgrade. With no connection to the outside world, it became
-even more useless. Often, I left it in the car and carried my point-and-shoot
-along instead.
+{% include pullquote.html image="eureka-springs.jpeg"
+text="In Eureka Springs, the Internet is not a given." %}
+
+And that's when my digital life began to fall apart. I've been somewhat
+dissatisfied with my phone and biding my time until I can upgrade. With no
+connection to the outside world, it became even more useless. Often, I left it
+in the car and carried my point-and-shoot camera along instead.
 
 As I sat and read my book, I realized that my digital life was failing me
 because it wasn't available when I wanted it. I don't use my electronics early

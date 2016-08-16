@@ -23,6 +23,12 @@ A simple and customizable theme for Jekyll.
 3. Modify `_sass/base/_variables.scss` if you need to change colors or font sizes
 4. Add new posts into `_posts/` :smiley:
 
+### Creating a new HTML fragment
+
+1. Create the fragment in `/_includes`
+2. Create a new SASS-compliant style for it in `/_sass`
+3. Add an `@import` directive to `/assets/css/styles.scss`
+
 ## Demo
 
 You can see live demo at below:
