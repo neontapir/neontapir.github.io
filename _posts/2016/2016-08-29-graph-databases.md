@@ -120,11 +120,11 @@ AND NOT (tom)-[:ACTED_IN]->(movie2)
 RETURN coCoActor.name
 {% endhighlight %}
 
-I think Cypher queries are easy to read. Nodes are in parentheses. Edges are in
-square brackets. Item specifications that need to be referred to elsewhere in
-the query can be given names using colons, like the "tom" or "coActor" nodes.
-Arrows between then show the direction of the relationship -- more on that in a
-moment.
+I think Cypher queries are easy to read if you are used to SQL. Nodes are in
+parentheses. Edges are in square brackets. Item specifications that need to be
+referred to elsewhere in the query can be given names using colons, like the
+"tom" or "coActor" nodes. Arrows between then show the direction of the
+relationship -- more on that in a moment.
 
 However, I prefer to play around with more personally meaningful data. The site
 [Graph your network!](http://network.graphdemos.com/#browser) allows you to do
