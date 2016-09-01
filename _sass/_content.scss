@@ -25,7 +25,8 @@
 
     strong, b {
       font-size: 1.1em;
-      font-weight: bolder;
+      font-variant: small-caps;
+      font-weight: bold;
     }
 
     blockquote {
@@ -47,6 +48,10 @@
             padding: 0.5em 1em;
             border: 1px solid $border-color;
             text-align: left;
+        }
+        th {
+          @extend strong;
+          background: $table-header-color;
         }
     }
 
