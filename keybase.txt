@@ -1,0 +1,51 @@
+https://keybase.io/neontapir
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://neontapir.github.io
+  * I am neontapir (https://keybase.io/neontapir) on keybase.
+  * I have a public key ASAgLlTho8VEEk8dNDcYUEhH9G8p_28jBsn3Z5m67hGG2wo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120202e54e1a3c544124f1d343718504847f46f29ff6f2306c9f76799baee1186db0a",
+            "host": "keybase.io",
+            "kid": "0120202e54e1a3c544124f1d343718504847f46f29ff6f2306c9f76799baee1186db0a",
+            "uid": "cab1c655be9878288eb10e572e2a0019",
+            "username": "neontapir"
+        },
+        "service": {
+            "hostname": "neontapir.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.17"
+    },
+    "ctime": 1472785698,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1472785534,
+        "hash": "69fe19daf91a189ac874cf6fa47ea74fe6a998f16095e1304ea2df05705aaf89ac8ec270c81d966b337020e235177d626bb308551203f15c64b47a7be9335fbc",
+        "seqno": 615013
+    },
+    "prev": "d7c0b50d7f6891a94f1d1d223f9a01fece8803c0ed1ff6a3b8eb3eed7bcd192d",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgIC5U4aPFRBJPHTQ3GFBIR/RvKf9vIwbJ92eZuu4RhtsKp3BheWxvYWTFAvx7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMjAyZTU0ZTFhM2M1NDQxMjRmMWQzNDM3MTg1MDQ4NDdmNDZmMjlmZjZmMjMwNmM5Zjc2Nzk5YmFlZTExODZkYjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMjAyZTU0ZTFhM2M1NDQxMjRmMWQzNDM3MTg1MDQ4NDdmNDZmMjlmZjZmMjMwNmM5Zjc2Nzk5YmFlZTExODZkYjBhIiwidWlkIjoiY2FiMWM2NTViZTk4NzgyODhlYjEwZTU3MmUyYTAwMTkiLCJ1c2VybmFtZSI6Im5lb250YXBpciJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoibmVvbnRhcGlyLmdpdGh1Yi5pbyIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjE3In0sImN0aW1lIjoxNDcyNzg1Njk4LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0NzI3ODU1MzQsImhhc2giOiI2OWZlMTlkYWY5MWExODlhYzg3NGNmNmZhNDdlYTc0ZmU2YTk5OGYxNjA5NWUxMzA0ZWEyZGYwNTcwNWFhZjg5YWM4ZWMyNzBjODFkOTY2YjMzNzAyMGUyMzUxNzdkNjI2YmIzMDg1NTEyMDNmMTVjNjRiNDdhN2JlOTMzNWZiYyIsInNlcW5vIjo2MTUwMTN9LCJwcmV2IjoiZDdjMGI1MGQ3ZjY4OTFhOTRmMWQxZDIyM2Y5YTAxZmVjZTg4MDNjMGVkMWZmNmEzYjhlYjNlZWQ3YmNkMTkyZCIsInNlcW5vIjo4LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQH+VrxNRcYFsTLfs2mA9X2gFYGCG6uJNSLCWV14jCAIMAgtVmF6ARocF18k3ift3PEYqnWXU5pmA/aRGf3lbRg2oc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCCKa6HLyy+u+UafnIZ6ercxu6foA+LFMWSm57dQWKk51aN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/neontapir
