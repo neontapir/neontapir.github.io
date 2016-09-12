@@ -2,6 +2,7 @@
 _site/
 .bundle/
 .sass-cache/
+CNAME
 Gemfile.lock
 vendor/
 .jekyll-metadata
