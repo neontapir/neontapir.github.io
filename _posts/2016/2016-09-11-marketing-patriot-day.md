@@ -37,13 +37,13 @@ saying jokingly, "We'll never forget."
 {% include pullquote.html text="Marketing is not all about positioning product;
 it’s also about connecting with your consumer base." %}
 
-The Budweiser ad only aired once in January 2002, during the Super Bowl. Many
-people in the country were still in shock after 9-11. This ad showed no product,
-and was purely a positioning ad. It communicated its message of solidarity with
-and mourning alongside its consumer base. It did so visually with no voice-over,
-only backed by a somber soundtrack. They sought and obtained the approval of
-members of Congress and New York City's mayor. You can read more about the
-[making of the
+Let's compare the two ads. The Budweiser ad only aired once in January 2002,
+during the Super Bowl. Many people in the country were still in shock after
+9-11. This ad showed no product, and was purely a positioning ad. It
+communicated its message of solidarity with and mourning alongside its consumer
+base. It did so visually with no voice-over, only backed by a somber soundtrack.
+They sought and obtained the approval of members of Congress and New York City's
+mayor. You can read more about the [making of the
 commercial](http://wgntv.com/2015/09/11/the-true-story-behind-the-911-budweiser-commercial-that-only-aired-one-time/)
 here. AdAge rated this ad as the "most effective of the quarter", as reported by
 [Business
