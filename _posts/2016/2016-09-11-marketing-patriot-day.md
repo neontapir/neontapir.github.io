@@ -34,6 +34,9 @@ saying jokingly, "We'll never forget."
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2ZmM-2gj5Gc" frameborder="0" allowfullscreen></iframe>
 
+{% include pullquote.html text="Marketing is not all about positioning product;
+it’s also about connecting with your consumer base." %}
+
 The Budweiser ad only aired once in January 2002, during the Super Bowl. Many
 people in the country were still in shock after 9-11. This ad showed no product,
 and was purely a positioning ad. It communicated its message of solidarity with
@@ -87,6 +90,6 @@ injuries sustained during the recovery efforts. In doing so, they could have
 strengthened their position as a consumer-minded member of the San Antonio small
 business community.
 
-Marketing is not all about positioning product, it's also about connecting with
+Marketing is not all about positioning product; it's also about connecting with
 your consumer base. It is sad that Miracle Mattress had to learn this in such a
 swift and damning manner.
