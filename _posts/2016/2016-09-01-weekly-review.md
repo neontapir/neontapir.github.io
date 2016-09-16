@@ -1,37 +1,36 @@
 ---
 layout: post
 title: Bullet Journaling - Weekly Reviews
-date: 2016-09-01 15:30:00
+date: 2016-09-01T15:30:00.000Z
 description: Weekly reviews with a bullet journal
 categories:
-- personal
+  - personal
 tags:
-- bullet
-- chart
-- data
-- hyperdex
-- journaling
-- niko-niko
-- radar
-- review
-- weekly
-
+  - bullet
+  - chart
+  - data
+  - hyperdex
+  - journaling
+  - niko-niko
+  - radar
+  - review
+  - weekly
 ---
 
 Today I want to describe another aspect of my bullet journaling, my weekly review. This is the first week I've taken a data analysis approach, and I am pleased with the results. I took a quick picture, which shows last week's charts.
 
-![weekly review charts](/assets/weekly-review.png)
+![weekly review charts](/assets/weekly-review.jpg) 
 
 <!-- more -->
 
-As you can see, the picture consists of three sections. The left chart is a hyperdex, just like the ones I use for my daily entries (see [my initial bullet journaling post]({% post_url 2016-07-25-bullet-journaling %}) for details). Here, I take an average of the entries for the 7 days. The legend is:
+ As you can see, the picture consists of three sections. The left chart is a hyperdex, just like the ones I use for my daily entries (see [my initial bullet journaling post]({% post_url 2016-07-25-bullet-journaling %}) for details). Here, I take an average of the entries for the 7 days. The legend is:
 
-| Color | Meaning |
-| --------- | ----------- |
-| Blue  | Highly productive |
-| White | Mildly productive |
-| Red   | Unproductive |
-| Green | Relaxing |
+Color | Meaning
+----- | -----------------
+Blue  | Highly productive
+White | Mildly productive
+Red   | Unproductive
+Green | Relaxing
 
 I tend to track time in 15 minute increments, though I'm not strict about it. Under the hyperdex, I show the order of precedence. If an hour in a day is classified into multiple categories, I choose the first color in order. So a half-blue, half-white hour is counted as blue. I then use the most common color in the week, with order of precedence breaking any ties.
 

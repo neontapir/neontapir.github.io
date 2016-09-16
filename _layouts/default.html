@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style type="text/css">
+    {% capture criticalcss %}
+      {% include critical.scss %}
+    {% endcapture %}
+    {{ criticalcss | scssify }}
+    </style>
+
     {% capture title %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% endcapture %}
     {% include google-analytics.html %}
     {% include page-url-resolver.html page=page %}
@@ -48,7 +55,6 @@
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
     <script src="https://use.fontawesome.com/1f5f360d80.js"></script>
 
-    <!-- <link href="{{ '/assets/lib/easy-social-buttons/jquery.easy-social-buttons.css' | prepend: site.baseurl }}" rel="stylesheet"> -->
     <link href="{{ '/assets/css/style.css' | prepend: site.baseurl }}" rel="stylesheet">
 
     <meta name="twitter:card" content="summary">
@@ -81,7 +87,7 @@
     <div class="inner clearfix">
         {% if site.avatar %}
         <a href="{{ '/' | prepend: site.baseurl }}">
-            <img class="avatar" src="{{ site.avatar | prepend: site.baseurl }}" alt=""/>
+            <img class="avatar" src="{{ site.avatar | prepend: site.baseurl }}" alt="avatar"/>
         </a>
         {% endif %}
         <h1 class="clearfix">
@@ -137,10 +143,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="{{ '/assets/lib/garand-sticky/jquery.sticky.js' | prepend: site.baseurl }}"></script>
-<!--
-<script src="{{ '/assets/lib/easy-social-buttons/jquery.social-info.js' | prepend: site.baseurl }}"></script>
-<script src="{{ '/assets/lib/easy-social-buttons/jquery.easy-social-buttons.js' | prepend: site.baseurl }}"></script>
--->
 <script src="{{ '/assets/js/script.js' | prepend: site.baseurl }}"></script>
 
 {% if page.id %}
