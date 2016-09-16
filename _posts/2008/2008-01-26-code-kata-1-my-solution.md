@@ -15,7 +15,7 @@ tags:
 - supermarket
 
 ---
-{% include side-image.html image='shopping-cart.png' %}
+{% include side-image.html image='shopping-cart.png' alt='shopping-cart' %}
 
 At the CodeKata site, [Code Kata 1](http://web.archive.org/web/20131016084201/http://codekata.pragprog.com/2007/01/code_kata_one_s.html) deals with supermarket pricing. You should go off and ponder it for a spell, then come back.
 

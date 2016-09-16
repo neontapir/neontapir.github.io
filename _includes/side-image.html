@@ -1,4 +1,4 @@
 <div class="site-side-image" style="width:{{ include.width | default:'33' }}%;">
-  <img src="/assets/{{ include.image }}" alt="{{ include.alt }}"/>
+  <img src="/assets/{{ include.image }}" alt="{{ include.alt | include.image }}"/>
     <span>{{ include.caption }}</span>
 </div>
