@@ -44,6 +44,14 @@
             margin-top: 0.5em;
             color: lighten($site-title-color, 20%);
         }
+
+        div.upper-margin {
+          margin-top: 1em;
+        }
+
+        p.centered {
+          text-align: center;
+        }
     }
 
 }

@@ -95,7 +95,7 @@ paginate_path: page/:num
 share_buttons:
   twitter: true
   facebook: true # needs ogp.fb.app_id
-  hatena: false
+  hatena: false # styling has been removed
 ogp:
   image_url: /assets/img/tapir.png
   fb:
@@ -123,8 +123,6 @@ gems:
 include: ["_pages"]
 
 markdown: kramdown
-redcarpet:
-  extensions: ["autolink", "fenced_code_blocks", "strikethrough", "superscript", "with_toc_data", "tables", "footnotes", "no_intra_emphasis"]
 highlighter: rouge
 
 excerpt_separator: <!--more-->

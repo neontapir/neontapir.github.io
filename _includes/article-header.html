@@ -51,13 +51,13 @@
     </div>
 
     {% if site.share_buttons and include.share != false %}
-    <div style="margin-top: 1em;">
+    <div class="upper-margin">
         {% include share-buttons.html page=page %}
     </div>
     {% endif %}
 
     {% if include.eye_catch != false and page.eye_catch %}
-    <p style="text-align: center">
+    <p class="centered">
         <img class="eye-catch" src="{{ page.eye_catch }}"/>
     </p>
     {% endif %}
