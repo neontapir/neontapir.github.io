@@ -6,7 +6,8 @@ description: How I came to adopt bullet journaling
 categories:
 - personal
 tags:
-- journal
+- bullet
+- journaling
 - willpower
 - organization
 ---
@@ -18,6 +19,9 @@ get email notifications, pop-ups on the web, notifications from my email client
 and on my phone. And yet I was ignoring them all. Even with excellent products
 like [Todoist](https://en.todoist.com) and Google Calendar, I found that my
 digital tracking system would consistently fall out of date.
+
+{% include pullquote.html image="eureka-springs.jpeg"
+text="In Eureka Springs, the Internet is not a given." %}
 
 At first, I thought it was a matter of discipline. But I quickly discovered that
 it wasn't a lack of willpower. Despite my commitment to check off items each
@@ -35,9 +39,6 @@ Arkansas](https://en.wikipedia.org/wiki/Northwest_Arkansas)". At least that's
 what the census calls it. Locals refer to the individual towns in this
 metropolitan area of 500,000 people, with the most recognized probably being
 Fayetteville.
-
-{% include pullquote.html image="eureka-springs.jpeg"
-text="In Eureka Springs, the Internet is not a given." %}
 
 And that's when my digital life began to fall apart. I've been somewhat
 dissatisfied with my phone and biding my time until I can upgrade. With no

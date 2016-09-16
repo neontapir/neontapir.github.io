@@ -7,12 +7,14 @@ categories:
 - personal
 tags:
 - bullet
-- journal
-- review
-- charts
+- chart
+- data
 - hyperdex
+- journaling
 - niko-niko
 - radar
+- review
+- weekly
 
 ---
 

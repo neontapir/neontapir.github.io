@@ -5,12 +5,14 @@ date: 2016-05-17 09:00:00
 categories:
 - personal
 tags:
+- audio
 - FFmpeg
-- SoX
 - ImageMagick
 - post-processing
-- audio
+- silence
+- SoX
 - video
+- WAV
 ---
 
 {% include side-image.html image="audio_processing.jpg" %}

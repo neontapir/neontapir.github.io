@@ -7,6 +7,10 @@ categories:
 - personal
 tags:
 - blog
+- color
+- functions
+- jekyll
+- sass
 - style
 - website
 ---

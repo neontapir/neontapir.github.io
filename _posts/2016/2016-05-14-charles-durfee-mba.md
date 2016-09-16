@@ -5,7 +5,10 @@ date: 2016-05-14 16:00:00
 categories:
 - school
 tags:
+- business
 - mba
+- product
+- software
 - thanks
 ---
 

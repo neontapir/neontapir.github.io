@@ -6,14 +6,19 @@ description: A third kind of database, based on graph theory
 categories:
 - professional
 tags:
-- database
-- relational
-- graph
-- twitter
-- movie
 - data
+- database
 - example
+- excel
+- graph
+- jekyll
+- movie
+- neo4j
+- nodes
+- relational
+- table
 - tutorial
+- twitter
 
 ---
 

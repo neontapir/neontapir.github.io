@@ -6,10 +6,17 @@ description: Contrasting two 9/11 commercials
 categories:
 - mba
 tags:
+- advertising
+- business
 - marketing
 - people
+- positioning
+- promotion
 
 ---
+
+{% include pullquote.html text="Marketing is not all about positioning product;
+it’s also about connecting with your consumer base." %}
 
 This post contrasts two television advertising approaches to September 11th.
 Both ads refer to the destruction of the Twin Towers in New York City on
@@ -33,9 +40,6 @@ mattresses. She acts upset about the accident, and then ends the commercial by
 saying jokingly, "We'll never forget."
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2ZmM-2gj5Gc" frameborder="0" allowfullscreen></iframe>
-
-{% include pullquote.html text="Marketing is not all about positioning product;
-it’s also about connecting with your consumer base." %}
 
 Let's compare the two ads. The Budweiser ad only aired once in January 2002,
 during the Super Bowl. Many people in the country were still in shock after
