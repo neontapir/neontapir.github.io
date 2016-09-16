@@ -105,12 +105,13 @@ ogp:
 #
 # Gems.
 #
-gems:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jemoji
+# gems:
+#   - jekyll-feed
+#   - jekyll-paginate
+#   - jekyll-seo-tag
+#   - jekyll-sitemap
+#   - jemoji
+#   - octopress-minify-html
 
 #
 # Styles: see "_sass/base/_variables.scss"
