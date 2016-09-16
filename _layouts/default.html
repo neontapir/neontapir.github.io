@@ -5,11 +5,13 @@
     {% include google-analytics.html %}
     {% include page-url-resolver.html page=page %}
 
-    <!-- {% if page.excerpt %}
-    {% assign description = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
+    {% if page.description %}
+      {% assign description = page.description %}
+    {% elsif page.excerpt %}
+      {% assign description = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
     {% else %}
-    {% assign description = site.description %}
-    {% endif %} -->
+      {% assign description = site.description %}
+    {% endif %}
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

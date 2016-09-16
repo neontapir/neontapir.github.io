@@ -5,7 +5,6 @@ gem 'jekyll-sass-converter', '1.3.0'
 gem 'jekyll-textile-converter', '0.1.0'
 gem 'kramdown', '1.10.0'
 gem 'rdiscount', '2.1.8'
-gem 'redcarpet', '3.3.3'
 gem 'RedCloth', '4.2.9'
 gem 'liquid', '3.0.6'
 gem 'rouge', '1.10.1'
@@ -25,8 +24,3 @@ gem 'celluloid', '0.16.0'
 gem 'timers', '4.0.4'
 gem 'nokogiri'
 gem 'classifier-reborn'
-
-# Needed by Octopress
-
-gem 'octopress'
-gem 'jekyll-watch'

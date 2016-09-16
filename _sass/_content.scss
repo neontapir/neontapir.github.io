@@ -134,6 +134,7 @@
         float: left;
         header {
             margin-bottom: $margin;
+            color: $header-text-color;
             .panel {
                 padding: 1em 1.5em;
                 background-color: rgba($page-title-color, .2);
@@ -155,7 +156,7 @@
                     padding: 0;
                     li {
                         display: inline-block;
-                        color: rgba($text-color, .5);
+                        color: $header-text-color;
                         font-size: 0.95em;
                         margin-right: 0.5em;
                         &:last-child {

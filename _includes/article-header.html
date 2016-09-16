@@ -22,6 +22,12 @@
             {% endfor %}
         </ul>
 
+        {% if site.share_buttons and include.share != false %}
+          <div class="clearfix">
+            {% include share-buttons.html page=page %}
+          </div>
+        {% endif %}
+
         <div class="clearfix">
             <ul class="meta">
                 {% if page.date %}
@@ -49,12 +55,6 @@
             </ul>
         </div>
     </div>
-
-    {% if site.share_buttons and include.share != false %}
-    <div class="upper-margin">
-        {% include share-buttons.html page=page %}
-    </div>
-    {% endif %}
 
     {% if include.eye_catch != false and page.eye_catch %}
     <p class="centered">
