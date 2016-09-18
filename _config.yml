@@ -1,7 +1,7 @@
 #
 # Basic settings.
 #
-#url: http://qckanemoto.github.io # or http://you.github.io
+# url: http://qckanemoto.github.io # or http://you.github.io
 lang: en-US
 url: http://neontapir.github.io
 baseurl: ""
@@ -31,7 +31,8 @@ defaults:
         display_name: Chuck
         first_name: Chuck
         last_name: Durfee
-
+      read_stats:
+        wpm: 180
 #
 # Icons
 #
@@ -86,8 +87,13 @@ recent_posts_num: 10
 #
 # Pagination.
 #
-paginate: 10
+paginate: 5
 paginate_path: page/:num
+
+#
+# Theme version
+#
+version: 2.1.0
 
 #
 # Social.

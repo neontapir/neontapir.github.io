@@ -30,6 +30,14 @@
 
         <div class="clearfix">
             <ul class="meta">
+                {% if page.icons %}
+                <li>
+                    <ul class="icons">
+                        {% include icons.html icons=page.icons %}
+                    </ul>
+                </li>
+                {% endif %}
+
                 {% if page.date %}
                 <li>
                     <i class="fa fa-calendar"></i>
@@ -44,13 +52,20 @@
                         {{ page.author.display_name }}
                     </a>
                 </li>
-                {% if page.icons %}
-                <li>
-                    <ul class="icons">
-                        {% include icons.html icons=page.icons %}
-                    </ul>
-                </li>
                 {% endif %}
+
+                {% if page.read_stats %}
+                <li>
+                    {% assign words = page.content | number_of_words %}
+                    {% assign wpm = 180 %}
+                    <span>
+                      {% if words < (wpm * 2) %}
+                        1 min
+                      {% else %}
+                        {{ words | divided_by: wpm }} mins
+                      {% endif %}
+                    </span>
+                </li>
                 {% endif %}
             </ul>
         </div>
