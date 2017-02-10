@@ -16,6 +16,8 @@ I wanted to give a quick review of the game [Sushi
 Go](http://www.gamewright.com/gamewright/index.php?section=games&page=game&show=291)
 by Gamewright. In general, the family and I enjoy it.
 
+<!--more-->
+
 Sushi Go is a pass-and-play game. The game takes place in three rounds. In each
 round, you are dealt a certain number of cards. To play, you remove a card from
 your hand and reserve it in front of you face down, then you pass the rest of

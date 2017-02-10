@@ -22,6 +22,8 @@ This post contrasts two television advertising approaches to September 11th.
 Both ads refer to the destruction of the Twin Towers in New York City on
 September 11th, 2001 -- 15 years ago today at the time of this posting.
 
+<!--more-->
+
 The first ad is from a nationally-known beer brewer, Budweiser. It shows a
 delivery wagon being pulled quietly through a small town street by the company's
 iconic Clydesdale horses. They somberly walk up to a park overlooking Manhattan,

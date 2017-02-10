@@ -20,15 +20,15 @@ and on my phone. And yet I was ignoring them all. Even with excellent products
 like [Todoist](https://en.todoist.com) and Google Calendar, I found that my
 digital tracking system would consistently fall out of date.
 
-{% include pullquote.html image="eureka-springs.jpeg"
-text="In Eureka Springs, the Internet is not a given." %}
-
 At first, I thought it was a matter of discipline. But I quickly discovered that
 it wasn't a lack of willpower. Despite my commitment to check off items each
 day, I would encounter higher priority items than doing the check-in. I put
 living my life ahead of tracking it. And yet, I would sometimes have to scramble
 to complete coursework for my MBA or I would have to apologize to my wife for
 not completing a honey-do item on time. And I loathed it.
+
+{% include pullquote.html image="eureka-springs.jpeg"
+text="In Eureka Springs, the Internet is not a given." %}
 
 I have taken a number of short trips this spring and summer, mostly for
 weddings. However, it was on a trip to Eureka Springs, Arkansas that I figured

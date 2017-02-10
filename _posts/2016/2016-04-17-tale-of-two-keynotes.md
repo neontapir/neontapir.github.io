@@ -20,6 +20,8 @@ colleague gave on presentation techniques. Today, I'm going to apply those
 concepts to the two keynotes at [Mile High Agile
 2016](http://milehighagile.org/) by Jurgen Appelo and Michael Feathers.
 
+<!--more-->
+
 Jurgen Appelo's talk was called "**Managing for Happiness**". He had the
 audience stand, and then asked three questions. If the answer was false for you,
 you sat down. It turns out only a very small fraction of people are happy in

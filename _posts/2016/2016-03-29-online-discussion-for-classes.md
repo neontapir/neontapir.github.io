@@ -25,6 +25,8 @@ During my undergraduate days, there were courses in which I couldn't wait for
 the in-class discussion. These days, as an online student, I dread them. What's
 the difference?
 
+<!--more-->
+
 The way that classes are made available in the MBA program is through use of a
 professional videographer, who controls cameras mounted throughout the room.
 They film live class sessions, focusing on the person talking or reaction shots.

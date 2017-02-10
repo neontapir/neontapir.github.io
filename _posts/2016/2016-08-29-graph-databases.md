@@ -28,8 +28,6 @@ Today, I want to talk to you about a different kind of database than the ones
 you are probably used to. I start with a brief description of common types of
 databases, then introduce graph databases with a couple of examples.
 
-<!-- more -->
-
 If you have been in the software development industry for a long time, you
 probably started with relational databases. If you've ever used a spreadsheet,
 this concept should sound familiar. A relational database stores data items in
@@ -38,15 +36,18 @@ represents a discrete piece of data, and a column represents a characteristic of
 the item common to every row in the table. In a database proper, that structure
 is enforced by a specification called a schema.
 
+{% include pullquote.html text="Graph databases can be powerful tools for
+analyzing the way items relate to one another." %}
+
+<!--more-->
+
 It's called a relational database because data characteristics like key values
-can be used to relate items to rows in other tables without moving the data.
+can be used to relate items to rows in other tables, without moving the data.
 That saves on data storage costs and makes it easy to update, I can keep a
 common value like the office's address in one table and my employees in other,
 without having to store a copy of the office address with each employee. If the
 office moves, I only have to update the address table, and that change will be
 reflected for all those related employees.
-
-{% include side-image.html image="jekyll-logo.png" width="25" %}
 
 Relational database don't handle both unstructured data and large objects very
 well. They also lead to situations where you have data structures that are only
@@ -56,6 +57,8 @@ those addresses belong to. It's possible to employ workarounds to combat these
 issues, but it's often at the expense of usability and performance. As these
 edge cases became more common, it led to the growth of a different style of
 database that thrived in those circumstances.
+
+{% include side-image.html image="jekyll-logo.png" width="25" %}
 
 The most common form of non-relational databases store data in records, which
 are similar to tables in some respects, but those records do not have a strict

@@ -28,19 +28,20 @@ product". I pointed the camera at the slideshow, made sure the speaker Paul was
 in the frame, and recorded for 50 minutes. The slides are legible, and you can
 make out what Paul is saying.
 
+{% include pullquote.html text="Aside from compressing it, I felt there were a
+couple of small things I could do to enhance the quality of the video...." %}
+
 In retrospect, I wish I had a fill light on Paul. The white slides washed him
 out, and the age of the camera meant that the camera couldn't cope. The colors
 were washed out, and Paul is a shadowy figure in the corner of the frame. The
 camcorder uses a proprietary .MOD file format and the raw footage was 1.8 GB,
 too bulky to share.
 
-Aside from compressing it, I felt there were a couple of small things I could do
-to enhance the quality of the video.
 
 <!--more-->
 
-The room had an air vent that was running
-throughout his talk. And, I wanted to preface the video with a title screen.
+The projector made a noticeable whirring that ran throughout his talk. And, I
+wanted to preface the video with a title screen.
 
 My work computer is a Mac, but I don't have carte blanche to install anything I
 want. But I can install programs, so I downloaded all the tools I needed via

@@ -16,6 +16,8 @@ I have been enjoying [Exercism.io](http://exercism.io), and I wanted to share
 the fun with you. The site's name is a playful take on the term code exercises.
 I think the designers of Exercism got a lot of things right.
 
+<!--more-->
+
 The authors made the site easy to use. Exercism has two components: its web
 site, and a command-line client. For anyone who uses a version control tool like
 Git, the interface should seem familiar. The command-line client allows you to

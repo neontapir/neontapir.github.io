@@ -22,6 +22,8 @@ of a different way to approach a problem, and then the thought will occur to me,
 "But is it performant?" Fruity is ideal for these kind of situations. But why
 might I want to import a library when Benchmark is built in?
 
+<!--more-->
+
 Let's take a recent example. I was working through the Minesweeper exercise on
 [Exercism.io](http://exercism.io). I was thinking if there was a better way to
 make sure my Minesweeper grid didn't have any illegal characters in it. The

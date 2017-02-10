@@ -21,12 +21,14 @@ deck](http://www.tamps.cinvestav.mx/~adiaz/ArqComp/03-Performance.pdf) I read
 last year talking about performance that referenced the Concorde.
 
 The thrust of the presentation is that when we speak about performance, there
-are really two metrics we are conflating. One is the time to do the task, which
-is measured as execution time or response time. We'll call that one **latency**.
+are really two metrics we are conflating.
 
-The other metric is the rate at which work is done, measured in terms of items
-per time frame. Oranges eaten per hour, for example. This is often called
-**throughput** or bandwidth.
+<!--more-->
+
+One is the time to do the task, which is measured as execution time or response
+time. We'll call that one **latency**. The other metric is the rate at which
+work is done, measured in terms of items per time frame. Oranges eaten per hour,
+for example. This is often called **throughput** or bandwidth.
 
 It's often the case that latency and throughput are in opposition. Let's examine
 the Boom, the Concorde, and the Boeing 747.

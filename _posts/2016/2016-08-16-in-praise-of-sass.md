@@ -21,6 +21,8 @@ I know Sass isn't the only game in town when it comes to higher-order CSS
 styling languages. However, it's the one supported by the Jekyll theme I'm
 using, so I've been dabbling in it.
 
+<!--more-->
+
 One thing I love is the color functions that Sass provides. They make it really
 easy to stick with a color scheme, because you can use them to style your site
 with just a few colors without having to manually calculate RGB values. Jekyll

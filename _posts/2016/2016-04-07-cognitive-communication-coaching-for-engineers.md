@@ -21,6 +21,8 @@ titled, "Cognitive Communication Coaching for Engineers". Tom was a high school
 teacher before he became a software engineer, so he's in a prime position to
 speak on this subject.
 
+<!--more-->
+
 It turns out that because of how our brains work, people can only carry a
 certain level of cognitive load. It is as though our hippocampus is a post
 office. When people get exposed to too many ideas at a time, just like a post

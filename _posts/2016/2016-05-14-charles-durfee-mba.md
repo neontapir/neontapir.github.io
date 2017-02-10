@@ -23,6 +23,8 @@ To celebrate, I wanted to share with you a vignette I found on my hard drive
 while doing some maintenance. I wrote this in June 2013, when I had just decided
 to get an MBA. I didn't post it then, but it seemed apropos.
 
+<!--more-->
+
 > Early in my journey as a software engineer, I was put in charge of maintaining
 my first enterprise application. It was a web application used by remote sales
 personnel to sell custom-built houses. I partnered with a talented product
