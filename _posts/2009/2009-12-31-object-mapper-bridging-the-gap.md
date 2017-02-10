@@ -22,7 +22,7 @@ tags:
 - Reflection
 ---
 
-Recently, I talked about the [generation gap]({% post_url 2009-12-29-object-mapper-generation-gap %}) I faced when considering elements at different levels of the hierarchy. I have a partial solution.
+Recently, I talked about the [generation gap]({% post_url 2009/2009-12-29-object-mapper-generation-gap %}) I faced when considering elements at different levels of the hierarchy. I have a partial solution.
 
 Recall I have the following hierarchy of objects:
 

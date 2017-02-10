@@ -17,7 +17,7 @@ tags:
 - XML
 
 ---
-Last time, I [introduced the object mapper]({% post_url 2009-12-23-introducing-the-object-mapper %}). Here, I describe its domain model.
+Last time, I [introduced the object mapper]({% post_url 2009/2009-12-23-introducing-the-object-mapper %}). Here, I describe its domain model.
 
 The request and response objects that require mapping are plain-old CLR objects with properties for the most part, though there are some arrays to contend with. The challenge is that the request and response objects do not have the same structure.
 

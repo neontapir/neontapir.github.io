@@ -18,7 +18,7 @@ tags:
 - XML
 
 ---
-In my last work-related post, I described ([the transition](%{ post_url 2009-12-18-the-grass-may-be-greener-less-filling %}) from my old workplace to my new one. In it, I briefly mentioned the project I'm working on. In an upcoming series of posts, I'll highlight some of the technical challenges I faced while creating the object mapper service.
+In my last work-related post, I described ([the transition](%{ post_url 2009/2009-12-18-the-grass-may-be-greener-less-filling %}) from my old workplace to my new one. In it, I briefly mentioned the project I'm working on. In an upcoming series of posts, I'll highlight some of the technical challenges I faced while creating the object mapper service.
 
 First, let me describe the object mapper service. Out there somewhere in the company, there exists a handful of Java applications that interface with a legacy application to get some data. That data is now also exposed by a .NET application I'll call the DataStore, so the goal is to retire the legacy application.
 

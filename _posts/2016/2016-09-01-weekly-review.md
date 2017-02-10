@@ -19,11 +19,11 @@ tags:
 
 Today I want to describe another aspect of my bullet journaling, my weekly review. This is the first week I've taken a data analysis approach, and I am pleased with the results. I took a quick picture, which shows last week's charts. (The page wasn't flat, so the edges are blurry but legible.)
 
-![weekly review charts](/assets/weekly-review.jpg) 
+![weekly review charts](/assets/weekly-review.jpg)
 
 <!-- more -->
 
- As you can see, the picture consists of three sections. The left chart is a hyperdex, just like the ones I use for my daily entries (see [my initial bullet journaling post]({% post_url 2016-07-25-bullet-journaling %}) for details). Here, I take an average of the entries for the 7 days. The legend is:
+ As you can see, the picture consists of three sections. The left chart is a hyperdex, just like the ones I use for my daily entries (see [my initial bullet journaling post]({% post_url 2016/2016-07-25-bullet-journaling %}) for details). Here, I take an average of the entries for the 7 days. The legend is:
 
 Color | Meaning
 ----- | -----------------

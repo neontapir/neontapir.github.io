@@ -27,7 +27,7 @@ tags:
 - XSD
 
 ---
-Recently, I've described [the object mapper's domain model]({% post_url 2009-12-28-the-object-mapper-domain-model %}) and illustrated that it's still evolving by discussing the "[generation gap]({% post_url 2009-12-29-object-mapper-generation-gap %})". In this post, I talk about the components of the object mapper.
+Recently, I've described [the object mapper's domain model]({% post_url 2009/2009-12-28-the-object-mapper-domain-model %}) and illustrated that it's still evolving by discussing the "[generation gap]({% post_url 2009/2009-12-29-object-mapper-generation-gap %})". In this post, I talk about the components of the object mapper.
 
 There are two main components to the object mapper. Since the mapper is configured via XML, clearly I need something to read in the XML and initialize the domain model. Because I'm constrained to C# 2.0, I used an XmlReader. To handle malformed mapping XML documents, I wrote an XSD schema and validate incoming XML before parsing.
 

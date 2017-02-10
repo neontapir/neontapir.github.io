@@ -20,7 +20,7 @@ tags:
 - properties
 
 ---
-In yesterday's post about the [domain model]({% post_url 2009-12-28-the-object-mapper-domain-model %}), I described some of the use cases for the object mapper.
+In yesterday's post about the [domain model]({% post_url 2009/2009-12-28-the-object-mapper-domain-model %}), I described some of the use cases for the object mapper.
 
 In trying to use it in a real-world situation today, my co-worker found another domain concept.
 

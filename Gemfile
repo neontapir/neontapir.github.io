@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem 'jekyll', '~>3.0.3'
+gem 'jekyll', '3.3.1'
 gem 'RedCloth', '4.2.9'
 gem 'celluloid', '0.16.0'
 gem 'classifier-reborn', '2.1.0'

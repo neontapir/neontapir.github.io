@@ -18,7 +18,7 @@ type: post
 published: true
 
 ---
-This is the third in a series of blog posts about implementing Kanban on my current project. The first installment was about [establishing the flow](% post_url 2014-06-05-establishing-flow-kanban-experience-report %). The second described the [Rally data extract scripts](% post_url 2014-06-12-rally-data-extract-scripts-kanban-experience-report %) I wrote. In this post, I talk about my Excel spreadsheet that consumes the data.
+This is the third in a series of blog posts about implementing Kanban on my current project. The first installment was about [establishing the flow](% post_url 2014/2014-06-05-establishing-flow-kanban-experience-report %). The second described the [Rally data extract scripts](% post_url 2014/2014-06-12-rally-data-extract-scripts-kanban-experience-report %) I wrote. In this post, I talk about my Excel spreadsheet that consumes the data.
 
 ![abacus](/assets/abacus-300x300.jpg)
 

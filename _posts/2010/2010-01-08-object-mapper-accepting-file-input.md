@@ -13,7 +13,7 @@ tags:
 - URI
 ---
 
-The work on the Object Mapper is nearly complete from when we left off with the [conversion engine]({% post_url 2010-01-06-the-object-mappers-conversion-engine %}).
+The work on the Object Mapper is nearly complete from when we left off with the [conversion engine]({% post_url 2010/2010-01-06-the-object-mappers-conversion-engine %}).
 
 I did enhance the parsing engine, though. My co-worker was trying to consume the engine, so he was reading in his document and extracting the text. We decided this was a common enough activity it would be worth adding to the parsing engine.
 
