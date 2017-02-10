@@ -9,6 +9,10 @@ tags:
 - json
 - druid
 - data-analysis
+- ingestion
+- columns
+- error
+- metrics
 
 ---
 
@@ -18,6 +22,8 @@ I'm just getting my feet wet in data analysis. My Boulder team has started
 working with a distributed data store called [Druid](http://druid.io). I
 encountered an issue when importing data from a CSV file, and I wanted to share
 a way I found to do it.
+
+<!--more-->
 
 Early on, I learned that a distributed data store like Druid is akin to a
 database, but one where information is stored on multiple nodes. Often, these
