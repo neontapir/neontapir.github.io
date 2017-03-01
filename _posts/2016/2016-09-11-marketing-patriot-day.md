@@ -12,6 +12,8 @@ tags:
 - people
 - positioning
 - promotion
+- mattress
+- horses
 
 ---
 

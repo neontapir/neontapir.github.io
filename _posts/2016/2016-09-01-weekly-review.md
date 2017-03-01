@@ -15,6 +15,8 @@ tags:
   - radar
   - review
   - weekly
+  - color
+  - ziglar
 ---
 
 Today I want to describe another aspect of my bullet journaling, my weekly review. This is the first week I've taken a data analysis approach, and I am pleased with the results. I took a quick picture, which shows last week's charts. (The page wasn't flat, so the edges are blurry but legible.)
