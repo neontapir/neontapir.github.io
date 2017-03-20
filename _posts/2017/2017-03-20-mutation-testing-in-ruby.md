@@ -174,7 +174,7 @@ name:
 ```
 
 That space uncovered a number of subtle bugs, which I squashed by changed spaces
-to dashes.
+to dashes. Tests like this now pass:
 
 ```ruby
 expect(@justice_league.members_by_folder).to contain_exactly(
@@ -183,7 +183,7 @@ expect(@justice_league.members_by_folder).to contain_exactly(
       )
 ```
 
-I also found cases where Mutant replaced my "to_s" implementation with something
+I also found cases where Mutant replaced my `to_s` implementation with something
 that gave the same result. In those cases, I simply tested that the two methods
 returned the same value. Here's an example from the current code base:
 
@@ -200,4 +200,4 @@ end
 
 Mutation testing can be a powerful technique for exposing assumptions in your
 code base and your unit tests. While I did not address every issue it reported,
-I found it to be extremely useful!
+I found it to be educational and worthwhile!
