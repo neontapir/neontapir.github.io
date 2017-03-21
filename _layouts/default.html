@@ -27,11 +27,11 @@
     <link href="{{ '/assets/css/style.css' | prepend: site.baseurl }}" rel="stylesheet">
 
     {% if page.eye_catch %}
-    {% assign ogp_image_url = page.eye_catch %}
-    {% assign twitter_card = "summary_large_image" %}
+      {% assign ogp_image_url = page.eye_catch %}
+      {% assign twitter_card = "summary_large_image" %}
     {% else %}
-    {% assign ogp_image_url = site.ogp.image_url %}
-    {% assign twitter_card = "summary" %}
+      {% assign ogp_image_url = site.ogp.image_url %}
+      {% assign twitter_card = "summary" %}
     {% endif %}
 
     <meta property="og:image" content="{{ site.url }}{{ ogp_image_url }}" />
