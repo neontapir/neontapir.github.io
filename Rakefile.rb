@@ -7,7 +7,7 @@ namespace :notify do
     begin
       require 'xmlrpc/client'
       puts "* Notifying Ping-O-Matic that the site has updated"
-      XMLRPC::Client.new('rpc.pingomatic.com', '/').call('weblogUpdates.extendedPing', 'neontapir.github.io' , '//neontapir.github.io', '//neontapir.github.io/atom.xml')
+      XMLRPC::Client.new('rpc.pingomatic.com', '/').call('weblogUpdates.extendedPing', 'neontapir.github.io' , '//neontapir.github.io', '//neontapir.github.io/atom.xml', '//neontapir.github.io/feed.xml')
     rescue LoadError
       puts "! Could not ping ping-o-matic, because XMLRPC::Client could not be found."
     end
