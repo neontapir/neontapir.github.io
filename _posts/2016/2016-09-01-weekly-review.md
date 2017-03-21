@@ -26,9 +26,9 @@ Today I want to describe another aspect of my bullet journaling, my weekly revie
 
 ![weekly review charts](/assets/weekly-review.jpg)
 
-<!--more-->
+<!-- more -->
 
- As you can see, the picture consists of three sections. The left chart is a hyperdex, just like the ones I use for my daily entries (see [my initial bullet journaling post]({% post_url 2016/2016-07-25-bullet-journaling %}) for details). Here, I take an average of the entries for the 7 days. The legend is:
+As you can see, the picture consists of three sections. The left chart is a hyperdex, just like the ones I use for my daily entries (see [my initial bullet journaling post]({% post_url 2016/2016-07-25-bullet-journaling %}) for details). Here, I take an average of the entries for the 7 days. The legend is:
 
 Color | Meaning
 ----- | -----------------

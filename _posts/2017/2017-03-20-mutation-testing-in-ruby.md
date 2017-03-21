@@ -20,9 +20,9 @@ The value of automated testing is predicated on trust. It begins innocently with
 
 For tests to remain relevant, this pervasive question runs throughout software testing: how can I trust that a unit test is actually exercising the code in question? This post talks about how mutation testing can provide a definitive answer.
 
-<!-- more -->
+<!--more-->
 
- In my days as a developer, I relied on code inspection to answer this question. I would go through the red-green-refactor loop as I developed: writing a failing test, modifying my code, re-running the test, and ensuring it passes. I would visually inspect my code, looking for code paths that were not under test. And so on.
+In my days as a developer, I relied on code inspection to answer this question. I would go through the red-green-refactor loop as I developed: writing a failing test, modifying my code, re-running the test, and ensuring it passes. I would visually inspect my code, looking for code paths that were not under test. And so on.
 
 Despite my best efforts, sometimes we would discover bugs. A method would have an unindented side effect. Some framework method would have a surprising outcome in edge cases. Or, I would make a mistake in a complicated Boolean statement that only occurred seldomly. These failures by my unit tests to uncover bugs would shake my faith in their veracity.
 

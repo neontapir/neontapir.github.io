@@ -12,14 +12,6 @@
     {% include google-analytics.html %}
     {% include page-url-resolver.html page=page %}
 
-    {% if page.description %}
-      {% assign description = page.description %}
-    {% elsif page.excerpt %}
-      {% assign description = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
-    {% else %}
-      {% assign description = site.description %}
-    {% endif %}
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -57,22 +49,24 @@
 
     <link href="{{ '/assets/css/style.css' | prepend: site.baseurl }}" rel="stylesheet">
 
+    {% if page.description %}
+      {% assign description = page.description %}
+    {% elsif page.excerpt %}
+      {% assign description = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
+    {% else %}
+      {% assign description = site.description %}
+    {% endif %}
+
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{{ site.icons.twitter }}">
     <meta name="twitter:creator" content="@{{ site.icons.twitter }}">
     {% if page.title %}
-      <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:title" content="{{ page.title }}">
     {% else %}
-      <meta name="twitter:title" content="{{ site.title }}">
+    <meta name="twitter:title" content="{{ site.title }}">
     {% endif %}
-    {% if page.url %}
-      <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-    {% endif %}
-    {% if page.description %}
-      <meta name="twitter:description" content="{{ page.description }}">
-    {% else %}
-      <meta name="twitter:description" content="{{ page.content | strip_html | xml_escape | truncate: 200 }}">
-    {% endif %}
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+    <meta name="twitter:description" content="{{ description }}">
     <meta name="twitter:image" content="{{ site.url }}{{ ogp_image_url }}">
 
     {% seo %}
