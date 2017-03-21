@@ -1,10 +1,10 @@
 ---
-layout: page
 comments: true
-title: Terms of Service and Privacy Policy
-permalink: /tos/
+layout: page
 order: 3
+permalink: /tos/
 share: false
+title: Terms of Service and Privacy Policy
 ---
 
 <h2>

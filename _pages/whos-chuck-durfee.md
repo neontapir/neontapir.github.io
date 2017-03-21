@@ -1,6 +1,6 @@
 ---
-layout: page
 comments: true
+layout: page
 order: 1
 permalink: /about/
 title: About Chuck Durfee
