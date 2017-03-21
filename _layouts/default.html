@@ -35,8 +35,10 @@
 
     {% if page.eye_catch %}
     {% assign ogp_image_url = page.eye_catch %}
+    {% assign twitter_card = "summary_large_image" %}
     {% else %}
     {% assign ogp_image_url = site.ogp.image_url %}
+    {% assign twitter_card = "summary" %}
     {% endif %}
 
     <meta property="fb:admins" content="{{ site.ogp.fb.admin }}" />
@@ -62,7 +64,7 @@
       {% assign page_title = site.title %}
     {% endif %}
 
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="{{ twitter_card }}">
     <meta name="twitter:site" content="@{{ site.icons.twitter }}">
     <meta name="twitter:creator" content="@{{ site.icons.twitter }}">
     <meta name="twitter:title" content="{{ page_title }}">
