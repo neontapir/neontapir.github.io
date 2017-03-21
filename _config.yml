@@ -10,6 +10,22 @@ description: The neon tapir, casting his eerie glow upon the masses
 avatar: /assets/img/tapir.png
 show_drafts: false
 
+# Additional Jekyll SEO tag information
+
+author: chuckdurfee
+facebook:
+ app_id: 194566184373771
+ publisher: 10153287725984334
+ admins: 10153287725984334
+logo: /assets/img/tapir.png
+social:
+  name: Chuck Durfee
+  links:
+    - http://twitter.com/ChuckDurfee
+    - https://www.linkedin.com/in/neontapir
+    - https://github.com/neontapir
+    - https://keybase.io/neontapir
+
 #
 # Defaults
 #
@@ -105,8 +121,8 @@ share_buttons:
 ogp:
   image_url: /assets/img/tapir.png
   fb:
-    admin: # facebook admin id
-    app_id: 710997945694360 # facebook application id
+    admin: 10153287725984334 # facebook admin id
+    app_id: 194566184373771 # facebook application id
 
 #
 # Gems.

@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Mutation Testing in Ruby
-date: 2017-02-10T15:30:00.000Z
+date: 2017-03-20T15:30:00.000Z
 description: How to perform mutation testing in Ruby
-image: mutation.jpeg
+eye_catch: /assets/mutation.jpeg
 categories:
   - professional
 tags:
@@ -13,11 +13,9 @@ tags:
   - ruby
 ---
 
-{% include side-image.html image="mutation.jpeg" %}
-
 The value of automated testing is predicated on trust. It begins innocently with a test suite that reports incorrectly. Maybe the test suite reports a lot of false positives, or maybe the test suite does catch enough failures. In either case, people stop running the tests. They stop maintaining the tests, and eventually the tests no longer function and are discarded.
 
-For tests to remain relevant, this pervasive question runs throughout software testing: how can I trust that a unit test is actually exercising the code in question? This post talks about how mutation testing can provide a definitive answer.
+For tests to remain relevant, this pervasive question runs throughout software testing: how can I trust that a unit test is actually exercising the code in question? This post talks about how mutation testing can provide a definitive answer. 
 
 <!-- more -->
 
@@ -69,9 +67,7 @@ expect(@avengers.members_by_folder).to contain_exactly(
 
 I discovered this bug during my mutation testing. The idea behind mutation testing is that if source code changes are made, tests should fail. If a mutant method returns the same results as the original, there's a good chance that the behavior of the method isn't being testing as thoroughly as it should. To do this, I used Mutant, which is a Ruby library, which automates the mutation testing process. Mutant achieves this through source code manipulation.
 
-Mutant is a Ruby gem, and can simply be installed with `gem install
-mutant-rspec`. I must say, it did take a number of attempts to hit upon the
-right combination of libraries. Here's an excerpt from my Gemfile:
+Mutant is a Ruby gem, and can simply be installed with `gem install mutant-rspec`. I must say, it did take a number of attempts to hit upon the right combination of libraries. Here's an excerpt from my Gemfile:
 
 ```ruby
 gem 'rspec', '~> 3.5', require: false, group: :test
@@ -79,9 +75,7 @@ gem 'simplecov', '~> 0.14', require: false, group: :test
 gem 'mutant-rspec', '0.8.11', require: false, group: :test
 ```
 
-`simplecov` provides code coverage metrics in conjunction with RSpec, but I
-believe it is optional and can be ignored if you are setting this up on your
-machine. Enough preamble, here's the result of running Mutant:
+`simplecov` provides code coverage metrics in conjunction with RSpec, but I believe it is optional and can be ignored if you are setting this up on your machine. Enough preamble, here's the result of running Mutant:
 
 ```bash
 $ bundle exec mutant --use rspec -I lib/ -r team Team
