@@ -74,7 +74,7 @@
       <meta name="twitter:description" content="{{ page.content | strip_html | xml_escape | truncate: 200 }}">
     {% endif %}
     {% if page.image %}
-      <meta name="twitter:image:src" content="{{ site.url }}/assets{{ page.images[0] }}">
+      <meta name="twitter:image:src" content="{{ site.url }}/assets{{ page.image }}">
     {% else %}
       <meta name="twitter:image:src" content="{{ site.url }}{{ site.avatar }}">
     {% endif %}
