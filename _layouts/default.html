@@ -8,20 +8,13 @@
     {{ criticalcss | scssify }}
     </style>
 
-    {% capture title %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% endcapture %}
     {% include google-analytics.html %}
     {% include page-url-resolver.html page=page %}
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>{{ title }}</title>
-
-    <meta name="description" content="{{ site.description }}">
-
     <link rel="shortcut icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}" type="image/x-icon">
-    <link rel="canonical" href="{{ url }}">
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}" />
 
     <!--[if lt IE 9]>
@@ -41,14 +34,9 @@
     {% assign twitter_card = "summary" %}
     {% endif %}
 
-    <meta property="fb:admins" content="{{ site.ogp.fb.admin }}" />
-    <meta property="fb:app_id" content="{{ site.ogp.fb.app_id }}" />
-    <meta property="og:description" content="{{ site.description }}" />
     <meta property="og:image" content="{{ site.url }}{{ ogp_image_url }}" />
-    <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ url }}" />
 
     {% if page.description %}
       {% assign description = page.description %}
