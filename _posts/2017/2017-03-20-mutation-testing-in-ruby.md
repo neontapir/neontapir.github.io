@@ -7,15 +7,18 @@ eye_catch: /assets/mutation.jpeg
 categories:
   - professional
 tags:
-  - testing
-  - mutation
+  - code
   - mutant
+  - mutation
+  - rspec
   - ruby
+  - testing
+  - tests
 ---
 
 The value of automated testing is predicated on trust. It begins innocently with a test suite that reports incorrectly. Maybe the test suite reports a lot of false positives, or maybe the test suite does catch enough failures. In either case, people stop running the tests. They stop maintaining the tests, and eventually the tests no longer function and are discarded.
 
-For tests to remain relevant, this pervasive question runs throughout software testing: how can I trust that a unit test is actually exercising the code in question? This post talks about how mutation testing can provide a definitive answer. 
+For tests to remain relevant, this pervasive question runs throughout software testing: how can I trust that a unit test is actually exercising the code in question? This post talks about how mutation testing can provide a definitive answer.
 
 <!-- more -->
 

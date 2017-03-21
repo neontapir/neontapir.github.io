@@ -1,0 +1,5 @@
+#!/bin/bash
+
+tr -sc 'A-Za-z' '\12' < $1 | tr -d [:punct:] | tr [:upper:] [:lower:] | tr -d '\r' | sort | uniq -c | sort -nr > output_ngram.txt
+awk 'FNR==NR{for(i=1;i<=NF;i++)w[$i];next}(!($2 in w))' stopwords-flat.txt output_ngram.txt
+rm output_ngram.txt

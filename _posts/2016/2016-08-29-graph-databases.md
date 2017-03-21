@@ -6,6 +6,8 @@ description: A third kind of database, based on graph theory
 categories:
 - professional
 tags:
+- count  
+- cypher
 - data
 - database
 - example
@@ -19,7 +21,6 @@ tags:
 - table
 - tutorial
 - twitter
-- cypher
 
 ---
 

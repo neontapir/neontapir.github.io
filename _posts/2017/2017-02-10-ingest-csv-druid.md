@@ -6,17 +6,21 @@ description: How to ingest a CSV file into Druid
 categories:
 - professional
 tags:
-- csv
-- json
-- druid
-- node
-- dataset
-- data-analysis
-- ingestion
+- actual
+- average
 - columns
+- csv
+- data
+- data-analysis
+- dataset
+- druid
 - error
+- ingestion
+- json
 - metrics
-
+- node
+- precipitation
+- weather
 ---
 
 {% include side-image.html image="druid-icon.png" %}

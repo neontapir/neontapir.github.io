@@ -8,14 +8,17 @@ categories:
 tags:
   - bullet
   - chart
+  - color
   - data
+  - days
+  - happy
   - hyperdex
   - journaling
   - niko-niko
   - radar
   - review
+  - usage
   - weekly
-  - color
   - ziglar
 ---
 

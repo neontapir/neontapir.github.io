@@ -1,20 +1,24 @@
 ---
 layout: post
 title: Marketing Patriot Day
-date: 2016-09-11 21:30:00
+date: 2016-11-11 21:30:00
 description: Contrasting two 9/11 commercials
 categories:
 - mba
 tags:
 - advertising
 - business
+- commerical
+- consumer
+- horses
 - marketing
+- mattress
 - people
 - positioning
 - promotion
-- mattress
-- horses
-
+- television
+- tv
+- twin
 ---
 
 {% include pullquote.html text="Marketing is not all about positioning product;
