@@ -1,7 +1,6 @@
 task :notify => ["notify:pingomatic", "notify:google", "notify:bing"]
 desc "Notify various services that the site has been updated"
 namespace :notify do
-
   desc "Notify Ping-O-Matic"
   task :pingomatic do
     begin
