@@ -1,11 +1,12 @@
-# jekyll-tch-theme
+# jekyll-ttskch-theme
 
 A simple and customizable theme for Jekyll.
 
 ## Features
 
--   A lot of Markdown features
--   GitHub flavored emoji :+1:
+-   A lot of Markdown features (also GitHub Flavored Markdown)
+-   `:emoji:` ready :+1:
+-   Easy color-scheme customization
 -   Tags list page
 -   Monthly Archives page
 -   Search feature without any Jekyll plugins
@@ -18,7 +19,7 @@ A simple and customizable theme for Jekyll.
 
 ## Getting started
 
-1.  [Fork me](https://github.com/qckanemoto/jekyll-qck-theme/fork)
+1.  [Fork me](https://github.com/ttskch/jekyll-ttskch-theme/fork)
 2.  Modify `_config.yml`
 3.  Modify `_sass/base/_variables.scss` if you need to change colors or font sizes
 4.  Add new posts into `_posts/` :smiley:
@@ -27,4 +28,4 @@ A simple and customizable theme for Jekyll.
 
 You can see live demo at below:
 
--   <http://qckanemoto.github.io/jekyll-qck-theme/>
+-   <https://ttskch.github.io/jekyll-ttskch-theme/>
