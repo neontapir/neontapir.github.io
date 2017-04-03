@@ -40,7 +40,7 @@ is enforced by a specification called a schema.
 {% include pullquote.html text="Graph databases can be powerful tools for
 analyzing the way items relate to one another." %}
 
-<!-- more -->
+<!--more-->
 
 It's called a relational database because data characteristics like key values
 can be used to relate items to rows in other tables, without moving the data.
