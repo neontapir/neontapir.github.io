@@ -1,25 +1,26 @@
 {% include page-url-resolver.html page=include.page %}
 <div class="clearfix">
   <div class="site-sharebuttons">
-    <i class="fa fa-fw fa-share"></i>
+    <i class="fa fa-fw fa-share" aria-hidden="true" title="Share"></i>
+    <span class="sr-only">Share:</span>
     &nbsp;
-    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}">
+    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" aria-label="Twitter">
         <i class="fa fa-fw fa-twitter"></i>
     </a>
     &nbsp;
-    <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}">
+    <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" aria-label="Facebook">
         <i class="fa fa-fw fa-facebook"></i>
     </a>
     &nbsp;
-    <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}">
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}" aria-label="LinkedIn">
         <i class="fa fa-fw fa-linkedin"></i>
     </a>
     &nbsp;
-    <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}">
+    <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" aria-label="Google Plus">
         <i class="fa fa-fw fa-google-plus"></i>
     </a>
     &nbsp;
-    <a href="http://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}">
+    <a href="http://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}" aria-label="Reddit">
         <i class="fa fa-fw fa-reddit"></i>
     </a>
 </div>

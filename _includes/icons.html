@@ -2,7 +2,7 @@
 
 {% if icons.rss %}
 <li>
-    <a href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
+    <a href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}" aria-label="RSS feed">
         <i class="fa fa-fw fa-rss"></i>
     </a>
 </li>
@@ -10,7 +10,7 @@
 
 {% if icons.email %}
 <li>
-    <a href="mailto:{{ icons.email }}">
+    <a href="mailto:{{ icons.email }}" aria-label="Email">
         <i class="fa fa-fw fa-envelope"></i>
     </a>
 </li>
@@ -18,7 +18,7 @@
 
 {% if icons.github %}
 <li>
-    <a href="https://github.com/{{ icons.github }}">
+    <a href="https://github.com/{{ icons.github }}" aria-label="GitHub">
         <i class="fa fa-fw fa-github"></i>
     </a>
 </li>
@@ -26,7 +26,7 @@
 
 {% if icons.bitbucket %}
 <li>
-    <a href="https://bitbucket.org/{{ icons.bitbucket }}">
+    <a href="https://bitbucket.org/{{ icons.bitbucket }}" aria-label="Bitbucket">
         <i class="fa fa-fw fa-bitbucket"></i>
     </a>
 </li>
@@ -34,7 +34,7 @@
 
 {% if icons.twitter %}
 <li>
-    <a href="https://twitter.com/{{ icons.twitter }}">
+    <a href="https://twitter.com/{{ icons.twitter }}" aria-label="Twitter">
         <i class="fa fa-fw fa-twitter"></i>
     </a>
 </li>
@@ -42,7 +42,7 @@
 
 {% if icons.facebook %}
 <li>
-    <a href="https://www.facebook.com/{{ icons.facebook }}">
+    <a href="https://www.facebook.com/{{ icons.facebook }}" aria-label="Facebook">
         <i class="fa fa-fw fa-facebook"></i>
     </a>
 </li>
@@ -50,7 +50,7 @@
 
 {% if icons.google_plus %}
 <li>
-    <a href="https://plus.google.com/{{ icons.google_plus }}">
+    <a href="https://plus.google.com/{{ icons.google_plus }}" aria-label="Google Plus">
         <i class="fa fa-fw fa-google-plus"></i>
     </a>
 </li>
@@ -58,7 +58,7 @@
 
 {% if icons.tumblr %}
 <li>
-    <a href="https://{{ icons.tumblr }}.tumblr.com/">
+    <a href="https://{{ icons.tumblr }}.tumblr.com/" aria-label="Tumblr">
         <i class="fa fa-fw fa-tumblr"></i>
     </a>
 </li>
@@ -66,7 +66,7 @@
 
 {% if icons.behance %}
 <li>
-    <a href="https://www.behance.net/{{ icons.behance }}">
+    <a href="https://www.behance.net/{{ icons.behance }}" aria-label="Behance">
         <i class="fa fa-fw fa-behance"></i>
     </a>
 </li>
@@ -74,7 +74,7 @@
 
 {% if icons.dribbble %}
 <li>
-    <a href="https://dribbble.com/{{ icons.dribbble }}">
+    <a href="https://dribbble.com/{{ icons.dribbble }}" aria-label="Dribble">
         <i class="fa fa-fw fa-dribbble"></i>
     </a>
 </li>
@@ -82,7 +82,7 @@
 
 {% if icons.flickr %}
 <li>
-    <a href="https://www.flickr.com/photos/{{ icons.flickr }}">
+    <a href="https://www.flickr.com/photos/{{ icons.flickr }}" aria-label="Flickr">
         <i class="fa fa-fw fa-flickr"></i>
     </a>
 </li>
@@ -90,7 +90,7 @@
 
 {% if icons.instagram %}
 <li>
-    <a href="http://instagram.com/{{ icons.instagram }}">
+    <a href="http://instagram.com/{{ icons.instagram }}" aria-label="Instagram">
         <i class="fa fa-fw fa-instagram"></i>
     </a>
 </li>
@@ -98,7 +98,7 @@
 
 {% if icons.linkedin %}
 <li>
-    <a href="https://www.linkedin.com/in/{{ icons.linkedin }}">
+    <a href="https://www.linkedin.com/in/{{ icons.linkedin }}" aria-label="LinkedIn">
         <i class="fa fa-fw fa-linkedin"></i>
     </a>
 </li>
@@ -106,7 +106,7 @@
 
 {% if icons.pinterest %}
 <li>
-    <a href="http://www.pinterest.com/{{ icons.pinterest }}">
+    <a href="http://www.pinterest.com/{{ icons.pinterest }}" aria-label="Pinterest">
         <i class="fa fa-fw fa-pinterest"></i>
     </a>
 </li>
@@ -114,7 +114,7 @@
 
 {% if icons.reddit %}
 <li>
-    <a href="https://www.reddit.com/user/{{ icons.reddit }}">
+    <a href="https://www.reddit.com/user/{{ icons.reddit }}" aria-label="Reddit">
         <i class="fa fa-fw fa-reddit"></i>
     </a>
 </li>
@@ -122,7 +122,7 @@
 
 {% if icons.soundcloud %}
 <li>
-    <a href="https://soundcloud.com/{{ icons.soundcloud }}">
+    <a href="https://soundcloud.com/{{ icons.soundcloud }}" aria-label="SoundCloud">
         <i class="fa fa-fw fa-soundcloud"></i>
     </a>
 </li>
@@ -130,7 +130,7 @@
 
 {% if icons.stack_exchange %}
 <li>
-    <a href="http://stackexchange.com/users/{{ icons.stack_exchange }}">
+    <a href="http://stackexchange.com/users/{{ icons.stack_exchange }}" aria-label="Stack Exchange">
         <i class="fa fa-fw fa-stack-exchange"></i>
     </a>
 </li>
@@ -138,7 +138,7 @@
 
 {% if icons.steam %}
 <li>
-    <a href="http://steamcommunity.com/id/{{ icons.steam }}">
+    <a href="http://steamcommunity.com/id/{{ icons.steam }}" aria-label="Steam">
         <i class="fa fa-fw fa-steam"></i>
     </a>
 </li>
@@ -146,7 +146,7 @@
 
 {% if icons.wordpress %}
 <li>
-    <a href="https://{{ icons.wordpress }}.wordpress.com/">
+    <a href="https://{{ icons.wordpress }}.wordpress.com/" aria-label="Wordpress">
         <i class="fa fa-fw fa-wordpress"></i>
     </a>
 </li>
@@ -154,7 +154,7 @@
 
 {% if icons.youtube %}
 <li>
-    <a href="https://www.youtube.com/user/{{ icons.youtube }}">
+    <a href="https://www.youtube.com/user/{{ icons.youtube }}" aria-label="YouTube">
         <i class="fa fa-fw fa-youtube"></i>
     </a>
 </li>
