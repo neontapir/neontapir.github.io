@@ -4,6 +4,7 @@ title: Explore DDD Volunteering
 date: 2017-08-28T17:30:00.000Z
 description: Explore DDD Volunteering
 image: explore-ddd.jpeg
+eye_catch: /assets/explore-ddd.jpeg
 categories:
   - professional
 tags:
