@@ -3,8 +3,8 @@ layout: post
 title: Explore DDD Volunteering
 date: 2017-08-28T17:30:00.000Z
 description: Explore DDD Volunteering
-image: explore-ddd.jpeg
-eye_catch: /assets/explore-ddd.jpeg
+image: Explore-DDD.png
+eye_catch: /assets/Explore-DDD.png
 categories:
   - professional
 tags:
@@ -15,7 +15,7 @@ tags:
   - microservices
 ---
 
-{% include side-image.html image="explore-ddd.jpeg" %}
+{% include side-image.html image="Explore-DDD.png" %}
 
 Hello there!
 
