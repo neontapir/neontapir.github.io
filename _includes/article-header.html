@@ -13,7 +13,7 @@
         <ul class="tags">
             {% assign tags_num = (page.tags | size) %}
             {% if tags_num > 0 %}
-            <li><i class="fa fa-tags"></i></li>
+            <li><i class="fa fa-tags" aria-hidden="true" title="Tags"></i></li>
             {% endif %}
             {% for tag in page.tags %}
             <li>
@@ -40,14 +40,14 @@
 
                 {% if page.date %}
                 <li>
-                    <i class="fa fa-calendar"></i>
+                    <i class="fa fa-calendar" aria-hidden="true" title="Calendar"></i>
                     {{ page.date | date: "%Y-%m-%d" }}
                 </li>
                 {% endif %}
 
                 {% if page.author %}
                 <li>
-                    <a href="{{ '/search/?a=' | append: page.author.display_name | prepend: site.baseurl }}">
+                    <a href="{{ '/search/?a=' | append: page.author.display_name | prepend: site.baseurl }}" aria-label="Author">
                         <i class="fa fa-user"></i>
                         {{ page.author.display_name }}
                     </a>

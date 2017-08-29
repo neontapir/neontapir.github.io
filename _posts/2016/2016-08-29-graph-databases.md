@@ -6,6 +6,8 @@ description: A third kind of database, based on graph theory
 categories:
 - professional
 tags:
+- count
+- cypher
 - data
 - database
 - example
@@ -19,8 +21,6 @@ tags:
 - table
 - tutorial
 - twitter
-- cypher
-
 ---
 
 {% include side-image.html image="Microsoft_Excel_2013_logo.png" width="25" %}
@@ -121,13 +121,13 @@ would be one degree removed, or a second degree connection. In a relational
 database, this would require a large association table with some subqueries to
 achieve. Here's the query shown on that page:
 
-{% highlight cypher %}
+```cypher
 MATCH (tom:Person)-[:ACTED_IN]->(movie1)<-[:ACTED_IN]-(coActor:Person),
          (coActor)-[:ACTED_IN]->(movie2)<-[:ACTED_IN]-(coCoActor:Person)
 WHERE tom.name = "Tom Hanks"
 AND NOT (tom)-[:ACTED_IN]->(movie2)
 RETURN coCoActor.name
-{% endhighlight %}
+```
 
 I think Cypher queries are easy to read if you are used to SQL. Nodes are in
 parentheses. Edges are in square brackets. Item specifications that need to be
@@ -145,7 +145,7 @@ Queries that graph databases excel at are ones that explore relationships with
 the data. An example would be finding out people I'm mentioning on Twitter. In
 this example, the Cypher query would be:
 
-{% highlight cypher %}
+```cypher
 MATCH
   (u:User {screen_name:'ChuckDurfee'})-[p:POSTS]->(t:Tweet)-[:MENTIONS]->(m:User)
 WITH
@@ -155,12 +155,12 @@ ORDER BY
 RETURN
   u,p,t,m
 LIMIT 10
-{% endhighlight %}
+```
 
 If I want the reverse, people who mention me, I simply need to change the query
 slightly:
 
-{% highlight cypher %}
+```cypher
 MATCH
   (u:User)-[p:POSTS]->(t:Tweet)-[:MENTIONS]->(m:User {screen_name:'ChuckDurfee'})
 WITH
@@ -170,13 +170,13 @@ ORDER BY
 RETURN
   u,p,t,m
 LIMIT 10
-{% endhighlight %}
+```
 
 Notice here that the direction of the relationship has been reversed just by
 changing the specification on the nodes. I could also rewrite this query by
 changing the direction of the arrows.
 
-{% highlight cypher %}
+```cypher
 MATCH
   (u:User {screen_name:'ChuckDurfee'})<-[:MENTIONS]-(t:Tweet)<-[p:POSTS]-(m:User)
 WITH
@@ -186,7 +186,7 @@ ORDER BY
 RETURN
   u,p,t,m
 LIMIT 10
-{% endhighlight %}
+```
 
 I hope this post has whet your appetite for looking into graph databases. They
 can be powerful tools for analyzing the way items relate to one another.

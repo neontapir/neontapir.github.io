@@ -1,20 +1,24 @@
 ---
 layout: post
 title: Marketing Patriot Day
-date: 2016-09-11 21:30:00
+date: 2016-11-11 21:30:00
 description: Contrasting two 9/11 commercials
 categories:
 - mba
 tags:
 - advertising
 - business
+- commerical
+- consumer
+- horses
 - marketing
+- mattress
 - people
 - positioning
 - promotion
-- mattress
-- horses
-
+- television
+- tv
+- twin
 ---
 
 {% include pullquote.html text="Marketing is not all about positioning product;
@@ -26,42 +30,17 @@ September 11th, 2001 -- 15 years ago today at the time of this posting.
 
 <!--more-->
 
-The first ad is from a nationally-known beer brewer, Budweiser. It shows a
-delivery wagon being pulled quietly through a small town street by the company's
-iconic Clydesdale horses. They somberly walk up to a park overlooking Manhattan,
-as the camera pans to the part of the skyline where the Twin Towers stood just
-four months prior. The ad ends with the Clydesdale horses kneeling in respect,
-then a fade to black with the words, "We'll never forget".
+The first ad is from a nationally-known beer brewer, Budweiser. It shows a delivery wagon being pulled quietly through a small town street by the company's iconic Clydesdale horses. They somberly walk up to a park overlooking Manhattan, as the camera pans to the part of the skyline where the Twin Towers stood just four months prior. The ad ends with the Clydesdale horses kneeling in respect, then a fade to black with the words, "We'll never forget".
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/J3eQmzw6n3k" frameborder="0" allowfullscreen></iframe>
 
-The second is a recent commercial from a San Antonio-based mattress company,
-Miracle Mattress. In this ad, a spokeswomen explains their special promotion for
-9-11, that you can get any size mattress for the size of a twin. Behind her
-stand two salesmen, both in front of a tower of mattresses. She throws her arms
-back into the two men, who stumble backwards and knock over the two towers of
-mattresses. She acts upset about the accident, and then ends the commercial by
-saying jokingly, "We'll never forget."
+The second is a recent commercial from a San Antonio-based mattress company, Miracle Mattress. In this ad, a spokeswomen explains their special promotion for 9-11, that you can get any size mattress for the size of a twin. Behind her stand two salesmen, both in front of a tower of mattresses. She throws her arms back into the two men, who stumble backwards and knock over the two towers of mattresses. She acts upset about the accident, and then ends the commercial by saying jokingly, "We'll never forget."
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2ZmM-2gj5Gc" frameborder="0" allowfullscreen></iframe>
 
-Let's compare the two ads. The Budweiser ad only aired once in January 2002,
-during the Super Bowl. Many people in the country were still in shock after
-9-11. This ad showed no product, and was purely a positioning ad. It
-communicated its message of solidarity with and mourning alongside its consumer
-base. It did so visually with no voice-over, only backed by a somber soundtrack.
-They sought and obtained the approval of members of Congress and New York City's
-mayor. You can read more about the [making of the
-commercial](http://wgntv.com/2015/09/11/the-true-story-behind-the-911-budweiser-commercial-that-only-aired-one-time/)
-here. AdAge rated this ad as the "most effective of the quarter", as reported by
-[Business
-Insider](http://www.businessinsider.com/consumers-like-911-ads-2011-9).
+Let's compare the two ads. The Budweiser ad only aired once in January 2002, during the Super Bowl. Many people in the country were still in shock after 9-11. This ad showed no product, and was purely a positioning ad. It communicated its message of solidarity with and mourning alongside its consumer base. It did so visually with no voice-over, only backed by a somber soundtrack. They sought and obtained the approval of members of Congress and New York City's mayor. You can read more about the [making of the commercial](http://wgntv.com/2015/09/11/the-true-story-behind-the-911-budweiser-commercial-that-only-aired-one-time/) here. AdAge rated this ad as the "most effective of the quarter", as reported by [Business Insider](http://www.businessinsider.com/consumers-like-911-ads-2011-9).
 
-By contrast, the mattress ad had the opposite effect. Public opinion about
-Miracle Mattress was so negative after the ad aired, that the company had to
-close their doors indefinitely, as reported by
-[CNBC](http://www.cnbc.com/2016/09/11/texas-based-miracle-mattress-shuts-doors-indefinitely-after-911-ad-falls-flat.html).
-What happened?
+By contrast, the mattress ad had the opposite effect. Public opinion about Miracle Mattress was so negative after the ad aired, that the company had to close their doors indefinitely, as reported by [CNBC](http://www.cnbc.com/2016/09/11/texas-based-miracle-mattress-shuts-doors-indefinitely-after-911-ad-falls-flat.html). What happened?
 
 Although I'm no expert on the mattress business, I understand that it is a
 high-margin reselling business. A firm like Miracle Mattress can probably afford

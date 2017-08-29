@@ -6,17 +6,21 @@ description: How to ingest a CSV file into Druid
 categories:
 - professional
 tags:
-- csv
-- json
-- druid
-- node
-- dataset
-- data-analysis
-- ingestion
+- actual
+- average
 - columns
+- csv
+- data
+- data-analysis
+- dataset
+- druid
 - error
+- ingestion
+- json
 - metrics
-
+- node
+- precipitation
+- weather
 ---
 
 {% include side-image.html image="druid-icon.png" %}
@@ -66,7 +70,7 @@ It took me a lot of trial and error to hit upon the correct JSON syntax, and the
 main purpose of this post is to share my findings. Without further ado, here's
 the JSON specification for the indexing job:
 
-{% highlight json %}
+```json
 {
   "type": "index_hadoop",
   "spec": {
@@ -145,7 +149,7 @@ the JSON specification for the indexing job:
     }
   }
 }
-{% endhighlight %}
+```
 
 I also made a couple of small changes to the CSV file itself, which I will
 mention as I go along.

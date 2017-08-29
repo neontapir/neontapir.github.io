@@ -137,7 +137,7 @@
             color: $header-text-color;
             .panel {
                 padding: 1em 1.5em;
-                background-color: rgba($page-title-color, .2);
+                background-color: $page-header-color;
                 h1 {
                     margin: 0;
                     &, a {
@@ -198,6 +198,10 @@
         .btn:first-child {
             margin-right: 1em;
         }
+    }
+
+    #sidebar-text {
+      color: $link-color
     }
 
     #search-results {

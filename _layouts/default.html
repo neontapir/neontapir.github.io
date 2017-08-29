@@ -8,9 +8,33 @@
     {{ criticalcss | scssify }}
     </style>
 
-    {% capture title %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% endcapture %}
     {% include google-analytics.html %}
     {% include page-url-resolver.html page=page %}
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}" type="image/x-icon">
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}" />
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- default site font defined in _sass/base/_variables.scss -->
+    <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+    <script src="https://use.fontawesome.com/1f5f360d80.js"></script>
+    <link href="{{ '/assets/css/style.css' | prepend: site.baseurl }}" rel="stylesheet">
+
+    {% if page.eye_catch %}
+      {% assign ogp_image_url = page.eye_catch %}
+      {% assign twitter_card = "summary_large_image" %}
+    {% else %}
+      {% assign ogp_image_url = site.ogp.image_url %}
+      {% assign twitter_card = "summary" %}
+    {% endif %}
+
+    <meta property="og:image" content="{{ site.url }}{{ ogp_image_url }}" />
 
     {% if page.description %}
       {% assign description = page.description %}
@@ -20,64 +44,19 @@
       {% assign description = site.description %}
     {% endif %}
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>{{ title }}</title>
-
-    <meta name="description" content="{{ site.description }}">
-
-    <link rel="shortcut icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}" type="image/x-icon">
-    <link rel="canonical" href="{{ url }}">
-    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}" />
-
-    {% if page.eye_catch %}
-    {% assign ogp_image_url = page.eye_catch %}
+    {% if page.title %}
+      {% assign page_title = page.title %}
     {% else %}
-    {% assign ogp_image_url = site.ogp.image_url %}
+      {% assign page_title = site.title %}
     {% endif %}
 
-    <meta property="og:title" content="{{ title }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="{{ ogp_image_url }}" />
-    <meta property="og:url" content="{{ url }}" />
-    <meta property="og:site_name" content="{{ site.title }}" />
-    <meta property="fb:admins" content="{{ site.ogp.fb.admin }}" />
-    <meta property="fb:app_id" content="{{ site.ogp.fb.app_id }}" />
-    <meta property="og:description" content="{{ site.description }}" />
-
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- default site font defined in _sass/base/_variables.scss -->
-    <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-    <script src="https://use.fontawesome.com/1f5f360d80.js"></script>
-
-    <link href="{{ '/assets/css/style.css' | prepend: site.baseurl }}" rel="stylesheet">
-
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="{{ twitter_card }}">
     <meta name="twitter:site" content="@{{ site.icons.twitter }}">
     <meta name="twitter:creator" content="@{{ site.icons.twitter }}">
-    {% if page.title %}
-      <meta name="twitter:title" content="{{ page.title }}">
-    {% else %}
-      <meta name="twitter:title" content="{{ site.title }}">
-    {% endif %}
-    {% if page.url %}
-      <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-    {% endif %}
-    {% if page.description %}
-      <meta name="twitter:description" content="{{ page.description }}">
-    {% else %}
-      <meta name="twitter:description" content="{{ page.content | strip_html | xml_escape | truncate: 200 }}">
-    {% endif %}
-    {% if page.image %}
-      <meta name="twitter:image" content="{{ site.url }}/assets/{{ page.image }}">
-    {% else %}
-      <meta name="twitter:image" content="{{ site.url }}{{ site.avatar }}">
-    {% endif %}
+    <meta name="twitter:title" content="{{ page_title }}">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="{{ site.url }}{{ ogp_image_url }}">
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
 
     {% seo %}
 </head>
@@ -123,7 +102,7 @@
             <hr class="with-no-margin margin-bottom"/>
 
             <div class="block sticky">
-                <h1>{{ site.str_recent_posts }}</h1>
+                <h2>{{ site.str_recent_posts }}</h2>
                 <ul>
                     {% assign posts = (site.posts | sort: 'date' | reverse) %}
                     {% for post in posts limit:site.recent_posts_num %}
