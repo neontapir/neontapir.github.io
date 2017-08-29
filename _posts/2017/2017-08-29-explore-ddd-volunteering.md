@@ -29,5 +29,5 @@ I plan to assemble the volunteer team this week. Please email me at <a href="&#1
 I have volunteered for several conferences in the past, and I can say from personal experience that I get a lot more out of the conference as a volunteer than as a regular attendee. I ask you to consider volunteering with us. Thank you for your time and interest!
 
 Regards,
-Chuck Durfee
-Volunteer Lead, Explore DDD
+<br />Chuck Durfee
+<br />Volunteer Lead, Explore DDD
