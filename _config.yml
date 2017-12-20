@@ -162,3 +162,5 @@ exclude:
   - Rakefile.rb
   - README.md
   - vendor
+
+theme: jekyll-theme-cayman
