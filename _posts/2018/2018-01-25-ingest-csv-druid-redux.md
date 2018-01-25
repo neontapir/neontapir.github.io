@@ -25,7 +25,7 @@ tags:
 
 {% include side-image.html image="druid-icon.png" %}
 
-Last year, I posted an article on my experience [ingesting a CSV file into Druid](<{% post_url 2017-02-10-ingest-csv-druid %}>). Yesterday, I got an email from a reader who needed more detail to make it work. So, today, I recreated that work and am posting a step-by-step guide.
+Last year, I posted an article on my experience [ingesting a CSV file into Druid](<{% post_url 2017/2017-02-10-ingest-csv-druid %}>). Yesterday, I got an email from a reader who needed more detail to make it work. So, today, I recreated that work and am posting a step-by-step guide.
 
 <!--more-->
 
@@ -313,14 +313,14 @@ It tried for a while longer, but failed again. I saw JNDI and JMX exceptions aga
 
 I forgot to strip the header row out of the dataset. Running it again, I got a SUCCESS status in the coordinator console:
 
-![Coordinator console screenshot]\({{ "/assets/druid-coordinator-console-20180125.png" | absolute_url }})
+![Coordinator console screenshot](/assets/druid-coordinator-console-20180125.png "Coordinator console screenshot")
 
 In the regular console on port 8081, `seattle-weather` now shows up as a disabled datasource.
 
-![Console screenshot of disabled datasources]\({{ "/assets/druid-disabled-datasources-20180125.png" | absolute_url }})
+![Console screenshot of disabled datasources](/assets/druid-disabled-datasources-20180125.png "Console screenshot of disabled datasources")
 
 If you click on the `seattle-weather` link, it will offer to enable the datasource for you.
 
-![Console screenshot of the enabled seattle-weather datasource]\({{ "/assets/druid-seattleweather-datasource-20180125.png" | absolute_url }})
+![Console screenshot of the enabled seattle-weather datasource](/assets/druid-seattleweather-datasource-20180125.png "Console screenshot of the enabled seattle-weather datasource")
 
 I hope this post has been helpful.
