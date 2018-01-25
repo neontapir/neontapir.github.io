@@ -6,13 +6,18 @@ description: Step-by-step instructions to visualize Druid data using Swiv
 categories:
 - professional
 tags:
+- business-intelligence
+- dashboard
 - data
 - data-analysis
 - dataset
 - druid
+- granularity
+- metrics
 - node
-- weather
+- pivot
 - swiv
+- weather
 ---
 
 {% include side-image.html image="swiv-logo.png" %}
@@ -21,7 +26,7 @@ Last year, I posted an article on my experience [ingesting a CSV file into Druid
 
 <!--more-->
 
-For this step, I'm going to use the open-source visualizaton tool Swiv, which used to be Pivot.
+For this step, I'm going to use the open-source visualization tool [Swiv](https://github.com/yahoo/swiv), which used to be Pivot. Swiv is a web-based exploratory visualization UI built on top of a library called Plywood.
 
 {% highlight bash %}
 git/github/yahoo
