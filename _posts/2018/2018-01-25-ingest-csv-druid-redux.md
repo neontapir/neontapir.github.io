@@ -297,7 +297,7 @@ I moved up to the `sandbox` folder, then modified my `seattle-weather.json` file
 }
 {% endhighlight %}
 
-Keep in mind that if you use a relative path like I did, it is relative to the folder you started the Druid processes in, in my case `sandbox\/druid-0.11.0`.
+Keep in mind that if you use a relative path like I did, it is relative to the folder you started the Druid processes in, in my case `sandbox/druid-0.11.0`.
 
 {% highlight bash %}
 ~/sandbox
