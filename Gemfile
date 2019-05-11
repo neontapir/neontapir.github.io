@@ -1,3 +1,4 @@
 source "https://rubygems.org"
 
-gem 'github-pages', '172'
+gem 'github-pages', '>=198'
+gem 'rubocop'
