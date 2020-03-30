@@ -48,7 +48,7 @@ defaults:
         first_name: Chuck
         last_name: Durfee
       read_stats:
-        wpm: 180
+        wpm: 160
 #
 # Icons via https://github.com/FortAwesome/Font-Awesome
 #
