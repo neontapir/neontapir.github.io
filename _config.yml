@@ -162,4 +162,4 @@ exclude:
   - README.md
   - vendor
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-dinky
