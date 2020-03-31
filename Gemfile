@@ -1,4 +1,6 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 gem 'github-pages', '>=204'
-gem 'rubocop'
+gem 'html-proofer'
+gem 'rake'
+# gem 'rubocop'

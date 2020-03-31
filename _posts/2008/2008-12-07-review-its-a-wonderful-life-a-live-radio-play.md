@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: 'Review: "It''s A Wonderful Life: A Live Radio Play"'
+title: "Review: It's A Wonderful Life: A Live Radio Play"
 date: 2008-12-07 19:01:46 -07:00
 categories:
 - op-ed

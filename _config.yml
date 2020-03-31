@@ -14,9 +14,9 @@ show_drafts: false
 
 author: chuckdurfee
 facebook:
- app_id: 194566184373771
- publisher: 10153287725984334
- admins: 10153287725984334
+  app_id: 194566184373771
+  publisher: 10153287725984334
+  admins: 10153287725984334
 logo: /assets/img/tapir.png
 social:
   name: Chuck Durfee
@@ -124,9 +124,18 @@ ogp:
     app_id: 194566184373771 # facebook application id
 
 #
-# Gems.
+# Gems, first default includes, then custom
 #
 plugins:
+  - jekyll-coffeescript
+  - jekyll-default-layout
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-relative-links
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag
@@ -162,4 +171,5 @@ exclude:
   - README.md
   - vendor
 
+# theme: jekyll-theme-cayman
 theme: jekyll-theme-dinky

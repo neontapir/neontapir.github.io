@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CSP: Why Certifications - 4x02
+title: CSP - Why Certifications - 4x02
 comments: true
 categories:
 - professional

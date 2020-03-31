@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CSP: The Downside to Certifications - 4x05
+title: CSP - The Downside to Certifications - 4x05
 comments: true
 categories:
 - professional

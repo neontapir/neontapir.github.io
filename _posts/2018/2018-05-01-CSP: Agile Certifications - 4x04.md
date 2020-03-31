@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CSP: Agile Certifications - 4x04
+title: CSP - Agile Certifications - 4x04
 comments: true
 categories:
 - professional

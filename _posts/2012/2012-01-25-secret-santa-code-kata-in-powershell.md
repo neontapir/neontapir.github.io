@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: '"Secret Santa" Code Kata in Powershell'
+title: 'Secret Santa Code Kata in Powershell'
 categories:
 - coding
 - professional
@@ -74,13 +74,13 @@ $results = ConvertTo-Array $names
 $results | ft  
 {% endhighlight %}
 
-It reads the contents of the file and writes each line to a hashtable, where all the receivers are $none (a special value I created which I used like $null).
+It reads the contents of the file and writes each line to a hash table, where all the receivers are $none (a special value I created which I used like $null).
 
-As long as there are unmatched people, I go through an algorithm to select a random gift giver who doesn’t have a receiver ($from) and a receiver who doesn’t have a giver ($to). The split(” “)[1] yields a person’s surname.
+As long as there are unmatched people, I go through an algorithm to select a random gift giver who doesn’t have a receiver ($from) and a receiver who doesn’t have a giver ($to). The `split(” “)[1]` yields a person’s surname.
 
 I used a variant on the “Hill Climbing” algorithm mentioned on the site. If I run into a situation where there are no more matches, I take a random person who could have been a match and throw them back into the pool of candidates. In this way, the algorithm never gets stuck.
 
-At the end, I call my `ConvertTo-Array` function to beautify the output. Without it, the hashtable columns are labeled “Name” and “Value”, and that didn’t satisfy me. (I couldn’t get `Format-Table` to help.)
+At the end, I call my `ConvertTo-Array` function to beautify the output. Without it, the hash table columns are labeled “Name” and “Value”, and that didn’t satisfy me. (I couldn’t get `Format-Table` to help.)
 
 I added a progress bar to see how often this part of the code is invoked, and it gets called once or twice per run on average. However, the script itself has decent performance. It takes a second or so to match 40 names.
 

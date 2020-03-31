@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CSP: Martial Art Belts - 4x03
+title: CSP - Martial Art Belts - 4x03
 comments: true
 categories:
 - professional
