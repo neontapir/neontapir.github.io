@@ -10,14 +10,13 @@ $code-font-size: 0.85em;
 $margin: 30px;
 
 // brand color.
-$brand-color: cyan; //#44eeff;
+$brand-color: #008100; // cyan; //#44eeff;
 
 // other major colors. See
-// https://coolors.co/44eeff-daa520-019e93-fcf6b1-f7f7f7
-// http://leaverou.github.io/contrast-ratio/#%23019E93-on-%23FCF6B1
+// https://coolors.co/000000-008100-c1edcc-7d6d61-b0c0bc
 $site-title-color: black;
-$page-title-color: goldenrod;
-$page-header-color: #FFFAB7; //rgba($page-title-color, .2);
+$page-title-color: #008100; // office green;
+$page-header-color: #b0c0bc; //rgba($page-title-color, .2);
 $page-title-outline: darken($page-title-color, 20%);
 $background-color: #FFFBFA;
 $border-color: rgba(black, .1);
@@ -26,7 +25,7 @@ $border-color: rgba(black, .1);
 $text-color: black;
 $header-text-color: $page-title-outline; // rgba($text-color, .75);
 $caption-color: lighten($text-color, 65%);
-$link-color: #007FFF; // darken(desaturate($brand-color, 50%), 20%); // darken($brand-color, 33%);
+$link-color: #7d6d61; // darken(desaturate($brand-color, 50%), 20%); // darken($brand-color, 33%);
 $pullquote-color: adjust-hue($link-color, 30deg);
-$blockquote-color: #757780;
+$blockquote-color: #c1edcc;
 $table-header-color: $brand-color; // adjust-hue($link-color, -30deg);

@@ -7,7 +7,7 @@ url: http://neontapir.github.io
 baseurl: ""
 title: Chuck Durfee's Blog
 description: The neon tapir, casting his eerie glow upon the masses
-avatar: /assets/img/tapir.png
+avatar: /assets/img/tapir-hex.png
 show_drafts: false
 
 # Additional Jekyll SEO tag information
@@ -17,7 +17,7 @@ facebook:
   app_id: 194566184373771
   publisher: 10153287725984334
   admins: 10153287725984334
-logo: /assets/img/tapir.png
+logo: /assets/img/tapir-hex.png
 social:
   name: Chuck Durfee
   links:
@@ -36,7 +36,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      logo: /assets/img/tapir.png
+      logo: /assets/img/tapir-hex.png
       social:
         name: Chuck Durfee
       twitter:
@@ -118,7 +118,7 @@ share_buttons:
   facebook: true # needs ogp.fb.app_id
   hatena: false # styling has been removed
 ogp:
-  image_url: /assets/img/tapir.png
+  image_url: /assets/img/tapir-hex.png
   fb:
     admin: 10153287725984334 # facebook admin id
     app_id: 194566184373771 # facebook application id
@@ -171,5 +171,12 @@ exclude:
   - README.md
   - vendor
 
-# theme: jekyll-theme-cayman
-theme: jekyll-theme-dinky
+theme: jekyll-theme-cayman
+# theme: jekyll-theme-dinky
+
+# search will not normally work locally because of CORS
+# uncomment the follow to bypass this for debugging
+
+# webrick:
+#   headers:
+#     Access-Control-Allow-Origin: '*'

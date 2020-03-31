@@ -68,7 +68,7 @@ function showPosts(words, targets)
                                 targetString += target[j];
                             }
                         } else if (typeof target == "object") {
-                            for (key in target) {
+                            for (var key in target) {
                                 targetString += target[key];
                             }
                         } else {
