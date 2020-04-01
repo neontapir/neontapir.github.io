@@ -40,7 +40,7 @@ for item in items:
     duration = str(round(float(item["itunes_duration"]) / 60))
     value = item["content"][0]['value']
     value = re.sub('<p>This episode is sponsored by .*</p>', '', value)
-    value = re.sub('<a.+rel="payment".*>.+</a>', '', value)
+    value = re.sub('<a rel="payment" href="https://www.patreon.com/agilechuckwagon">.+</a>', '', value)
     value = re.sub('<p>\s*</p>', '', value)
     value = value.replace('(https://www.patreon.com/agilechuckwagon)', '')
     value = html2markdown.convert(value) + ' (length: ' + duration + ' min)'
