@@ -58,10 +58,11 @@ icons:
   dribbble:
   email: neontapir+blog@gmail.com
   facebook: chuck.durfee
-  flickr: tangentier
+  # flickr: tangentier
   github: neontapir
   instagram: neontapir
-  linkedin: neontapir
+  linkedin: agilechuckwagon
+  patreon: agilechuckwagon
   pinterest:
   reddit: neontapir
   rss: true
@@ -70,7 +71,7 @@ icons:
   steam:
   tumblr:
   twitter: ChuckDurfee
-  wordpress: neontapir
+  # wordpress: neontapir
   youtube: neontapir
 
 #

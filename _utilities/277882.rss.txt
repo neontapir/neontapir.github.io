@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<channel>
+  <atom:link href="https://feeds.buzzsprout.com/277882.rss" rel="self" type="application/rss+xml" />
+  <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub" xmlns="http://www.w3.org/2005/Atom" />
+  <title>Agile Chuck Wagon</title>
+  <lastBuildDate>Mon, 30 Mar 2020 15:50:35 -0400</lastBuildDate>
+  <link>https://agilechuckwagon.buzzsprout.com</link>
+  <language>en</language>
+  <copyright>&#x2117; &amp; © 2020 Agile Chuck Wagon</copyright>
+  <itunes:subtitle><![CDATA[A weekly podcast on agile, lean, leadership, and technical topics aimed at beginning to intermediate practitioners.]]></itunes:subtitle>
+  <itunes:author>Chuck Durfee</itunes:author>
+  <itunes:summary><![CDATA[A weekly podcast on agile, lean, leadership, and technical topics aimed at beginning to intermediate practitioners.]]></itunes:summary>
+  <itunes:type>episodic</itunes:type>
+  <itunes:explicit>false</itunes:explicit>
+  <description><![CDATA[A weekly podcast on agile, lean, leadership, and technical topics aimed at beginning to intermediate practitioners.]]></description>
+  <itunes:keywords>agile, lean, leadership, programming, interactions, communications</itunes:keywords>
+  <itunes:owner>
+    <itunes:name>Chuck Durfee</itunes:name>
+    <itunes:email>chuck@agilechuckwagon.com</itunes:email>
+  </itunes:owner>
+  <image>
+     <url>https://storage.buzzsprout.com/variants/GJyfayW6K1CKctjCJPVaaeuh/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg</url>
+     <title>Agile Chuck Wagon</title>
+     <link>https://agilechuckwagon.buzzsprout.com</link>
+  </image>
+  <itunes:image href="https://storage.buzzsprout.com/variants/GJyfayW6K1CKctjCJPVaaeuh/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+  <itunes:category text="Business" />
+  <itunes:category text="Business">
+    <itunes:category text="Management" />
+  </itunes:category>
+  <itunes:category text="Technology" />
+  <item>
+    <itunes:title>The Accountability Dial</itunes:title>
+    <title>The Accountability Dial</title>
+    <description><![CDATA[<p>In this episode, Chuck illustrates the use of Jonathan Raymond's Accountability Dial technique, with Manager Tools feedback examples as well.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>In this episode, Chuck illustrates the use of Jonathan Raymond's Accountability Dial technique, with Manager Tools feedback examples as well.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/olq4a2ik13r4w1yqfllusnwim2ae/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>In this episode, Chuck illustrates the use of Jonathan Raymond&#39;s Accountability Dial technique, with Manager Tools feedback examples as well.</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/3008284-the-accountability-dial.mp3?blob_id=11193598" length="12358978" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-3008284</guid>
+    <pubDate>Wed, 25 Mar 2020 09:00:00 -0600</pubDate>
+    <itunes:duration>1027</itunes:duration>
+    <itunes:keywords>management, discipline, feedback, categories, scale</itunes:keywords>
+    <itunes:season>10</itunes:season>
+    <itunes:episode>6</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>The Advice Monster</itunes:title>
+    <title>The Advice Monster</title>
+    <description><![CDATA[<p>Chuck talks about a concept from the new book <a href="https://www.mbs.works/theadvicetrap"><em>The Advice Trap</em></a> by Michael Bungay Stanier, the Advice Monster. This tendency to inject ourselves into coaching comes with three personas: Tell-It, Save-It, and Control-It. Chuck uses personal examples for each.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>Chuck talks about a concept from the new book <a href="https://www.mbs.works/theadvicetrap"><em>The Advice Trap</em></a> by Michael Bungay Stanier, the Advice Monster. This tendency to inject ourselves into coaching comes with three personas: Tell-It, Save-It, and Control-It. Chuck uses personal examples for each.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/8i4x1haar6h6hip0ytqutc8mqmbt/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Chuck talks about a concept from the new book The Advice Trap by Michael Bungay Stanier, the Advice Monster. This tendency to inject ourselves into coaching comes with three personas: Tell-It, Save-It, and Control-It. Chuck uses personal examples for each.</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2942617-the-advice-monster.mp3?blob_id=11193676" length="7033509" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2942617</guid>
+    <pubDate>Wed, 18 Mar 2020 09:00:00 -0600</pubDate>
+    <itunes:duration>584</itunes:duration>
+    <itunes:keywords>advice, book, mbs, monster, save, tell, control</itunes:keywords>
+    <itunes:season>10</itunes:season>
+    <itunes:episode>5</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>Coaching versus Feedback</itunes:title>
+    <title>Coaching versus Feedback</title>
+    <description><![CDATA[<p>Chuck talks about the difference between coaching and feedback. This difference between staying curious and sharing your point of view is a line he often blurs himself. This concept comes from the new book <em>The Advice Trap</em> by Michael Bungay Stanier.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>Chuck talks about the difference between coaching and feedback. This difference between staying curious and sharing your point of view is a line he often blurs himself. This concept comes from the new book <em>The Advice Trap</em> by Michael Bungay Stanier.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/n3gz4dpfhcydbtp1e5x99xkibi9u/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Chuck talks about the difference between coaching and feedback. This difference between staying curious and sharing your point of view is a line he often blurs himself. This concept comes from the new book The Advice Trap by Michael Bungay Stanier.</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2942605-coaching-versus-feedback.mp3?blob_id=11193754" length="6837677" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2942605</guid>
+    <pubDate>Wed, 11 Mar 2020 09:00:00 -0600</pubDate>
+    <itunes:duration>567</itunes:duration>
+    <itunes:keywords>coaching, feedback, difference, words, vocabulary</itunes:keywords>
+    <itunes:season>10</itunes:season>
+    <itunes:episode>4</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>No Season 9 Retro</itunes:title>
+    <title>No Season 9 Retro</title>
+    <description><![CDATA[<p>A quick audio note that there was no Season 9 retro</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>A quick audio note that there was no Season 9 retro</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>A quick audio note that there was no Season 9 retro</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2942584-no-season-9-retro.mp3?blob_id=10236064" length="432394" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2942584</guid>
+    <pubDate>Sat, 07 Mar 2020 09:00:00 -0700</pubDate>
+    <itunes:duration>33</itunes:duration>
+    <itunes:keywords></itunes:keywords>
+    <itunes:season>9</itunes:season>
+    <itunes:episode>16</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>The Strategy Pattern</itunes:title>
+    <title>The Strategy Pattern</title>
+    <description><![CDATA[<p>Chuck talks about the strategy pattern, a technique software engineers use to make programs behave more intelligently. Design patterns appear outside of software, and Chuck uses real-world examples to illustrate.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>Chuck talks about the strategy pattern, a technique software engineers use to make programs behave more intelligently. Design patterns appear outside of software, and Chuck uses real-world examples to illustrate.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/qvp4jgvkfhsdq0kun4r1qvhzsfr5/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Chuck talks about the strategy pattern, a technique software engineers use to make programs behave more intelligently. Design patterns appear outside of software, and Chuck uses real-world examples to illustrate.</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2791216-the-strategy-pattern.mp3?blob_id=11197477" length="5229582" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2791216</guid>
+    <pubDate>Wed, 04 Mar 2020 09:00:00 -0700</pubDate>
+    <itunes:duration>433</itunes:duration>
+    <itunes:keywords>design, software, strategy, pattern</itunes:keywords>
+    <itunes:season>10</itunes:season>
+    <itunes:episode>3</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>The CORE Model for Leadership Resilience</itunes:title>
+    <title>The CORE Model for Leadership Resilience</title>
+    <description><![CDATA[<p>Chuck talks about how exercising control, ownership, reach, endurance (CORE) can help you deal with adversaries. He mentioned Morag Barrett's book <em>Cultivate</em> if you want to convert an adversary to an ally.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>Chuck talks about how exercising control, ownership, reach, endurance (CORE) can help you deal with adversaries. He mentioned Morag Barrett's book <em>Cultivate</em> if you want to convert an adversary to an ally.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/5maz7mlmw19f0cgjj24yr4ceoaxb/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Chuck talks about how exercising control, ownership, reach, endurance (CORE) can help you deal with adversaries. He mentioned Morag Barrett&#39;s book Cultivate if you want to convert an adversary to an ally.</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2791189-the-core-model-for-leadership-resilience.mp3?blob_id=11197567" length="5198577" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2791189</guid>
+    <pubDate>Wed, 26 Feb 2020 09:00:00 -0700</pubDate>
+    <itunes:duration>429</itunes:duration>
+    <itunes:keywords>core, model, leadership, control, ownership, reach, endurance</itunes:keywords>
+    <itunes:season>10</itunes:season>
+    <itunes:episode>2</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>The Decorator Pattern</itunes:title>
+    <title>The Decorator Pattern</title>
+    <description><![CDATA[<p>In this episode, Chuck talks about the decorator pattern, one of many design patterns software engineers use.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>In this episode, Chuck talks about the decorator pattern, one of many design patterns software engineers use.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/etdce884bi8kjkfa9bn9g7dnywyt/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>In this episode, Chuck talks about the decorator pattern, one of many design patterns software engineers use.</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2791174-the-decorator-pattern.mp3?blob_id=11197657" length="5360650" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2791174</guid>
+    <pubDate>Wed, 19 Feb 2020 18:00:00 -0700</pubDate>
+    <itunes:duration>442</itunes:duration>
+    <itunes:keywords></itunes:keywords>
+    <itunes:season>10</itunes:season>
+    <itunes:episode>1</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>5 Ways of Well-Being</itunes:title>
+    <title>5 Ways of Well-Being</title>
+    <description><![CDATA[<p>In this episode, Chuck talks about a study done by the New Economics Foundation on 5 practices that improve a person's happiness and feelings of well-being. They are Connect, Be active, Take notice, Keep learning, and Give. Thanks for sketchplanations for bringing it to my attention!</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>In this episode, Chuck talks about a study done by the New Economics Foundation on 5 practices that improve a person's happiness and feelings of well-being. They are Connect, Be active, Take notice, Keep learning, and Give. Thanks for sketchplanations for bringing it to my attention!</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>In this episode, Chuck talks about a study done by the New Economics Foundation on 5 practices that improve a person&#39;s happiness and feelings of well-being. They are Connect, Be active, Take notice, Keep learning, and Give. Thanks for sketchplanations...</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2685568-5-ways-of-well-being.mp3?blob_id=9071518" length="11077843" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2685568</guid>
+    <pubDate>Wed, 12 Feb 2020 09:00:00 -0700</pubDate>
+    <itunes:duration>920</itunes:duration>
+    <itunes:keywords></itunes:keywords>
+    <itunes:season>9</itunes:season>
+    <itunes:episode>15</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>Professionalism</itunes:title>
+    <title>Professionalism</title>
+    <description><![CDATA[<p>In this short episode, Chuck reminds us of the importance of remaining professional after giving notice.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>In this short episode, Chuck reminds us of the importance of remaining professional after giving notice.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>In this short episode, Chuck reminds us of the importance of remaining professional after giving notice.</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2652448-professionalism.mp3?blob_id=8914177" length="3974932" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2652448</guid>
+    <pubDate>Wed, 05 Feb 2020 09:00:00 -0700</pubDate>
+    <itunes:duration>328</itunes:duration>
+    <itunes:keywords></itunes:keywords>
+    <itunes:season>9</itunes:season>
+    <itunes:episode>14</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>Build Systems</itunes:title>
+    <title>Build Systems</title>
+    <description><![CDATA[<p>In a continuing series on DevOps, Chuck talks about build systems: what they are and why they are important to DevOps success.<br><br>NOTE: The episode doesn't mention build systems by name. Three popular options are Jenkins, Travis, and TeamCity.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>In a continuing series on DevOps, Chuck talks about build systems: what they are and why they are important to DevOps success.<br><br>NOTE: The episode doesn't mention build systems by name. Three popular options are Jenkins, Travis, and TeamCity.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Version control for non-technicians</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2465009-build-systems.mp3?blob_id=8118740" length="8272597" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2465009</guid>
+    <pubDate>Wed, 29 Jan 2020 09:00:00 -0700</pubDate>
+    <itunes:duration>686</itunes:duration>
+    <itunes:keywords>build, devops</itunes:keywords>
+    <itunes:season>9</itunes:season>
+    <itunes:episode>13</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>ESVP Activity</itunes:title>
+    <title>ESVP Activity</title>
+    <description><![CDATA[<p>The ESVP activity has application beyond just retrospectives. Learn about explorers, shoppers, vacationers, and prisoners in business meetings and other gatherings.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>The ESVP activity has application beyond just retrospectives. Learn about explorers, shoppers, vacationers, and prisoners in business meetings and other gatherings.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>A categorization exercise for retrospectives</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2464994-esvp-activity.mp3?blob_id=8118626" length="7615252" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2464994</guid>
+    <pubDate>Wed, 22 Jan 2020 09:00:00 -0700</pubDate>
+    <itunes:duration>631</itunes:duration>
+    <itunes:keywords>retrospective, technique</itunes:keywords>
+    <itunes:season>9</itunes:season>
+    <itunes:episode>12</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>Version Control</itunes:title>
+    <title>Version Control</title>
+    <description><![CDATA[<p>In today's episode, Chuck talks about version control. He uses software and non-software examples, then talks through the basics of git, a popular version control system, uses those running examples.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>In today's episode, Chuck talks about version control. He uses software and non-software examples, then talks through the basics of git, a popular version control system, uses those running examples.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Git in simple terms</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2464964-version-control.mp3?blob_id=8118572" length="15836614" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2464964</guid>
+    <pubDate>Wed, 15 Jan 2020 09:00:00 -0700</pubDate>
+    <itunes:duration>1316</itunes:duration>
+    <itunes:keywords>devops, vcs, versioning, git</itunes:keywords>
+    <itunes:season>9</itunes:season>
+    <itunes:episode>11</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>SLO SLI SLA</itunes:title>
+    <title>SLO SLI SLA</title>
+    <description><![CDATA[<p>On this episode, Chuck talks about the differences between service level objectives (SLOs), service level indicators (SLIs), and service level agreements (SLAs).</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>On this episode, Chuck talks about the differences between service level objectives (SLOs), service level indicators (SLIs), and service level agreements (SLAs).</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>On this episode, Chuck talks about the differences between service level objectives (SLOs), service level indicators (SLIs), and service level agreements (SLAs).</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2207915-slo-sli-sla.mp3?blob_id=6967967" length="8964728" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2207915</guid>
+    <pubDate>Wed, 08 Jan 2020 09:00:00 -0700</pubDate>
+    <itunes:duration>744</itunes:duration>
+    <itunes:keywords></itunes:keywords>
+    <itunes:season>9</itunes:season>
+    <itunes:episode>10</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>Thinking in Bets</itunes:title>
+    <title>Thinking in Bets</title>
+    <description><![CDATA[<p>Chuck talks about Annie Duke's book <em>Thinking in Bets</em>, which has some nice parallels to agile philosophy.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>Chuck talks about Annie Duke's book <em>Thinking in Bets</em>, which has some nice parallels to agile philosophy.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Chuck talks about Annie Duke&#39;s book Thinking in Bets, which has some nice parallels to agile philosophy.</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2207909-thinking-in-bets.mp3?blob_id=6967931" length="8253476" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2207909</guid>
+    <pubDate>Wed, 01 Jan 2020 09:00:00 -0700</pubDate>
+    <itunes:duration>685</itunes:duration>
+    <itunes:keywords></itunes:keywords>
+    <itunes:season>9</itunes:season>
+    <itunes:episode>9</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>Introduction to DevOps</itunes:title>
+    <title>Introduction to DevOps</title>
+    <description><![CDATA[<p>Chuck introduces the topic of DevOps or Site Reliability Engineering.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>Chuck introduces the topic of DevOps or Site Reliability Engineering.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Chuck introduces the topic of DevOps or Site Reliability Engineering.</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2207897-introduction-to-devops.mp3?blob_id=6967883" length="7757266" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2207897</guid>
+    <pubDate>Wed, 25 Dec 2019 09:00:00 -0700</pubDate>
+    <itunes:duration>643</itunes:duration>
+    <itunes:keywords></itunes:keywords>
+    <itunes:season>9</itunes:season>
+    <itunes:episode>8</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>Ownership and Excuses</itunes:title>
+    <title>Ownership and Excuses</title>
+    <description><![CDATA[<p>In this episode, Chuck talks about how excuses prevent taking ownership of issues.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>In this episode, Chuck talks about how excuses prevent taking ownership of issues.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>In this episode, Chuck talks about how excuses prevent taking ownership of issues.</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2207894-ownership-and-excuses.mp3?blob_id=6967835" length="6615608" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2207894</guid>
+    <pubDate>Wed, 18 Dec 2019 09:00:00 -0700</pubDate>
+    <itunes:duration>548</itunes:duration>
+    <itunes:keywords></itunes:keywords>
+    <itunes:season>9</itunes:season>
+    <itunes:episode>7</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>Ideal Team Player</itunes:title>
+    <title>Ideal Team Player</title>
+    <description><![CDATA[<p>Chuck talks about Pat Lencioni's book,<em> The Ideal Team Player</em>.<br><br>Photo by <a href="https://unsplash.com/@quinoal?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Quino Al</a> on <a href="https://unsplash.com/s/photos/team-player?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>Chuck talks about Pat Lencioni's book,<em> The Ideal Team Player</em>.<br><br>Photo by <a href="https://unsplash.com/@quinoal?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Quino Al</a> on <a href="https://unsplash.com/s/photos/team-player?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/FTwTPoyipqcFLvAzHEbt8kT9/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Chuck talks about Pat Lencioni&#39;s book, The Ideal Team Player.</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2081526-ideal-team-player.mp3?blob_id=6454908" length="9197718" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2081526</guid>
+    <pubDate>Wed, 11 Dec 2019 09:00:00 -0700</pubDate>
+    <itunes:duration>761</itunes:duration>
+    <itunes:keywords>book, lencioni</itunes:keywords>
+    <itunes:season>9</itunes:season>
+    <itunes:episode>6</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>Universal Troubleshooting Process</itunes:title>
+    <title>Universal Troubleshooting Process</title>
+    <description><![CDATA[<p>Chuck introduces Steve Litt's 10-step Universal Troubleshooting Process, found on <a href="https://troubleshooters.com">troubleshooters.com</a>.<br><br>Photo by <a href="https://unsplash.com/@owenbeard?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Owen Beard</a> on <a href="https://unsplash.com/s/photos/diagnosis?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>Chuck introduces Steve Litt's 10-step Universal Troubleshooting Process, found on <a href="https://troubleshooters.com">troubleshooters.com</a>.<br><br>Photo by <a href="https://unsplash.com/@owenbeard?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Owen Beard</a> on <a href="https://unsplash.com/s/photos/diagnosis?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/k7UUKRLskrCw89Gxk2wd4XZa/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Steve Litt&#39;s 10-step Universal Troubleshooting Process</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2081490-universal-troubleshooting-process.mp3?blob_id=6454914" length="9388639" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2081490</guid>
+    <pubDate>Wed, 04 Dec 2019 09:00:00 -0700</pubDate>
+    <itunes:duration>779</itunes:duration>
+    <itunes:keywords></itunes:keywords>
+    <itunes:season>9</itunes:season>
+    <itunes:episode>5</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>Death by Meeting</itunes:title>
+    <title>Death by Meeting</title>
+    <description><![CDATA[<p>In today's episode, Chuck talks about Pat Lencioni's book <em>Death by Meeting</em>.<br><br>Photo by <a href="https://unsplash.com/@marvelous?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Marvin Meyer</a> on <a href="https://unsplash.com/collections/3760669/boring-office?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>In today's episode, Chuck talks about Pat Lencioni's book <em>Death by Meeting</em>.<br><br>Photo by <a href="https://unsplash.com/@marvelous?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Marvin Meyer</a> on <a href="https://unsplash.com/collections/3760669/boring-office?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/e7aQNLn4YkipfRhz7xbJ9BQF/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>book review of Death by Meeting</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2081475-death-by-meeting.mp3?blob_id=6454572" length="12840052" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2081475</guid>
+    <pubDate>Wed, 27 Nov 2019 09:00:00 -0700</pubDate>
+    <itunes:duration>1065</itunes:duration>
+    <itunes:keywords>book, review, lencioni</itunes:keywords>
+    <itunes:season>9</itunes:season>
+    <itunes:episode>4</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>The Abilene Paradox</itunes:title>
+    <title>The Abilene Paradox</title>
+    <description><![CDATA[<p>Today, Chuck talks about situations where a group takes an action no individual approves of.<br><br>Photo by <a href="https://unsplash.com/@dinoreichmuth?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Dino Reichmuth</a> on <a href="https://unsplash.com/s/photos/hot-car?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>Today, Chuck talks about situations where a group takes an action no individual approves of.<br><br>Photo by <a href="https://unsplash.com/@dinoreichmuth?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Dino Reichmuth</a> on <a href="https://unsplash.com/s/photos/hot-car?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/USM3qT8C3iZjLWwvzL1dtKva/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Groupthink</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/2081436-the-abilene-paradox.mp3?blob_id=6454395" length="3828463" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-2081436</guid>
+    <pubDate>Wed, 20 Nov 2019 09:00:00 -0700</pubDate>
+    <itunes:duration>313</itunes:duration>
+    <itunes:keywords>decision</itunes:keywords>
+    <itunes:season>9</itunes:season>
+    <itunes:episode>3</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>Levels of Conflict</itunes:title>
+    <title>Levels of Conflict</title>
+    <description><![CDATA[<p>In this episode, Chuck talks about a model for levels of conflict by Speed Leas. The model shares some strategies for keeping conflict from escalating.<br><br>Photo by <a href="https://unsplash.com/@frankbusch?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Frank Busch</a> on <a href="https://unsplash.com/s/photos/conflict?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>In this episode, Chuck talks about a model for levels of conflict by Speed Leas. The model shares some strategies for keeping conflict from escalating.<br><br>Photo by <a href="https://unsplash.com/@frankbusch?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Frank Busch</a> on <a href="https://unsplash.com/s/photos/conflict?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/ZFZPcQKBUopnHNZi5Mam1C25/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Levels of conflict by Speed Leas</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/1868170-levels-of-conflict.mp3?blob_id=5599915" length="7833807" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-1868170</guid>
+    <pubDate>Wed, 13 Nov 2019 09:00:00 -0700</pubDate>
+    <itunes:duration>650</itunes:duration>
+    <itunes:keywords>conflict, interaction, facilitation, mediation</itunes:keywords>
+    <itunes:season>9</itunes:season>
+    <itunes:episode>2</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>Nielson&#39;s 10 Heuristics for User Interface Design</itunes:title>
+    <title>Nielson&#39;s 10 Heuristics for User Interface Design</title>
+    <description><![CDATA[<p>Chuck talks about Jakob Nielson's 10 heuristics for create good user interfaces. They include rules of thumb like use of ubiquitous language and the need for error prevention.<br><br>Photo by <a href="https://unsplash.com/@kobuagency?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Kobu Agency</a> on <a href="https://unsplash.com/s/photos/software-design?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>Chuck talks about Jakob Nielson's 10 heuristics for create good user interfaces. They include rules of thumb like use of ubiquitous language and the need for error prevention.<br><br>Photo by <a href="https://unsplash.com/@kobuagency?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Kobu Agency</a> on <a href="https://unsplash.com/s/photos/software-design?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/v6MhFrdEZA6db8wtRYgyu1WB/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Good user interfaces</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/1868125-nielson-s-10-heuristics-for-user-interface-design.mp3?blob_id=5599834" length="12170535" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-1868125</guid>
+    <pubDate>Wed, 06 Nov 2019 09:00:00 -0700</pubDate>
+    <itunes:duration>1011</itunes:duration>
+    <itunes:keywords>usability, UI, UX</itunes:keywords>
+    <itunes:season>9</itunes:season>
+    <itunes:episode>1</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>My Reading Workflow</itunes:title>
+    <title>My Reading Workflow</title>
+    <description><![CDATA[<p>For the last episode of season 8, I did not record a retrospective due to the hiatus. Instead, I talked about my personal reading workflow. It's enabled me to read over a book a week.<br><br>Photo by <a href="https://unsplash.com/@thoughtcatalog?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Thought Catalog</a> on <a href="https://unsplash.com/s/photos/reading?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>For the last episode of season 8, I did not record a retrospective due to the hiatus. Instead, I talked about my personal reading workflow. It's enabled me to read over a book a week.<br><br>Photo by <a href="https://unsplash.com/@thoughtcatalog?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Thought Catalog</a> on <a href="https://unsplash.com/s/photos/reading?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/nbhDW1yUwySC4G5zppbj8W2r/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Chuck&#39;s reading workflow</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/1868101-my-reading-workflow.mp3?blob_id=5599709" length="5398990" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-1868101</guid>
+    <pubDate>Tue, 29 Oct 2019 09:00:00 -0600</pubDate>
+    <itunes:duration>446</itunes:duration>
+    <itunes:keywords>reading, fiction, nonfiction</itunes:keywords>
+    <itunes:season>8</itunes:season>
+    <itunes:episode>16</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>Development Managers as Engineering Leads</itunes:title>
+    <title>Development Managers as Engineering Leads</title>
+    <description><![CDATA[<p>In a similar vein to last episode, Chuck talks about the challenges of having a development manager also be an engineering lead.<br><br>Photo by <a href="https://unsplash.com/@madebymarius?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Marius Ciocirlan</a> on <a href="https://unsplash.com/s/photos/man?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>In a similar vein to last episode, Chuck talks about the challenges of having a development manager also be an engineering lead.<br><br>Photo by <a href="https://unsplash.com/@madebymarius?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Marius Ciocirlan</a> on <a href="https://unsplash.com/s/photos/man?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/TxPWYMYJBPwfvYr7Ua6pgUiu/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Development managers make poor engineering leads</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/1868080-development-managers-as-engineering-leads.mp3?blob_id=5599586" length="4209158" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-1868080</guid>
+    <pubDate>Tue, 22 Oct 2019 09:00:00 -0600</pubDate>
+    <itunes:duration>347</itunes:duration>
+    <itunes:keywords>management, engineering, lead, bases of power</itunes:keywords>
+    <itunes:season>8</itunes:season>
+    <itunes:episode>15</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>Development Managers as Scrum Masters</itunes:title>
+    <title>Development Managers as Scrum Masters</title>
+    <description><![CDATA[<p>In this episode, Chuck answers a question from an old work colleague who recently went into management. Young wants to know if dev managers can fill the role of a scrum master. Chuck explains the challenges with this practice.<br><br>Photo by <a href="https://unsplash.com/@fotosushi?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Foto Sushi</a> on <a href="https://unsplash.com/s/photos/man?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>In this episode, Chuck answers a question from an old work colleague who recently went into management. Young wants to know if dev managers can fill the role of a scrum master. Chuck explains the challenges with this practice.<br><br>Photo by <a href="https://unsplash.com/@fotosushi?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Foto Sushi</a> on <a href="https://unsplash.com/s/photos/man?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/3koYxPQFBmvCN4dX8TTHiFtG/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Development managers make poor scrum masters</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/1868050-development-managers-as-scrum-masters.mp3?blob_id=5599534" length="4430474" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-1868050</guid>
+    <pubDate>Tue, 15 Oct 2019 09:00:00 -0600</pubDate>
+    <itunes:duration>367</itunes:duration>
+    <itunes:keywords>management, scrum</itunes:keywords>
+    <itunes:season>8</itunes:season>
+    <itunes:episode>14</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>Hiatus</itunes:title>
+    <title>Hiatus</title>
+    <description><![CDATA[<p>The Agile Chuck Wagon is on pause while I recover from a car accident</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>The Agile Chuck Wagon is on pause while I recover from a car accident</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>The Agile Chuck Wagon is on pause while I recover from a car accident</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/1791763-hiatus.mp3?blob_id=5278126" length="789436" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-1791763</guid>
+    <pubDate>Tue, 01 Oct 2019 09:00:00 -0600</pubDate>
+    <itunes:duration>63</itunes:duration>
+    <itunes:keywords></itunes:keywords>
+    <itunes:season></itunes:season>
+    <itunes:episode></itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>Commit Derby</itunes:title>
+    <title>Commit Derby</title>
+    <description><![CDATA[<p>Chuck details an exercise to help people using source control learn good commit discipline.<br><br>Interesting in trying it? See <a href="https://github.com/neontapir/code-katas/tree/master/commit-derby">my code-kata respository</a> for an implementation.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>Chuck details an exercise to help people using source control learn good commit discipline.<br><br>Interesting in trying it? See <a href="https://github.com/neontapir/code-katas/tree/master/commit-derby">my code-kata respository</a> for an implementation.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/C4Z8TTycx9UgJasrY5WiwbZL/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>An exercise to help people using source control learn good commit discipline</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/1284379-commit-derby.mp3?blob_id=5172556" length="10260269" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-1284379</guid>
+    <pubDate>Tue, 24 Sep 2019 09:00:00 -0600</pubDate>
+    <itunes:duration>851</itunes:duration>
+    <itunes:keywords></itunes:keywords>
+    <itunes:season>8</itunes:season>
+    <itunes:episode>13</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>Pomodoro Technique</itunes:title>
+    <title>Pomodoro Technique</title>
+    <description><![CDATA[<p>In this episode, Chuck teaches you how a tomato timer can help you be manage your time and be more productive.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>In this episode, Chuck teaches you how a tomato timer can help you be manage your time and be more productive.</p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/16kp6Z858pn36tTUrqLYgQkr/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>A time management technique</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/1284367-pomodoro-technique.mp3?blob_id=5172535" length="10227777" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-1284367</guid>
+    <pubDate>Tue, 17 Sep 2019 09:00:00 -0600</pubDate>
+    <itunes:duration>848</itunes:duration>
+    <itunes:keywords>time, management, Pomodoro, chunking, discipline</itunes:keywords>
+    <itunes:season>8</itunes:season>
+    <itunes:episode>12</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>4 Pillars of Too Much</itunes:title>
+    <title>4 Pillars of Too Much</title>
+    <description><![CDATA[<p>This week, Chuck talks about 4 pillars of too much: stuff, choice, information and speed. While originally in the context of overwhelm in children, adults suffer from this as well.<br><br>Source: <a href="https://www.sketchplanations.com/post/63034715554/the-four-pillars-of-too-much-stuff-choice">Sketchplanations</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>This week, Chuck talks about 4 pillars of too much: stuff, choice, information and speed. While originally in the context of overwhelm in children, adults suffer from this as well.<br><br>Source: <a href="https://www.sketchplanations.com/post/63034715554/the-four-pillars-of-too-much-stuff-choice">Sketchplanations</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/RkkMxEj47Vt3hDU8dPPE56LU/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Avoid overwhelm with the 4 pillars of too much</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/1284355-4-pillars-of-too-much.mp3?blob_id=5172514" length="8055157" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-1284355</guid>
+    <pubDate>Tue, 10 Sep 2019 09:00:00 -0600</pubDate>
+    <itunes:duration>667</itunes:duration>
+    <itunes:keywords>categories, stuff, choice, information, fast, speed</itunes:keywords>
+    <itunes:season>8</itunes:season>
+    <itunes:episode>11</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+  <item>
+    <itunes:title>A Spectum of Feedback Quality</itunes:title>
+    <title>A Spectum of Feedback Quality</title>
+    <description><![CDATA[<p>Chuck talks about Nancy Hey's spectrum of feedback quality, from no feedback at all to judgmental, descriptive, targeted, and then self-recognized at the top.<br><br>Source: <a href="https://www.sketchplanations.com/post/53041495693/a-spectrum-of-feedback-quality-for-giving-well">Sketchplanations</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></description>
+    <content:encoded><![CDATA[<p>Chuck talks about Nancy Hey's spectrum of feedback quality, from no feedback at all to judgmental, descriptive, targeted, and then self-recognized at the top.<br><br>Source: <a href="https://www.sketchplanations.com/post/53041495693/a-spectrum-of-feedback-quality-for-giving-well">Sketchplanations</a></p><p><a rel="payment" href="https://www.patreon.com/agilechuckwagon">Support the show</a> (https://www.patreon.com/agilechuckwagon)</p>]]></content:encoded>
+    <itunes:image href="https://storage.buzzsprout.com/variants/uhmYW8qxswvgEcRGaetxxbra/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg" />
+    <itunes:author>Chuck Durfee</itunes:author>
+    <itunes:summary>Nancy Hey&#39;s spectrum of feedback quality</itunes:summary>
+    <enclosure url="https://www.buzzsprout.com/277882/1284331-a-spectum-of-feedback-quality.mp3?blob_id=5172499" length="8651208" type="audio/mpeg" />
+    <guid isPermaLink="false">Buzzsprout-1284331</guid>
+    <pubDate>Tue, 03 Sep 2019 09:00:00 -0600</pubDate>
+    <itunes:duration>715</itunes:duration>
+    <itunes:keywords>spectrum, scale, measure, metric, qualitative, feedback, quality</itunes:keywords>
+    <itunes:season>8</itunes:season>
+    <itunes:episode>10</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+</channel>
+</rss>

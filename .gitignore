@@ -6,3 +6,4 @@ CNAME
 Gemfile.lock
 vendor/
 .jekyll-metadata
+_utilities/*.md
