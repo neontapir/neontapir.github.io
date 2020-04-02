@@ -1,4 +1,5 @@
 ---
+type: post
 layout: post
 title: Coronavirus
 eye_catch: https://storage.buzzsprout.com/variants/lfo75w5bjt6kdjj29knhxzm4cksc/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg
@@ -14,12 +15,9 @@ categories:
 status: publish
 published: true
 meta:
-  _edit_last: "1"
-type: post
+_edit_last: "1"
 ---
 
-## Agile Chuck Wagon, season 10, episode 7
+### Agile Chuck Wagon, season 10, episode 7
 
-Chuck talks about the coronavirus and its disruption to routine
-
-  (length: 10 min)
+Chuck talks about the coronavirus and its disruption to routine (length: 10 min)

@@ -1,6 +1,7 @@
 ---
+type: post
 layout: post
-title: 
+title: Finite State Machines - 2x11
 eye_catch: https://storage.buzzsprout.com/variants/wmxm97H27ni897sDV5vkYXeg/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg
 tags:
 - agile-chuck-wagon
@@ -11,10 +12,9 @@ categories:
 status: publish
 published: true
 meta:
-  _edit_last: "1"
-type: post
+_edit_last: "1"
 ---
 
-## Agile Chuck Wagon, season 2, episode 11
+### Agile Chuck Wagon, season 2, episode 11
 
 This episode comes from the archives of the old Agile Chuck Wagon podcast. In this show, Chuck talks about the programming design pattern of finite state machines, which can be found in many places in the real world. (length: 11 min)

@@ -1,4 +1,5 @@
 ---
+type: post
 layout: post
 title: Commit Derby
 eye_catch: https://storage.buzzsprout.com/variants/C4Z8TTycx9UgJasrY5WiwbZL/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg
@@ -11,12 +12,11 @@ categories:
 status: publish
 published: true
 meta:
-  _edit_last: "1"
-type: post
+_edit_last: "1"
 ---
 
-## Agile Chuck Wagon, season 8, episode 13
+### Agile Chuck Wagon, season 8, episode 13
 
 Chuck details an exercise to help people using source control learn good commit discipline.  
   
-Interesting in trying it? See  (length: 14 min)
+Interesting in trying it? See [my code-kata respository](https://github.com/neontapir/code-katas/tree/master/commit-derby) for an implementation. (length: 14 min)

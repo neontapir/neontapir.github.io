@@ -1,6 +1,7 @@
 ---
+type: post
 layout: post
-title: 
+title: BECOME case study - 4x15
 eye_catch: https://storage.buzzsprout.com/variants/92xNeRHWuNHn4Hhd6hjXXYZ5/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg
 tags:
 - agile-chuck-wagon
@@ -11,11 +12,10 @@ categories:
 status: publish
 published: true
 meta:
-  _edit_last: "1"
-type: post
+_edit_last: "1"
 ---
 
-## Agile Chuck Wagon, season 4, episode 15
+### Agile Chuck Wagon, season 4, episode 15
 
 On this episode of the Agile Chuck Wagon, Chuck addresses a social media storm. Recently, a prominent member of the agile community has been making sexist comments about female software programmers. This is a timely example of inappropriate behavior, and Chuck uses the BECOME process to formulate a response.
 

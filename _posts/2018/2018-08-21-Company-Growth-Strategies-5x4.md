@@ -1,6 +1,7 @@
 ---
+type: post
 layout: post
-title: 
+title: Company Growth Strategies - 5x4
 eye_catch: https://storage.buzzsprout.com/variants/cuqhABmnQmnVKhqmKeLAg9nz/8d66eb17bb7d02ca4856ab443a78f2148cafbb129f58a3c81282007c6fe24ff2?.jpg
 tags:
 - agile-chuck-wagon
@@ -11,11 +12,10 @@ categories:
 status: publish
 published: true
 meta:
-  _edit_last: "1"
-type: post
+_edit_last: "1"
 ---
 
-## Agile Chuck Wagon, season 5, episode 4
+### Agile Chuck Wagon, season 5, episode 4
 
 In today's episode, Chuck talks a marketing topic: the 10 ways you can grow a business. He talks about what a company might gain from each strategy, using illustrative examples of each type. He also includes the podcast itself as a running example through the podcast.
 

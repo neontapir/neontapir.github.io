@@ -73,7 +73,7 @@
 
     {% if include.eye_catch != false and page.eye_catch %}
     <p class="centered">
-        <img class="eye-catch" style="max-width: 50%" src="{{ page.eye_catch }}"/>
+        <img class="eye-catch" style="max-width: 50%" src="{{ page.eye_catch | absolute_url }}"/>
     </p>
     {% endif %}
 </header>

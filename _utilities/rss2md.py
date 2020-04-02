@@ -22,62 +22,81 @@ import re
 #   <itunes:explicit>false</itunes:explicit>
 # </item>
 
+def parse_value(item):
+  value = item["content"][0]['value']
+  value = re.sub('<p>This episode is sponsored by .*</p>', '', value)
+  value = re.sub('<a rel="payment" href="https://www.patreon.com/agilechuckwagon">.+</a>', '', value)
+  value = value.replace('<p> (https://www.patreon.com/agilechuckwagon)</p>', '')
+  value = re.sub('^\s+', '', value)
+  value = re.sub('\s+$', '', value)
+  value = html2markdown.convert(value) + ' (length: ' + duration + ' min)'
+  value = value.replace('&nbsp;', ' ')
+  return value
+
+def parse_season_episode(item, title):
+  match = re.match('.*(\d+)x(\d+).*', title)
+  if match:
+    season = str(int(match.group(1)))
+    episode = str(int(match.group(2)))
+    title = re.sub('.*(\d+)x(\d+).*', '', title)
+  else:
+    season = item["itunes_season"]
+    episode = item["itunes_episode"]
+  return (season, episode)
+
+# rss_url = "277882.rss.txt" 
 rss_url = "https://feeds.buzzsprout.com/277882.rss"
 
 feed = feedparser.parse( rss_url )
 items = feed["items"]
 for item in items:
-    # print(item)
-    # print(item['tags'])
-    # for tag in item['tags']:
-    #   print(tag['term'])
+  # print(item)
+  # print(item['tags'])
+  # for tag in item['tags']:
+  #   print(tag['term'])
 
-    time = item[ "published_parsed" ]
-    title = item[ "title" ].replace(':', " -") #.encode('utf-8')
-    fileName = str(time.tm_year) + '-' + ("%02d" % time.tm_mon) + '-' + ("%02d" % time.tm_mday) + '-' + title + '.md'
-    fileName = re.sub("[/']", '', fileName)
-    fileName = fileName.replace(' ', '-').replace('---', '-')
-    duration = str(round(float(item["itunes_duration"]) / 60))
-    value = item["content"][0]['value']
-    value = re.sub('<p>This episode is sponsored by .*</p>', '', value)
-    value = re.sub('<a rel="payment" href="https://www.patreon.com/agilechuckwagon">.+</a>', '', value)
-    value = re.sub('<p>\s*</p>', '', value)
-    value = value.replace('(https://www.patreon.com/agilechuckwagon)', '')
-    value = html2markdown.convert(value) + ' (length: ' + duration + ' min)'
-    value = value.replace('&nbsp;', ' ')
-    
-    season = 0
-    episode = 0
-    match = re.match('.*(\d+)x(\d+).*', title)
-    if match:
-      season = str(int(match.group(1)))
-      episode = str(int(match.group(2)))
-      title = re.sub('.*(\d+)x(\d+).*', '', title)
-    else:
-      season = item["itunes_season"]
-      episode = item["itunes_episode"]
-    
-    f = open(fileName,'w') 
-    f.write('---\nlayout: post\ntitle: ' + title + '\n')
-    if item.has_key('image'):
-      f.write('eye_catch: ' + item['image']['href'] + '\n')
-    f.write('tags:\n- agile-chuck-wagon\n')
-    if item.has_key('tags'):
-      for tag in item['tags']:
-        f.write('- ' + tag['term'] + '\n')
-    f.write('''comments: true
+  time = item[ "published_parsed" ]
+  # if time.tm_year < 2020:
+  #   continue
+
+  title = item[ "title" ].replace(':', " -") #.encode('utf-8')
+  
+  fileName = str(time.tm_year) + '-' + ("%02d" % time.tm_mon) + '-' + ("%02d" % time.tm_mday) + '-' + title + '.md'
+  fileName = re.sub("[/']", '', fileName)
+  fileName = fileName.replace(' ', '-').replace('---', '-')
+  fileName = '../_posts/' + str(time.tm_year) + '/' + fileName
+
+  duration = str(round(float(item["itunes_duration"]) / 60))
+
+  value = parse_value(item)
+
+  episode_info = parse_season_episode(item, title)
+  season = episode_info[0]
+  episode = episode_info[1]
+  
+  f = open(fileName,'w') 
+  f.write('---\ntype: post\nlayout: post\ntitle: ' + title + '\n')
+  if item.has_key('image'):
+    eye_catch = item['image']['href']
+  else:
+    eye_catch = "/assets/img/acw.png"
+  f.write('eye_catch: ' + eye_catch + '\n')
+  f.write('tags:\n- agile-chuck-wagon\n')
+  if item.has_key('tags'):
+    for tag in item['tags']:
+      f.write('- ' + tag['term'] + '\n')
+  f.write('''comments: true
 categories:
 - professional
 - podcast
 status: publish
 published: true
 meta:
-  _edit_last: "1"
-type: post
+_edit_last: "1"
 ---
 
 ''')
-    f.write('## Agile Chuck Wagon, season ' + season + ', episode ' + episode + '\n\n')
-    f.write(value + '\n')
-    # break
-print('end')
+  f.write('### Agile Chuck Wagon, season ' + season + ', episode ' + episode + '\n\n')
+  f.write(value + '\n')
+
+print('...done')
