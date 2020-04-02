@@ -56,8 +56,8 @@ for item in items:
   #   print(tag['term'])
 
   time = item[ "published_parsed" ]
-  # if time.tm_year < 2020:
-  #   continue
+  if time.tm_year < 2020:
+    continue
 
   title = item[ "title" ].replace(':', " -") #.encode('utf-8')
   
