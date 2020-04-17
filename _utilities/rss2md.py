@@ -60,7 +60,10 @@ for item in items:
   fileName = build_fileName(time, title)
   postFolderName = '../_posts/' + str(time.tm_year) + '/'
   if path.exists(postFolderName + fileName):
+    print('File exists: ' + postFolderName + fileName)
     continue
+  else:
+    print ('Creating ' + postFolderName + fileName)
 
   duration = str(round(float(item["itunes_duration"]) / 60))
 
