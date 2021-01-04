@@ -6,3 +6,5 @@ gem 'rake'
 # gem 'rubocop'
 
 gem "rouge", "~> 3.19"
+
+gem "webrick", "~> 1.7"
