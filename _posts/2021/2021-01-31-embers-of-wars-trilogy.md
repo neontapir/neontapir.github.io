@@ -63,6 +63,7 @@ It's not a Rebellion versus Empire story, though there are political factions in
 One of the elements I most enjoyed about the _Embers of War_ trilogy is the House of Reclamation.
 The House is a place for people looking for a fresh start,
 and its mission is to rescue ships and people in distress.
+To join, people must renounce their citizenship and sever ties with their former governments.
 Our protagonists are trying to redeem the sins of their pasts, to greater and lesser degrees of success.
 This theme of redemption plays strongly throughout the novels,
 and that is what drew my comparison to the _Star Wars_ trilogy.
