@@ -27,6 +27,7 @@ Each of the three books felt like an act in a larger story, which many other ser
 The climax of the first novel informs the second, **_Fleet of Knives_**.
 However, _Fleet_ raises the stakes from _Embers_.
 The same is true of the third book, **_Light of Impossible Stars_**.
+
 Also, the new characters in _Fleet_ and _Light_ did not irritate me as Ashton Childe did in
 _Embers_.
 The new characters in both books ended up having character arcs of their own,
