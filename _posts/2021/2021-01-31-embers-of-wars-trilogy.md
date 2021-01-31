@@ -11,7 +11,7 @@ tags:
   - sci-fi
 ---
 
-![Embers of War Trilogy](/assets/embers-of-war-trilogy.png)
+![Embers of War Trilogy](/assets/embers-of-war-trilogy.jpg)
 
 I recently reviewed **_Embers of War_ by Gareth Powell**.
 A few weeks later, I've finished the trilogy.
