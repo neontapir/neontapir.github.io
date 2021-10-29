@@ -4,9 +4,9 @@ namespace :notify do
   desc "Notify Ping-O-Matic"
   task :pingomatic do
     begin
-      require 'xmlrpc/client'
+      require "xmlrpc/client"
       puts "* Notifying Ping-O-Matic that the site has updated"
-      XMLRPC::Client.new('rpc.pingomatic.com', '/').call('weblogUpdates.extendedPing', 'neontapir.github.io' , '//neontapir.github.io', '//neontapir.github.io/atom.xml', '//neontapir.github.io/feed.xml')
+      XMLRPC::Client.new("rpc.pingomatic.com", "/").call("weblogUpdates.extendedPing", "neontapir.github.io", "//neontapir.github.io", "//neontapir.github.io/atom.xml", "//neontapir.github.io/feed.xml")
     rescue LoadError
       puts "! Could not ping ping-o-matic, because XMLRPC::Client could not be found."
     end
@@ -15,10 +15,10 @@ namespace :notify do
   desc "Notify Google of updated sitemap"
   task :google do
     begin
-      require 'net/http'
-      require 'uri'
+      require "net/http"
+      require "uri"
       puts "* Notifying Google that the site has updated"
-      Net::HTTP.get('www.google.com', '/webmasters/tools/ping?sitemap=' + URI.escape('//neontapir.github.io/sitemap.xml'))
+      Net::HTTP.get("www.google.com", "/webmasters/tools/ping?sitemap=" + URI.escape("//neontapir.github.io/sitemap.xml"))
     rescue LoadError
       puts "! Could not ping Google about our sitemap, because Net::HTTP or URI could not be found."
     end
@@ -27,30 +27,32 @@ namespace :notify do
   desc "Notify Bing of updated sitemap"
   task :bing do
     begin
-      require 'net/http'
-      require 'uri'
-      puts '* Notifying Bing that the site has updated'
-      Net::HTTP.get('www.bing.com', '/webmaster/ping.aspx?siteMap=' + URI.escape('//neontapir.github.io/sitemap.xml'))
+      require "net/http"
+      require "uri"
+      puts "* Notifying Bing that the site has updated"
+      Net::HTTP.get("www.bing.com", "/webmaster/ping.aspx?siteMap=" + URI.escape("//neontapir.github.io/sitemap.xml"))
     rescue LoadError
       puts "! Could not ping Bing about our sitemap, because Net::HTTP or URI could not be found."
     end
   end
 end
 
-desc 'Serve'
+PORT = 4001
+
+desc "Serve"
 task :serve do
-  sh "bundle exec jekyll serve --incremental"
+  sh %Q[bundle exec jekyll serve --port #{PORT} --incremental]
 end
 
-desc 'Serve without incremental'
+desc "Serve without incremental"
 task :serve_all do
-  sh "bundle exec jekyll serve"
+  sh %Q[bundle exec jekyll serve --port #{PORT}]
 end
 
-desc 'Profile Liquid'
+desc "Profile Liquid"
 task :profile do
-  sh "bundle exec jekyll build --profile"
+  sh %Q[bundle exec jekyll build --profile]
 end
 
-desc 'Default is to build everything'
+desc "Default is to build everything"
 task :default => :serve
