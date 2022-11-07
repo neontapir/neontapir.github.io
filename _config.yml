@@ -38,6 +38,8 @@ defaults:
       logo: /assets/img/tapir-hex.png
       social:
         name: Chuck Durfee
+      mastodon:
+        username: ruby.social/neontapir
       twitter:
         username: ChuckDurfee
       author:
@@ -62,6 +64,7 @@ icons:
   github: neontapir
   instagram: neontapir
   linkedin: chuck-durfee
+  mastodon: neontapir@ruby.social
   # patreon: agilechuckwagon
   pinterest:
   reddit: neontapir
@@ -116,6 +119,7 @@ version: 2.1.0
 # Social.
 #
 share_buttons:
+  mastodon: true
   twitter: true
   facebook: true # needs ogp.fb.app_id
   hatena: false # styling has been removed
