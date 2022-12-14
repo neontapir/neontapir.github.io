@@ -6,7 +6,7 @@ description: Life update, Mastodon
 categories:
   - personal
 tags:
-  - jeckyl
+  - jekyll
   - social
 ---
 
